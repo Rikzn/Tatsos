@@ -1,0 +1,15 @@
+.payment-history {
+    &__inner {
+        padding-top: 120px;
+        .search {
+            padding-top: 50px;
+            padding-bottom: 22px;
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48px;
+        color: #2E2E2E;
+    }
+}

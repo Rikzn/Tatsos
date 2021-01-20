@@ -1,0 +1,86 @@
+.debit-card {
+    .card {
+        margin-top: 124px;
+        padding-right: 3rem;
+        &:hover {
+            &::before {
+                display: none;
+            }
+        }
+        &-img {
+            width: 12.6rem;
+        }
+        &-content {
+            &__subtitle {
+                font-weight: 500;
+                font-size: 40px;
+                line-height: 48px;
+                color: #2E2E2E;
+                margin-bottom: 5px;
+            }
+            &__title {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 29px;
+                color: #2E2E2E;
+                span {
+                    font-weight: 400;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    &-requisites {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 53px;
+        border-radius: 20px;
+        background-color: #F5F5F5;
+        padding: 1rem 4rem 4rem 4rem;
+        &__descr {
+            flex-basis: 45%;
+            margin-top: 30px;
+        }
+        &__title {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            color: #C1C1C1;
+            margin-bottom: 10px;
+        }
+        &__subtitle {
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 20px;
+            color: #2E2E2E;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+            &:hover {
+                button {
+                    opacity: 1;
+                    transition: 0.3s;
+                }
+            }
+            svg {
+                width: 24px;
+                height: 24px;
+                fill: #000000;
+                margin-left: 23px;
+            }
+            button {
+                opacity: 0;
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    fill: #F1611F;
+                    margin-left: 9px;
+                }
+            }
+        }
+    }
+    &__wrapper {
+        display: flex;
+    }
+
+}

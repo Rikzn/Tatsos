@@ -1,0 +1,178 @@
+.widget {
+    margin-bottom: 2.5rem;     /* 25px */
+    @include breakpoint(small-mobile) {
+        margin-bottom: 2.1rem;
+      }
+    &__title {
+        font-size: 1.6rem;
+        /* 16px */
+        line-height: 1.9rem;
+        /* 19px */
+        color: $widgetTitle;
+        position: relative;
+        padding-right: 2.4rem;
+        /* 24px */
+        display: flex;
+        cursor: pointer;
+
+        &--active {
+            svg {
+                transform: rotate(180deg);
+                // transition: 0.2s;
+            }
+        }
+    }
+
+    &__body {
+        font-weight: 200;
+        font-size: 6.4rem;
+        /* 64px */
+        color: #fff;
+        overflow: hidden;
+        max-height: 0;
+        transition: 0.3s;
+
+        p {
+            transition: 0.3s;
+        }
+
+        span {
+            font-size: 2.8rem;
+            /* 28px */
+            transition: 0.3s;
+        }
+
+        &--active {
+            max-height: 20rem;
+            /* 200px */
+            transition: 0.3s;
+            overflow: visible;
+        }
+    }
+
+    &-SVG {
+        width: 2rem;
+        /* 20px */
+        height: 2rem;
+        /* 20px */
+        fill: #fff;
+        transition: 0.3s;
+        vertical-align: super;
+        position: relative;
+        z-index: -1;
+    }
+
+    &-card {
+        padding-bottom: 2.5rem;
+        /* 25px */
+    }
+
+    .currency {
+        &__inner {
+            border-radius: 1.5rem;
+            /* 15px */
+            padding: 2rem 1.8rem 2rem 2.3rem;
+            /* 20px 18px 20px 23px */
+            position: relative;
+            margin-top: 2.7rem;
+
+            /* 27px */
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                transform: translate(-50%, -50%);
+                border-radius: 1.5rem;
+                /* 15px */
+                background-color: rgba($color: #000000, $alpha: 0.37);
+                z-index: -1;
+            }
+        }
+
+        &__title {
+            color: rgba($color: #fff, $alpha: 0.5);
+            display: flex;
+            margin-bottom: 0.9rem;
+
+            /* 9px */
+            span {
+                font-size: 1.2rem;
+                /* 12px */
+                line-height: 1.4rem;
+                /* 14px */
+                margin-right: 4.9rem;
+
+                /* 49px */
+                &:first-child {
+                    flex-grow: 1;
+                    margin-right: 0;
+                }
+
+                &:last-child {
+                    margin-right: 2.7rem;
+                    /* 27px */
+                }
+            }
+        }
+
+        &__item {
+            display: flex;
+            margin-bottom: 0.9rem;
+
+            /* 9px */
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            span {
+                &:first-child {
+                    flex-grow: 1;
+                    font-weight: 500;
+                    margin-right: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                font-weight: 400;
+                font-size: 2rem;
+                /* 20px */
+                display: flex;
+                align-items: center;
+                margin-right: 1.9rem;
+                /* 19px */
+                line-height: 2.4rem;
+                /* 24px */
+            }
+        }
+
+        &--decline {
+            width: 2.4rem;
+            /* 24px */
+            height: 2.4rem;
+            /* 24px */
+            fill: #E26B2F;
+            transform: rotate(-180deg);
+        }
+
+        &--raising {
+            width: 2.4rem;
+            /* 24px */
+            height: 2.4rem;
+            /* 24px */
+            fill: #05B135;
+        }
+    }
+
+    &__curs {
+        margin-top: 2rem;
+        /* 20px */
+        @include breakpoint(small-mobile) {
+            display: none;
+          }
+    }
+}

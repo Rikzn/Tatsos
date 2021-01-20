@@ -1,0 +1,106 @@
+.operations {
+    padding-top: 12rem;
+    /* 120px */
+    display: flex;
+    @include breakpoint(laptop) {         
+        flex-direction: column;
+        }
+    @include breakpoint(small-mobile) {
+        display: flex;
+        flex-direction: column;
+        }
+}
+
+.plus {
+    border-radius: 15rem;
+    /* 150px */
+    background-color: #F5F5F5;
+    padding: 1.5rem;
+    /* 15px */
+}
+
+.payments {
+    &__wrapper {
+        flex-grow: 1;
+        max-width: 561px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        justify-content: space-between;
+        /* 30px */
+    }
+
+    &__card {
+        flex-basis: 46.2%;
+        display: flex;
+        align-items: center;
+        padding-top: 2.1rem;
+        /* 21px */
+        padding-bottom: 3.3rem;
+        /* 33px */
+        border-top: 0.1rem
+            /* 1px */
+        solid #C1C1C1;
+        cursor: pointer;
+    }
+
+    &-img {
+        margin-right: 1.4rem;
+
+        /* 14px */
+        svg {
+            width: 2.4rem;
+            /* 24px */
+            height: 2.4rem;
+            /* 24px */
+        }
+    }
+
+    &__inner {
+        color: #2E2E2E;
+        margin-right: 6%;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            font-weight: 600;
+            font-size: 2.4rem;
+            /* 24px */
+            line-height: 2.9rem;
+            /* 29px */
+            margin-right: 2rem;
+            /* 20px */
+        }
+
+        &-svg {
+            width: 2.4rem;
+            /* 24px */
+            height: 2.4rem;
+            /* 24px */
+            transform: rotate(-90deg);
+        }
+    }
+
+    &-content {
+        &__title {
+            font-weight: 500;
+            font-size: 1.6rem;
+            /* 16px */
+            line-height: 1.9rem;
+            /* 19px */
+        }
+
+        &__subtitle {
+            font-weight: 500;
+            font-size: 1.2rem;
+            /* 12px */
+            line-height: 1.4rem;
+            /* 14px */
+            color: #C1C1C1;
+        }
+    }
+}
+

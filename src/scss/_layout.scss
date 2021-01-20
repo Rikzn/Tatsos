@@ -1,0 +1,41 @@
+.container {
+    width: 100%;
+    max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+    @supports (width: max(20vw, 100px)) {
+        padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
+        padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+    }
+}
+.container-inner {
+    max-width: 870px;
+    margin: 0 auto;
+    @include breakpoint(desktop) {
+    padding: 0 6%;
+    }
+    @include breakpoint(laptop) {         
+        padding: 0 4%;
+        }
+}
+
+
+
+.page-content {
+    display: flex;
+    flex-direction: row;
+    @include breakpoint(small-mobile) {   
+        display: flex;      
+        flex-direction: column;
+        }
+    }
+
+.page-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(small-mobile) {
+        border-top-left-radius: 20px;
+    	border-top-right-radius: 20px;
+    }
+}

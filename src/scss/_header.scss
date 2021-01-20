@@ -1,0 +1,78 @@
+$widgetTitle: #fff;
+
+.header {
+    position: relative;
+    margin-left: auto;
+    z-index: 1;
+    @include breakpoint(mobile) {
+        margin-left: unset;
+        width: 100%;
+    }
+    &__wrapper {
+        height: 40vh;
+        padding-right: 1.3rem; /* 13px */
+        overflow-x: hidden;
+        padding-left: 2.2rem; /* 22px */
+        margin-left: -1.7rem; /* -17px */
+        scrollbar-color: rgba($color: #FFF, $alpha: 0.8) rgba($color: #FFF, $alpha: 0.1);
+        scrollbar-width: thin;
+        &::-webkit-scrollbar {
+            width: 0.3rem; /* 3px */
+            height: 25rem; /* 250px */ 
+            background-color: rgba($color: #FFF, $alpha: 0.1);
+            border-radius: 1rem; /* 10px */
+            }
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba($color: #FFF, $alpha: 0.8);
+            border-radius: 1rem; /* 10px */
+            height: 7.5rem; /* 75px */
+            box-shadow: inset 0.1rem 0.1rem 1rem /* 1px 1px 10px */ #f3faf7;
+        }
+        @include breakpoint(small-mobile) {
+            height: auto;
+            overflow-x: visible;
+            }
+        }
+    &__link {
+        background: #F1611F;
+        border-radius: 2rem; /* 20px */
+        padding: 2.1rem; /* 21px */
+        display: block;
+        text-align: center;
+        margin-top: 1rem; /* 10px */
+        span {
+            font-weight: 500;
+            font-size: 1.6rem; /* 16px */
+            line-height: 1.9rem; /* 19px */
+            color: #FFFFFF;
+        }
+    }
+    &-logo {
+        width: 15.8rem;
+        margin-bottom: 8rem; /* 80px */
+        @include breakpoint(small-mobile) {
+            width: 14.6rem;
+            margin-bottom: 9.4rem;
+        }
+    }
+}
+
+.sidebar {
+    padding: 3rem 5rem 5.7rem 5rem; /* 30px 50px 57px 50px */
+    height: 100vh;
+    position: sticky;
+    z-index: 0;
+    display: flex;
+    top: 0;
+    width: 45rem;
+    @include breakpoint(desktop) {
+        padding: 3rem 2rem 5.7rem;
+     }
+    @include breakpoint(mobile) {
+        position: relative;
+    }
+    @include breakpoint(small-mobile) {
+        padding: 1.2rem 1.3rem 5.7rem;
+        width: auto;
+            }
+}
