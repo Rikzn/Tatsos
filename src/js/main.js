@@ -1,15 +1,15 @@
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
-import widget from './widget';
 import slider from './slider';
-import history from './history';
+import click from './click';
 import datefilter from './datefilter';
+import tabs from './tabs';
 
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
-    widget();
+    click();
 });
 
 window.addEventListener('load', function() {
@@ -20,3 +20,4 @@ window.addEventListener('load', function() {
 
 // копирование при нажатие
 new ClipboardJS('.copy-btn');
+

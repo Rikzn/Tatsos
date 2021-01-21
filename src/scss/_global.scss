@@ -233,3 +233,12 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     background-color: transparent;
 }
+
+.title {
+    &:hover {
+        svg {
+            transform: rotate(270deg);
+            transition: 0.2s;
+        }
+    }
+}

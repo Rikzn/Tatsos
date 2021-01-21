@@ -1,40 +1,143 @@
 <section class="history">
     <div class="container-inner">
         <div class="history__inner">
-            <h2 class="history-header">
-            Последние операции
-            <svg>
-                <use xlink:href="#chevron-down" />
-            </svg>
+            <h2 class="history-header title">
+                Последние операции
+                <svg>
+                    <use xlink:href="#chevron-down" />
+                </svg>
             </h2>
             <div class="history-form">
-                <div class="history-form__setting">
+                <div class="history-form-setting history-form-btn">
                     <svg>
                         <use xlink:href="#settings-history" />
                     </svg>
+                    <div class="history-form-setting__dropdown">
+                        <div class="history-form-setting__inner">
+                            <div class="history-form-setting__item">
+                                <p class="history-form-setting__item--title">Период</p>
+                                <div class="history-form-setting__item--wrapper">
+                                    <button class="history-form-setting__item--btn history-form__btn">Сегодня</button>
+                                    <button class="history-form-setting__item--btn history-form__btn">Вчера</button>
+                                    <button class="history-form-setting__item--btn history-form__btn">В этом месяце</button>
+                                    <input class="history-form__btn" type="text" name="datefilter"
+                                        value="15 июня — 15 декабря" />
+                                </div>
+                            </div>
+                            <div class="history-form-setting__item">
+                                <p class="history-form-setting__item--title">Счета и карты</p>
+                                <label href="#" class="card-item">
+                                    <div class="card-img">
+                                        <img src="/img/card_2.png" alt="Card">
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="card-content__subtitle">
+                                            Дебетовая карт *1256
+                                        </p>
+                                        <p class="card-content__title">
+                                            90 789,<span>23 ₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-checkbox">
+                                        <input type="checkbox">
+                                        <span class="card-checkbox__false"></span>
+                                    </div>
+                                </label>
+                                <label href="#" class="card-item">
+                                    <div class="card-img">
+                                        <img src="/img/card_2.png" alt="Card">
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="card-content__subtitle">
+                                            Дебетовая карт *1256
+                                        </p>
+                                        <p class="card-content__title">
+                                            90 789,<span>23 ₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-checkbox">
+                                        <input type="checkbox">
+                                        <span class="card-checkbox__false"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="history-form-setting__item">
+                                <p class="history-form-setting__item--title">Кредиты</p>
+                                <label href="#" class="card-item">
+                                    <div class="card-img">
+                                        <img src="/img/card_2.png" alt="Card">
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="card-content__subtitle">
+                                            Дебетовая карт *1256
+                                        </p>
+                                        <p class="card-content__title">
+                                            90 789,<span>23 ₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-checkbox">
+                                        <input type="checkbox">
+                                        <span class="card-checkbox__false"></span>
+                                    </div>
+                                </label>
+                                <label href="#" class="card-item">
+                                    <div class="card-img">
+                                        <img src="/img/card_2.png" alt="Card">
+                                    </div>
+                                    <div class="card-content">
+                                        <p class="card-content__subtitle">
+                                            Дебетовая карт *1256
+                                        </p>
+                                        <p class="card-content__title">
+                                            90 789,<span>23 ₽</span>
+                                        </p>
+                                    </div>
+                                    <div class="card-checkbox">
+                                        <input type="checkbox">
+                                        <span class="card-checkbox__false"></span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="history-form-setting__item">
+                                <p class="history-form-setting__item--title">Вид платежа</p>
+                                <div class="history-form-setting__item--wrapper">
+                                    <button class="history-form-setting__item--btn history-form__btn">Пополнение</button>
+                                    <button class="history-form-setting__item--btn history-form__btn">Списание</button>
+                                </div>
+                            </div>
+                            <div class="history-form-setting__item">
+                                <p class="history-form-setting__item--title">Категория</p>
+                                <div class="history-form-setting__item--wrapper">
+                                    <button class="history-form-setting__item--btn history-form__btn">Транспорт</button>
+                                    <button class="history-form-setting__item--btn history-form__btn">Развлечения</button>
+                                    <button class="history-form-setting__item--btn history-form__btn">Покупки</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <button class="history-form__btn">Пополнение</button>
                 <button class="history-form__btn">Списание</button>
                 <input class="history-form__btn" type="text" name="datefilter" value="15 июня — 15 декабря" />
-                <div class="history-form__btn history-form__group">
-                        <div class="history-form__group-btn">
-                            <div class="history-form__group-cross">
-                                Счета и карты: <span>2</span>
-                                <svg>
-                                    <use xlink:href="#chevron-down" />
-                                </svg>
+                <div class="history-form__btn history-form__group history-form-btn">
+                    <div class="history-form__group-btn">
+                        <div class="history-form__group-cross">
+                            Счета и карты: <span>2</span>
+                            <svg>
+                                <use xlink:href="#chevron-down" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="history-form__group-dropdown">
+                        <div class="history-form__group-dropdown-inner">
+                            <div class="history-form__group-dropdown-scroll-wrapper">
+                                <label>Карта 1</label>
+                                <label>Карта 2</label>
+                                <label>Карта 3</label>
+                                <label>Карта 4</label>
                             </div>
                         </div>
-                        <div class="history-form__group-dropdown">
-                            <div class="history-form__group-dropdown-inner">
-                                <div class="history-form__group-dropdown-scroll-wrapper">
-                                    <label>Карта 1</label>
-                                    <label>Карта 2</label>
-                                    <label>Карта 3</label>
-                                    <label>Карта 4</label>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
                 </div>
             </div>
             <div class="history-card">

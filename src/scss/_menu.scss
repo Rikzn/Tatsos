@@ -364,6 +364,7 @@ $svg-sitebar: #fff;
         padding-left: 0.6rem;
         /* 6px */
         overflow: hidden;
+        transition: 0.4s;
         @include breakpoint(small-mobile) {               
             color: #fff;
             }
@@ -387,10 +388,12 @@ $svg-sitebar: #fff;
                 opacity: 0;
                 transition: 0.3s;
                 z-index: -1;
+                height: 0;
 
                 &-inner {
                     display: flex;
                     flex-direction: column;
+                    height: 0;
                     padding: 0.5rem;
                     /* 5px */
                     background: #FFFFFF;
@@ -402,15 +405,15 @@ $svg-sitebar: #fff;
                     a {
                         font-weight: 500;
                         font-size: 1.6rem;
-                        /* 16px */
                         line-height: 1.9rem;
-                        /* 19px */
                         padding: 0.5rem 0.9rem 0.7rem 0.9rem;
-                        /* 5px 9px 7px 9px */
                         transition: 0.3s;
                         margin-bottom: 0.5rem;
-
-                        /* 5px */
+                        &:hover {
+                            background-color: #F5F5F5;
+                            border-radius: 7px;
+                            transition: 0.3s;
+                        }
                         &:last-child {
                             margin-bottom: 0;
                         }
@@ -419,21 +422,24 @@ $svg-sitebar: #fff;
             }
         }
 
-        &:hover {
-            transition: 0.3s;
+        &--active {
+            transition: 0.4s;
             overflow: visible;
-
             svg {
                 transform: rotate(-180deg);
-                transition: 0.3s;
+                transition: 0.4s;
             }
-
             .menu__authorized-user {
                 &-more {
                     &-dropdown {
                         opacity: 1;
-                        transition: 0.3s;
+                        transition: 0.4s;
                         z-index: 3;
+                        height: auto;
+                        &-inner {
+                            height: auto;
+                            transition: 0.4s;
+                        }
                     }
                 }
             }
