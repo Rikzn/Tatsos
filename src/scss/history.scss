@@ -18,6 +18,7 @@
         margin-bottom: 3.2rem;
         @include breakpoint(small-mobile) {
             width: 100%;
+            margin-bottom: 1.2rem;
             }
         /* 32px */
         svg {
@@ -148,6 +149,8 @@
         margin-bottom: 4.4rem;
         @include breakpoint(small-mobile) {
             overflow-y: scroll;
+            padding-top: 15px;
+            margin-bottom: 3.3rem;
         }
         &__btn {
             background-color: #F5F5F5;

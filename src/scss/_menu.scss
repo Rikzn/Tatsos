@@ -21,11 +21,11 @@ $svg-sitebar: #fff;
             }
     }
 
-    &-logo {
-        width: 45rem;
-        opacity: 0;
-                @include breakpoint(small-mobile) {
-            display: none;
+    &__logo {
+        display: none;
+            @include breakpoint(small-mobile) {
+                display: block;
+                margin-right: auto;
         }
     }
 
@@ -37,7 +37,7 @@ $svg-sitebar: #fff;
             overflow-x: scroll;
             width: 100%;
             padding-left: 2rem;
-            margin-top: 2.4rem;
+            margin-top: 2rem;
             margin-left: 0;
             border-bottom: 0.1rem solid rgba($color: #fff, $alpha: 0.2);
             scrollbar-width: none;
@@ -212,8 +212,10 @@ $svg-sitebar: #fff;
         display: flex;
         align-items: center;
         @include breakpoint(small-mobile) {
-            margin-left: auto;
+            padding-left: 20px;
             padding-right: 20px;
+            width: 100%;
+            align-items: baseline;
         }
         svg {
             width: 2.4rem;

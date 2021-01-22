@@ -1253,12 +1253,12 @@ select:-webkit-autofill:focus {
       position: fixed;
       z-index: 1; } }
 
-.menu-logo {
-  width: 45rem;
-  opacity: 0; }
+.menu__logo {
+  display: none; }
   @media only screen and (max-width: 576px) {
-    .menu-logo {
-      display: none; } }
+    .menu__logo {
+      display: block;
+      margin-right: auto; } }
 
 .menu-nav {
   display: -webkit-box;
@@ -1274,7 +1274,7 @@ select:-webkit-autofill:focus {
       overflow-x: scroll;
       width: 100%;
       padding-left: 2rem;
-      margin-top: 2.4rem;
+      margin-top: 2rem;
       margin-left: 0;
       border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
       scrollbar-width: none; }
@@ -1441,8 +1441,12 @@ select:-webkit-autofill:focus {
           align-items: center; }
   @media only screen and (max-width: 576px) {
     .menu-navigation {
-      margin-left: auto;
-      padding-right: 20px; } }
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 100%;
+      -webkit-box-align: baseline;
+          -ms-flex-align: baseline;
+              align-items: baseline; } }
   .menu-navigation svg {
     width: 2.4rem;
     /* 24px */
@@ -1774,7 +1778,8 @@ select:-webkit-autofill:focus {
     @media only screen and (max-width: 767px) {
       .sidebar__inner {
         margin-left: unset;
-        width: 100%; } }
+        width: 100%;
+        position: fixed; } }
   .sidebar__wrapper {
     height: 55vh;
     padding-right: 1.3rem;
@@ -1830,9 +1835,7 @@ select:-webkit-autofill:focus {
     width: 15.8rem; }
     @media only screen and (max-width: 576px) {
       .sidebar-logo {
-        width: 14.6rem;
-        margin-bottom: 9.4rem;
-        margin-top: 12px; } }
+        display: none; } }
   .sidebar-img {
     position: absolute;
     top: 0rem;
@@ -2191,7 +2194,8 @@ select:-webkit-autofill:focus {
     /* 32px */ }
     @media only screen and (max-width: 576px) {
       .history-header {
-        width: 100%; } }
+        width: 100%;
+        margin-bottom: 1.2rem; } }
     .history-header svg {
       width: 2.4rem;
       height: 2.4rem;
@@ -2306,7 +2310,9 @@ select:-webkit-autofill:focus {
     margin-bottom: 4.4rem; }
     @media only screen and (max-width: 576px) {
       .history-form {
-        overflow-y: scroll; } }
+        overflow-y: scroll;
+        padding-top: 15px;
+        margin-bottom: 3.3rem; } }
     .history-form__btn {
       background-color: #F5F5F5;
       border-radius: 1rem;
@@ -2714,7 +2720,7 @@ select:-webkit-autofill:focus {
     margin-top: 8rem; }
     @media only screen and (max-width: 576px) {
       .widget-main {
-        margin-top: 0; } }
+        margin-top: 14rem; } }
 
 .card {
   display: -webkit-box;
@@ -3245,6 +3251,9 @@ select:-webkit-autofill:focus {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 0.4rem; }
+  @media only screen and (max-width: 576px) {
+    .templates__title {
+      padding-left: 0; } }
   .templates__title h2 {
     font-weight: 600;
     font-size: 2.4rem;

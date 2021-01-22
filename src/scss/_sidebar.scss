@@ -28,6 +28,7 @@ $widgetTitle: #fff;
         @include breakpoint(mobile) {
             margin-left: unset;
             width: 100%;
+            position: fixed;
         }
     }
     &__wrapper {
@@ -76,9 +77,7 @@ $widgetTitle: #fff;
     &-logo {
         width: 15.8rem;
         @include breakpoint(small-mobile) {
-            width: 14.6rem;
-            margin-bottom: 9.4rem;
-            margin-top: 12px;
+           display: none;
         }
     }
     &-img {

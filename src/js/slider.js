@@ -9,6 +9,4 @@ var mySwiper = new Swiper('.swiper-container', {
       nextEl: '.slider__next',
       prevEl: '.slider__prev',
     },
-    breakpoints: {
-    }
   });
