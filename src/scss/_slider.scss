@@ -1,136 +1,142 @@
-// .slider {
-//     min-width: 0;
-//     padding-bottom: 63px;
-//     &__wrapper {
-//         display: flex;
-//         justify-content: space-between;
-//         margin-bottom: 2.2rem;
-//         /* 22px */
-//     }
+.slider {
+    min-width: 0;
+    padding-bottom: 6.3rem;
+    @include breakpoint(small-mobile) {
+        margin-top: 0.9rem;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2.2rem;
+        /* 22px */
+    }
 
-//     &__header {
-//         display: flex;
-//         align-items: center;
-//         font-weight: 500;
-//         font-size: 2.4rem;
-//         /* 24px */
-//         line-height: 2.4rem;
+    &__header {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 2.4rem;
+        @include breakpoint(small-mobile) {
+            width: 100%;
+           }
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+            transform: rotate(-90deg);
+            margin-left: 0.8rem;
+            @include breakpoint(small-mobile) {
+             margin-left: auto;
+            }
+        }
+    }
 
-//         /* 24px */
-//         svg {
-//             width: 2.4rem;
-//             /* 24px */
-//             height: 2.4rem;
-//             /* 24px */
-//             transform: rotate(-90deg);
-//             margin-left: 0.8rem;
-//             /* 8px */
-//         }
-//     }
+    &__nav {
+        display: flex;
+        align-self: center;
 
-//     &__nav {
-//         display: flex;
-//         align-self: center;
+        svg {
+            width: 3.2rem;
+            height: 3.2rem;
+            cursor: pointer;
+        }
+    }
 
-//         svg {
-//             width: 3.2rem;
-//             height: 3.2rem;
-//             cursor: pointer;
-//         }
-//     }
+    &__prev {
+        border-radius: 1rem;
+        /* 10px */
+        padding: 0.9rem 0.7rem 0.9rem 0.9rem;
+        /* 9px 7px 9px 9px */
+        transition: 0.3s;
+        outline: none;
+        @include breakpoint(small-mobile) {
+            display: none;
+        }
+        &:hover {
+            background-color: #F5F5F5;
 
-//     &__prev {
-//         border-radius: 1rem;
-//         /* 10px */
-//         padding: 0.9rem 0.7rem 0.9rem 0.9rem;
-//         /* 9px 7px 9px 9px */
-//         transition: 0.3s;
-//         outline: none;
+        }
+    }
 
-//         &:hover {
-//             background-color: #F5F5F5;
+    &__next {
+        margin-left: 0.8rem;
+        /* 8px */
+        border-radius: 1rem;
+        /* 10px */
+        padding: 0.9rem 0.9rem 0.9rem 0.7rem;
+        /* 9px 9px 9px 7px */
+        transition: 0.3s;
+        outline: none;
+        @include breakpoint(small-mobile) {
+            display: none;
+        }
+        &:hover {
+            background-color: #F5F5F5;
+        }
 
-//         }
-//     }
+        svg {
+            transform: rotate(-180deg);
+        }
+    }
 
-//     &__next {
-//         margin-left: 0.8rem;
-//         /* 8px */
-//         border-radius: 1rem;
-//         /* 10px */
-//         padding: 0.9rem 0.9rem 0.9rem 0.7rem;
-//         /* 9px 9px 9px 7px */
-//         transition: 0.3s;
-//         outline: none;
+    &__inner {
+        border-radius: 1.7rem;
+        /* 17px */
+        width: 30rem;
+        /* 300px */
+        position: relative;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+    }
 
-//         &:hover {
-//             background-color: #F5F5F5;
+    &__tag {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 1.2rem;
+        /* 12px */
+        margin-left: 1.2rem;
+        /* 12px */
+        background-color: #F1611F;
+        border-top-right-radius: 0.3rem;
+        /* 3px */
+        border-bottom-right-radius: 1.1rem;
+        /* 11px */
+        border-top-left-radius: 1.1rem;
+        /* 11px */
+        border-bottom-left-radius: 0.3rem;
+        /* 3px */
+        font-weight: 500;
+        font-size: 1.2rem;
+        /* 12px */
+        line-height: 1.4rem;
+        /* 14px */
+        color: #ffffff;
+        padding: 0.4rem 1rem;
+        /* 4px 10px */
+    }
 
-//         }
+    &__title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-bottom: 1.8rem;
+        /* 18px */
+        margin-left: 2.1rem;
+        /* 21px */
+        font-weight: 700;
+        font-size: 2rem;
+        /* 20px */
+        line-height: 2.4rem;
+        /* 24px */
+        color: #ffffff;
+    }
+    .swiper-slide {
+        width: auto;
+    }
+}
 
-//         svg {
-//             transform: rotate(-180deg);
-//         }
-//     }
-
-//     &__inner {
-//         border-radius: 1.7rem;
-//         /* 17px */
-//         width: 30rem;
-//         /* 300px */
-//         position: relative;
-//         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
-//     }
-
-//     &__tag {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         margin-top: 1.2rem;
-//         /* 12px */
-//         margin-left: 1.2rem;
-//         /* 12px */
-//         background-color: #F1611F;
-//         border-top-right-radius: 0.3rem;
-//         /* 3px */
-//         border-bottom-right-radius: 1.1rem;
-//         /* 11px */
-//         border-top-left-radius: 1.1rem;
-//         /* 11px */
-//         border-bottom-left-radius: 0.3rem;
-//         /* 3px */
-//         font-weight: 500;
-//         font-size: 1.2rem;
-//         /* 12px */
-//         line-height: 1.4rem;
-//         /* 14px */
-//         color: #ffffff;
-//         padding: 0.4rem 1rem;
-//         /* 4px 10px */
-//     }
-
-//     &__title {
-//         position: absolute;
-//         bottom: 0;
-//         left: 0;
-//         margin-bottom: 1.8rem;
-//         /* 18px */
-//         margin-left: 2.1rem;
-//         /* 21px */
-//         font-weight: 700;
-//         font-size: 2rem;
-//         /* 20px */
-//         line-height: 2.4rem;
-//         /* 24px */
-//         color: #ffffff;
-//     }
-//     .swiper-slide {
-//         width: auto;
-//     }
-// }
-
-// .swiper-container {
-//     // overflow: visible;
-//     position: relative;
-//     z-index: -1;
-// }
+.swiper-container {
+    overflow: visible;
+    position: relative;
+    z-index: -1;
+}

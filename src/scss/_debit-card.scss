@@ -1,6 +1,6 @@
 .debit-card {
     .card {
-        margin-top: 124px;
+        margin-top: 12.4rem;
         padding-right: 3rem;
         &:hover {
             &::before {
@@ -13,19 +13,19 @@
         &-content {
             &__subtitle {
                 font-weight: 500;
-                font-size: 40px;
-                line-height: 48px;
+                font-size: 4rem;
+                line-height: 4.8rem;
                 color: #2E2E2E;
-                margin-bottom: 5px;
+                margin-bottom: 0.5rem;
             }
             &__title {
                 font-weight: 400;
-                font-size: 24px;
-                line-height: 29px;
+                font-size: 2.4rem;
+                line-height: 2.9rem;
                 color: #2E2E2E;
                 span {
                     font-weight: 400;
-                    font-size: 24px;
+                    font-size: 2.4rem;
                 }
             }
         }
@@ -33,25 +33,25 @@
     &-requisites {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 53px;
-        border-radius: 20px;
+        margin-top: 5.3rem;
+        border-radius: 2rem;
         background-color: #F5F5F5;
         padding: 1rem 4rem 4rem 4rem;
         &__descr {
             flex-basis: 45%;
-            margin-top: 30px;
+            margin-top: 3rem;
         }
         &__title {
             font-weight: 500;
-            font-size: 15px;
-            line-height: 18px;
+            font-size: 1.5rem;
+            line-height: 1.8rem;
             color: #C1C1C1;
-            margin-bottom: 10px;
+            margin-bottom: 1rem;
         }
         &__subtitle {
             font-weight: 600;
-            font-size: 17px;
-            line-height: 20px;
+            font-size: 1.7rem;
+            line-height: 2rem;
             color: #2E2E2E;
             display: flex;
             align-items: center;
@@ -63,18 +63,18 @@
                 }
             }
             svg {
-                width: 24px;
-                height: 24px;
+                width: 2.4rem;
+                height: 2.4rem;
                 fill: #000000;
-                margin-left: 23px;
+                margin-left: 2.3rem;
             }
             button {
                 opacity: 0;
                 svg {
-                    width: 18px;
-                    height: 18px;
+                    width: 1.8rem;
+                    height: 1.8rem;
                     fill: #F1611F;
-                    margin-left: 9px;
+                    margin-left: 0.9rem;
                 }
             }
         }

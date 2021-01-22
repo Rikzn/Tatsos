@@ -11,7 +11,7 @@
     <script src="assets/js/svgInject.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/styles.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" / >
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/ >
     <title>
         {{ title }}
     </title>
@@ -22,19 +22,18 @@
         {{> sprite }}
     </div>
     {{> menu }}
-    <div class="page-content">
-        <aside class="sidebar">
-            {{> asideBg }}
-               
-            {{> header }}
-        </aside>
-            <main class="page-main">
+    <div id="main-content" class="page-content main">
+        <div id="sidebar" class="sidebar">              
+            {{> sidebar }}
+        </div>
+            <main id="content" class="page-main content">
             {{#block "main"}}
 
             {{/block}} 
             </main>
         {{!-- {{> footer }} --}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        {{!-- <script src="/assets/js/ResizeSensor.js"></script> --}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
         <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js" ></script>

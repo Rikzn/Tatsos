@@ -12,10 +12,12 @@ $svg-sitebar: #fff;
         width: 100%;
         padding-left: 45rem;
         @include breakpoint(small-mobile) {
-            right: 0px;
+            right: 0rem;
             display: flex;
             padding-top: 2.3rem;
             padding-left: 0;
+            position: fixed;
+            z-index: 1;
             }
     }
 
@@ -34,9 +36,10 @@ $svg-sitebar: #fff;
         @include breakpoint(small-mobile) {
             overflow-x: scroll;
             width: 100%;
-            padding-left: 19px;
-            margin-top: 24px;
-            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
+            padding-left: 2rem;
+            margin-top: 2.4rem;
+            margin-left: 0;
+            border-bottom: 0.1rem solid rgba($color: #fff, $alpha: 0.2);
             scrollbar-width: none;
             &::-webkit-scrollbar {
                 width: 0;
@@ -210,6 +213,7 @@ $svg-sitebar: #fff;
         align-items: center;
         @include breakpoint(small-mobile) {
             margin-left: auto;
+            padding-right: 20px;
         }
         svg {
             width: 2.4rem;
@@ -411,7 +415,7 @@ $svg-sitebar: #fff;
                         margin-bottom: 0.5rem;
                         &:hover {
                             background-color: #F5F5F5;
-                            border-radius: 7px;
+                            border-radius: 0.7rem;
                             transition: 0.3s;
                         }
                         &:last-child {
@@ -449,16 +453,20 @@ $svg-sitebar: #fff;
     &__wrapper {
         display: flex;
         justify-content: space-between;
-        width: 870px;
+        width: 100%;
+        // max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
+        max-width: 870px;
         margin: 0 auto;
-        @include breakpoint(desktop) {
-            padding: 0 4%;
-            }
+        padding: 0 var(--content-padding);
+        @supports (width: max(20vw, 100px)) {
+            padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
+            padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+        }
         @include breakpoint(small-mobile) {
-            flex-direction: column-reverse;
             padding: 0;
-            width: 100%;
-                } 
+            display: flex;
+            flex-direction: column-reverse;
+        }
     }
 
     &-hover {

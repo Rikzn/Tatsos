@@ -16,23 +16,24 @@
         line-height: 2.4rem;
         /* 24px */
         margin-bottom: 3.2rem;
-
+        @include breakpoint(small-mobile) {
+            width: 100%;
+            }
         /* 32px */
         svg {
             width: 2.4rem;
-            /* 24px */
             height: 2.4rem;
-            /* 24px */
             transform: rotate(-90deg);
             margin-left: 0.8rem;
-            /* 8px */
+            @include breakpoint(small-mobile) {
+                margin-left: auto;
+                }
         }
     }
 
     &-card {
         padding-bottom: 5rem;
 
-        /* 50px */
         &__header {
             display: flex;
             width: 100%;
@@ -93,11 +94,12 @@
             &__title {
                 font-weight: 500;
                 font-size: 1.6rem;
-                /* 16px */
                 line-height: 1.9rem;
-                /* 19px */
                 margin-bottom: 0.4rem;
-                /* 4px */
+                @include breakpoint(small-mobile) {
+                    font-size: 1.4rem;
+                    max-width: 173px;
+                    }
             }
 
             &__subtitle {
@@ -144,6 +146,9 @@
         display: flex;
         align-items: center;
         margin-bottom: 4.4rem;
+        @include breakpoint(small-mobile) {
+            overflow-y: scroll;
+        }
         &__btn {
             background-color: #F5F5F5;
             border-radius: 1rem;
@@ -166,6 +171,11 @@
                 background-color: #2E2E2E;
                 color: #F5F5F5;
                 transition: 0.3s;
+                .history-form__group-cross-svg {
+                    use {
+                        fill: #fff;
+                    }
+                }
             }
         }
 
@@ -187,7 +197,9 @@
                 background-color: #F1611F;
                 border-radius: 100%;
             }
-
+            @include breakpoint(small-mobile) {
+                margin-right: 0.9rem;
+            }
             svg {
                 width: 2rem;
                 height: 2rem;
@@ -195,52 +207,52 @@
 
             &__dropdown {
                 position: absolute;
-                padding-top: 15px;
+                padding-top: 1.5rem;
                 left: 0;
                 z-index: -3;
                 opacity: 0;
-                height: 1px;
+                height: 0.1rem;
                 overflow: hidden;
                 transition: 0.2s;
             }
 
             &__inner {
-                box-shadow: 0px 13.7866px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 7.37098px 17.869px rgba(0, 0, 0, 0.0417275), 0px 4.13211px 10.0172px rgba(0, 0, 0, 0.035), 0px 2.19453px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 0.913195px 2.21381px rgba(0, 0, 0, 0.0196802);
-                border-radius: 15px;
+                box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem rgba(0, 0, 0, 0.0196802);
+                border-radius: 1.5rem;
                 background-color: #fff;
                 color: #C1C1C1;
-                padding: 0 14px 30px 30px;
+                padding: 0 1.4rem 3rem 3rem;
             }
             &__item {
                 display: flex;
                 flex-direction: column;
                 &--title {
                     font-weight: 500;
-                    font-size: 12px;
-                    line-height: 14px;
+                    font-size: 1.2rem;
+                    line-height: 1.4rem;
                     color: #C1C1C1;
-                    margin-top: 30px;
-                    margin-bottom: 19px;
+                    margin-top: 3rem;
+                    margin-bottom: 1.9rem;
                     }
                 &--wrapper {
                     display: flex;
                     input {
                         background-color: #F5F5F5;
-                        border-radius: 10px;
+                        border-radius: 1rem;
                         font-weight: 500;
-                        font-size: 12px;
+                        font-size: 1.2rem;
                         color: #2E2E2E;
-                        width: 140px;
+                        width: 14rem;
                     }
                     }
                 &--btn {
                         background-color: #F5F5F5;
-                        border-radius: 10px;
-                        padding: 7px 10px;
+                        border-radius: 1rem;
+                        padding: 0.7rem 1rem;
                         font-weight: 500;
-                        font-size: 12px;
+                        font-size: 1.2rem;
                         color: #2E2E2E;
-                        margin-right: 10px;
+                        margin-right: 1rem;
                         white-space: pre;
                         &:last-child {
                             margin-right: 0;
@@ -263,7 +275,7 @@
                }
                &-checkbox {
                    margin-left: auto;
-                   margin-right: 26px;
+                   margin-right: 2.6rem;
                    input {
                        display: none;
                        transition: 0.3s;
@@ -274,8 +286,8 @@
                    }
                    &__false {
                         background-color: #F5F5F5;
-                        width: 30px;
-                        height: 30px;
+                        width: 3rem;
+                        height: 3rem;
                         display: block;
                         border-radius: 100%;
                         position: relative;
@@ -308,6 +320,13 @@
                 overflow: visible;
                 transition: 0.2s;
             }
+            .history-form__group-dropdown {
+                opacity: 1;
+                z-index: 3;
+                height: auto;
+                overflow: visible;
+                transition: 0.2s;
+            }
         }
         &__group {
             position: relative;
@@ -315,65 +334,106 @@
             &-cross {
                 font-weight: 500;
                 font-size: 1.2rem;
-                /* 12px */
                 line-height: 1.4rem;
-                /* 14px */
+                display: flex;
+                align-items: center;
+                @include breakpoint(small-mobile) {
+                    min-width: 122px;
+                 }
+                span {
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                    line-height: 1.4rem;
+                    margin-left: 0.1rem;
+                }
+                &-svg {
+                    use {
+                        fill: #000;
+                    }
+                }
             }
-
             &-btn {
                 svg {
                     width: 1.6rem;
-                    /* 16px */
                     height: 1.6rem;
-                    /* 16px */
                     fill: #fff;
                 }
             }
 
             &-dropdown {
                 position: absolute;
-                top: 2rem;
-                /* 20px */
-                left: 0;
-                border-radius: 1rem;
-                /* 10px */
-                padding-top: 0.5rem;
-                /* 5px */
+                padding-top: 1.5rem;
+                left: -298%;
+                z-index: -3;
                 opacity: 0;
-                transition: 0.3s;
+                height: 0.1rem;
+                overflow: hidden;
+                border-radius: 1.5rem;
+                transition: 0.2s;
 
                 &-inner {
-                    padding: 0.5rem;
-                    /* 5px */
-                    background: #FFFFFF;
-                    box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem
-                        /* 0px 13.7866px 33.4221px 0px 7.37098px 17.869px 0px 4.13211px 10.0172px 0px 2.19453px 5.32008px 0px 0.913195px 2.21381px */
-                        rgba(0, 0, 0, 0.0196802);
-                    border-radius: 1rem;
-                    /* 10px */
+                    box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem rgba(0, 0, 0, 0.0196802);
+                    border-radius: 1.5rem;
+                    background-color: #fff;
+                    color: #C1C1C1;
+                    padding: 0 1.4rem 3rem 3rem;
                     display: flex;
                     flex-direction: column;
+                    
                 }
-            }
-
-            &:hover {
-                .history {
-                    &-form {
-                        &__group {
-                            &-dropdown {
-                                &:hover {
-                                    opacity: 1;
-                                    transition: 0.3s, opacity 1s;
-                                    padding: 2rem 2rem 0 0;
-                                    /* 20px 20px */
-                                    top: 2rem;
-                                    /* 20px */
-                                }
+                .card {
+                    &-item {
+                        width: 48.7rem;
+                    }
+                    &-content {
+                        &__subtitle {
+                         color: rgba($color: #2E2E2E, $alpha: 0.6);
+                        }
+                        &__title {
+                         color: #2E2E2E;
+                         span {
+                             color: rgba($color: #2E2E2E, $alpha: 0.6);
+                         }
+                        }
+                    }
+                    &-checkbox {
+                        margin-left: auto;
+                        margin-right: 2.6rem;
+                        input {
+                            display: none;
+                            transition: 0.3s;
+                            &:checked + .card-checkbox__false::before {
+                                opacity: 1;
+                                transition: 0.3s;
                             }
                         }
-
+                        &__false {
+                             background-color: #F5F5F5;
+                             width: 3rem;
+                             height: 3rem;
+                             display: block;
+                             border-radius: 100%;
+                             position: relative;
+                             &::before {
+                                 content: '';
+                                 position: absolute;
+                                 border-radius: 100%;
+                                 background-color: #F1611F;
+                                 background-image: url(/img/icons/checkmark.svg);
+                                 background-repeat: no-repeat;
+                                 background-position: center center;
+                                 width: 100%;
+                                 height: 100%;
+                                 opacity: 0;
+                             }
+                        }
                     }
-                }
+                 }
+            }
+        }
+        input {
+            @include breakpoint(small-mobile) {
+                width: 140px;
             }
         }
     }

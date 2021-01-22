@@ -29,6 +29,8 @@
     "object-fit-images": "^3.2.4",
     "picturefill": "^3.0.3",
     "smoothscroll-polyfill": "^0.4.4",
+    "sticky-sidebar": "^3.3.1",
+    "sticky-sidebar-v2": "^1.1.0",
     "swiper": "^6.3.2"
   },
   "devDependencies": {

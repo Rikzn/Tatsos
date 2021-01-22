@@ -2,32 +2,27 @@
     padding-top: 12rem;
     /* 120px */
     display: flex;
-    @include breakpoint(laptop) {         
-        flex-direction: column;
-        }
     @include breakpoint(small-mobile) {
         display: flex;
         flex-direction: column;
+        padding-top: 2.8rem;
         }
 }
 
-.plus {
-    border-radius: 15rem;
-    /* 150px */
-    background-color: #F5F5F5;
-    padding: 1.5rem;
-    /* 15px */
-}
 
 .payments {
     &__wrapper {
         flex-grow: 1;
-        max-width: 561px;
+        max-width: 56.1rem;
         display: flex;
         flex-wrap: wrap;
         margin-top: 3rem;
         justify-content: space-between;
         /* 30px */
+        @include breakpoint(small-mobile) {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            }
     }
 
     &__card {
@@ -36,19 +31,14 @@
         align-items: center;
         padding-top: 2.1rem;
         position: relative;
-        /* 21px */
         padding-bottom: 3.3rem;
-        /* 33px */
-        // border-top: 0.1rem solid #C1C1C1;
-            /* 1px */
         cursor: pointer;
         transition: 0.3s;
         &:hover {
-            // border-top: 0.3rem solid #2E2E2E;
             transition: 0.3s;
             transform: translateY(-3px);
             &::before {
-                height: 3px;
+                height: 0.3rem;
                 transition: 0.3s;
                 background-color: #2E2E2E;
             }
@@ -59,10 +49,19 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 1px;
+            height: 0.1rem;
             background-color: #C1C1C1;
             transition: 0.3s;
+            @include breakpoint(small-mobile) {
+                content: none;
+                }
         }
+        @include breakpoint(desktop) {
+            padding-bottom: 3.1rem;
+        }
+        @include breakpoint(small-mobile) {
+            padding-bottom: 1.9rem;
+            }
     }
 
     &-img {
@@ -80,6 +79,9 @@
     &__inner {
         color: #2E2E2E;
         margin-right: 6%;
+        @include breakpoint(small-mobile) {
+            margin-right: 0;
+            }
     }
 
     &__title {
@@ -90,11 +92,12 @@
         h2 {
             font-weight: 600;
             font-size: 2.4rem;
-            /* 24px */
             line-height: 2.9rem;
-            /* 29px */
             margin-right: 2rem;
-            /* 20px */
+            @include breakpoint(small-mobile) {
+                font-weight: 500;
+                margin-right: auto;
+                }
         }
 
         &-svg {
@@ -107,25 +110,36 @@
     }
 
     &-content {
+        @include breakpoint(small-mobile) {
+            width: 100%;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -21px;
+                width: 100%;
+                height: 0.1rem;
+                background-color: #C1C1C1;
+                transition: 0.3s;
+                }
+            }
         &__title {
             font-weight: 500;
             font-size: 1.6rem;
-            /* 16px */
             line-height: 1.9rem;
-            /* 19px */
         }
 
         &__subtitle {
             font-weight: 500;
             font-size: 1.2rem;
-            /* 12px */
             line-height: 1.4rem;
-            /* 14px */
             color: #C1C1C1;
             display: flex;
-            margin-top: 3px;
+            margin-top: 0.3rem;
             img {
-                margin-left: 4px;
+                margin-left: 0.4rem;
+                width: 1.5rem;
             }
         }
     }

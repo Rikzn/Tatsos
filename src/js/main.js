@@ -1,9 +1,11 @@
+import StickySidebar from 'sticky-sidebar-v2';
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
 import slider from './slider';
 import click from './click';
 import datefilter from './datefilter';
-import tabs from './tabs';
+import tabs from './tabs'; 
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -21,3 +23,13 @@ window.addEventListener('load', function() {
 // копирование при нажатие
 new ClipboardJS('.copy-btn');
 
+
+
+// Фиксация сайдбара 
+
+var sidebar = new StickySidebar('#sidebar', {
+    containerSelector: '#main-content',
+    innerWrapperSelector: '.sidebar__inner',
+    topSpacing: 0,
+    bottomSpacing: 0
+});

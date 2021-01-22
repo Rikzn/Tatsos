@@ -8,8 +8,14 @@
 
 :root {
     --max-container-width: 124rem;
-    --content-padding: 6.06%;
+    --content-padding: 6rem;
     --primary-color: #13B17C;
+    @include breakpoint(desktop) {
+        --content-padding: 5rem;
+    }
+    @include breakpoint(small-mobile) {
+        --content-padding: 2rem;
+        }
 }
 
 html {
@@ -31,7 +37,7 @@ html {
         font-size: 6px;
     }
     @include breakpoint(mobile) {
-        font-size: 4px;
+        font-size: 5px;
     }
     @include breakpoint(small-mobile) {
         font-size: 10px;
@@ -236,9 +242,7 @@ select:-webkit-autofill:focus {
 
 .title {
     &:hover {
-        svg {
-            transform: rotate(270deg);
-            transition: 0.2s;
-        }
+        opacity: 0.6;
+        transition: 0.2s;
     }
 }
