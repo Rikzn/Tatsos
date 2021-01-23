@@ -26,11 +26,17 @@
         &::before {
             opacity: 0.6;
             transition: 0.3s;
+            @include breakpoint(small-mobile) {
+                opacity: 0;
+                    }
         }
 
         .card-more {
             opacity: 1;
             transition: 0.3s;
+            @include breakpoint(small-mobile) {
+                opacity: 0;
+                    }
         }
     }
 
@@ -84,14 +90,11 @@
         position: relative;
         overflow: hidden;
         opacity: 0;
-
         &-dropdown {
             position: absolute;
             top: 0;
-            right: -14.1rem;
-            /* -141px */
+            right: -0.1rem;
             padding-top: 3.5rem;
-            /* 35px */
             opacity: 0;
             transition: 0.3s;
             z-index: -1;

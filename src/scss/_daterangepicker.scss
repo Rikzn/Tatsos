@@ -1,0 +1,22 @@
+.daterangepicker {
+    .drp-selected {
+        display: none !important;
+    }
+    .drp-calendar {
+        .start-date {
+            background-color: #F1611F;
+            &:hover {
+                background-color: rgba($color: #F1611F, $alpha: 0.8);
+            } 
+        }
+        .end-date {
+            background-color: #F1611F;
+            &:hover {
+                background-color: rgba($color: #F1611F, $alpha: 0.8);
+            } 
+        }
+    }
+    
+}
+
+

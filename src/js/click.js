@@ -1,35 +1,70 @@
 
-    
-
-    // // Клик по "..." в блоке widget
+     // Клик по "..." в блоке widget
 export default function FilterDropdowns() {
-    const elements = Array.from(document.querySelectorAll('.card'));
+    const elements = Array.from(document.querySelectorAll('.js-filters-dropdown'));
 
     elements.forEach(element => {
-        const btn = element.querySelector('.card-more');
+        const btn = element.querySelector('.filters__select-group-btn');
 
         btn.addEventListener('click', event => {
             event.preventDefault();
             
-            if (!element.classList.contains('card--active')) {
-                elements.forEach(element => element.classList.remove('card--active'))
-                element.classList.add('card--active');
+            if (!element.classList.contains('active')) {
+                elements.forEach(element => element.classList.remove('active'))
+                element.classList.add('active');
                 
             } else {
-                elements.forEach(element => element.classList.remove('card--active'))
-                element.classList.remove('card--active');
+                elements.forEach(element => element.classList.remove('active'))
+                element.classList.remove('active');
             }
         });
 
 
         document.addEventListener('click', event => {
-            const insideGroup = event.target.matches('.card-more') || event.target.closest('.card-more');
+            const insideGroup = event.target.matches('.filters__select-group') || event.target.closest('.filters__select-group');
             if (!insideGroup) {
-                elements.forEach(element => element.classList.remove('card--active'))
+                elements.forEach(element => element.classList.remove('active'))
             } 
         });
     });
-}
+} 
+  
+
+
+
+
+
+
+
+//     // // Клик по "..." в блоке widget
+// export default function FilterDropdowns() {
+//     const elements = Array.from(document.querySelectorAll('.card'));
+
+//     elements.forEach(element => {
+//         const btn = element.querySelector('.card-more');
+
+//         btn.addEventListener('click', event => {
+//             event.preventDefault();
+            
+//             if (!element.classList.contains('card--active')) {
+//                 elements.forEach(element => element.classList.remove('card--active'))
+//                 element.classList.add('card--active');
+                
+//             } else {
+//                 elements.forEach(element => element.classList.remove('card--active'))
+//                 element.classList.remove('card--active');
+//             }
+//         });
+
+
+//         document.addEventListener('click', event => {
+//             const insideGroup = event.target.matches('.card-more') || event.target.closest('.card-more');
+//             if (!insideGroup) {
+//                 elements.forEach(element => element.classList.remove('card--active'))
+//             } 
+//         });
+//     });
+// }
 
 
     // раскрытия виджета
@@ -45,25 +80,25 @@ export default function FilterDropdowns() {
         });
     });
 
-    // Клик по авторизованному пользователю
-    const authorizedUser = document.querySelectorAll('.menu__authorized-user'); 
+    // // Клик по авторизованному пользователю
+    // const authorizedUser = document.querySelectorAll('.menu__authorized-user'); 
 
-    for(let menuItem of authorizedUser) {
-        menuItem.addEventListener("click", function() {
-            menuItem.classList.toggle('menu__authorized-user--active');
+    // for(let menuItem of authorizedUser) {
+    //     menuItem.addEventListener("click", function() {
+    //         menuItem.classList.toggle('menu__authorized-user--active');
           
-        });
-    }
+    //     });
+    // }
 
-    // клик в блоке История платежей > Настройки > Выбор меню
-    const historyBtn = document.querySelectorAll('.history-form-btn');
+    // // клик в блоке История платежей > Настройки > Выбор меню
+    // const historyBtn = document.querySelectorAll('.history-form-btn');
 
-    for(let historyItem of historyBtn) {
-        historyItem.addEventListener("click", function() {
-            historyItem.classList.toggle('history-form--active');
+    // for(let historyItem of historyBtn) {
+    //     historyItem.addEventListener("click", function() {
+    //         historyItem.classList.toggle('history-form--active');
           
-        });
-    }
+    //     });
+    // }
 
         // Клик в блоке Истории операций
         const btnActive = document.querySelectorAll('.history-form__btn');

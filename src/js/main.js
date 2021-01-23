@@ -32,5 +32,18 @@ var sidebar = new StickySidebar('#sidebar', {
     innerWrapperSelector: '.sidebar__inner',
     topSpacing: 0,
     bottomSpacing: 0,
-    // defaultPosition: fixed
+    minWidth: 576
 });
+
+
+let inputChexbox = document.querySelector('.history-form__group-chexbox');
+
+let checkboxItem = document.querySelector('.card-checkbox-input');
+console.log(inputChexbox);
+console.log(checkboxItem);
+
+function showChexbox() {
+    console.log("Привет")
+};
+showChexbox()
+// document.querySelectorAll('input[type="checkbox"]:checked').length

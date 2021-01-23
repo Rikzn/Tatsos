@@ -26,6 +26,7 @@ $svg-sitebar: #fff;
             @include breakpoint(small-mobile) {
                 display: block;
                 margin-right: auto;
+                width: 14.6rem;
         }
     }
 
@@ -212,8 +213,8 @@ $svg-sitebar: #fff;
         display: flex;
         align-items: center;
         @include breakpoint(small-mobile) {
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 2rem;
+            padding-right: 2rem;
             width: 100%;
             align-items: baseline;
         }
@@ -232,6 +233,8 @@ $svg-sitebar: #fff;
         position: relative;
         @include breakpoint(small-mobile) {
             color: #fff;
+            margin-right: 1.5rem;
+            top: 0.6rem;
         }
         input {
             position: absolute;
@@ -368,11 +371,14 @@ $svg-sitebar: #fff;
         cursor: pointer;
         align-items: center;
         padding-left: 0.6rem;
-        /* 6px */
-        overflow: hidden;
         transition: 0.4s;
         @include breakpoint(small-mobile) {               
             color: #fff;
+            padding-left: 0;
+            svg {
+                width: 2rem;
+                height: 2rem;
+                }
             }
         
         &-name {
@@ -387,15 +393,16 @@ $svg-sitebar: #fff;
             &-dropdown {
                 position: absolute;
                 left: -5rem;
-                /* -50px */
                 top: 0;
                 padding-top: 4rem;
-                /* 40px */
                 opacity: 0;
                 transition: 0.3s;
                 z-index: -1;
                 height: 0;
-
+                overflow: hidden;
+                @include breakpoint(small-mobile) {               
+                    color: #000;
+                    }
                 &-inner {
                     display: flex;
                     flex-direction: column;
@@ -427,29 +434,6 @@ $svg-sitebar: #fff;
                 }
             }
         }
-
-        &--active {
-            transition: 0.4s;
-            overflow: visible;
-            svg {
-                transform: rotate(-180deg);
-                transition: 0.4s;
-            }
-            .menu__authorized-user {
-                &-more {
-                    &-dropdown {
-                        opacity: 1;
-                        transition: 0.4s;
-                        z-index: 3;
-                        height: auto;
-                        &-inner {
-                            height: auto;
-                            transition: 0.4s;
-                        }
-                    }
-                }
-            }
-        }
     }
 
     &__wrapper {
@@ -457,7 +441,7 @@ $svg-sitebar: #fff;
         justify-content: space-between;
         width: 100%;
         // max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
-        max-width: 870px;
+        max-width: 87rem;
         margin: 0 auto;
         padding: 0 var(--content-padding);
         @supports (width: max(20vw, 100px)) {
@@ -491,7 +475,7 @@ $svg-sitebar: #fff;
                 color: #000000;
                 transition: 0.3s;
                 @include breakpoint(small-mobile) {
-                    color: inherit;
+                    color: rgba($color: #fff, $alpha: 0.4)
                 }
             }
 

@@ -4,6 +4,7 @@
         right: -1rem;
         @include breakpoint(small-mobile) {
             margin-top: 3.7rem;
+            right: 0;
             }
     }
     &__wrapper {
@@ -60,14 +61,23 @@
             opacity: 0.8;
             transition: 0.3s;
         }
-        @include breakpoint(small-tablet) {
+        @include breakpoint(small-mobile) {
             margin-bottom: 0;
-            margin-right: 0;
-            width: 25%;
+            margin-right: 20px;
+            width: 20%;
             align-items: center;
             height: 97px;
             justify-content: end;
+            &:nth-child(3n) {
+                margin-right: 20px;
+            }
+            &:nth-child(4) {
+                margin-right: 0;
+            }
         }
+        @include breakpoint(supersmall-mobile) {
+            margin-right: 18px;
+             }
     }
 
     &-content {
@@ -85,6 +95,10 @@
     }
 
     &-img {
+        img {
+            width: 4.8rem;
+            height: 4.8rem;
+        }
         @include breakpoint(desktop) {
             width: 4rem;
         }

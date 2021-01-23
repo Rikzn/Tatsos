@@ -36,11 +36,17 @@
         transition: 0.3s;
         &:hover {
             transition: 0.3s;
-            transform: translateY(-3px);
+            @include breakpoint(small-mobile) {
+                transform: translateY(0);
+                }
             &::before {
                 height: 0.3rem;
                 transition: 0.3s;
                 background-color: #2E2E2E;
+                @include breakpoint(small-mobile) {
+                    height: 0.1rem;
+                    background-color: #C1C1C1;
+                    }
             }
         }
         &::before {
@@ -66,13 +72,9 @@
 
     &-img {
         margin-right: 1.4rem;
-
-        /* 14px */
         svg {
             width: 2.4rem;
-            /* 24px */
             height: 2.4rem;
-            /* 24px */
         }
     }
 

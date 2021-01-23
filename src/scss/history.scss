@@ -18,7 +18,7 @@
         margin-bottom: 3.2rem;
         @include breakpoint(small-mobile) {
             width: 100%;
-            margin-bottom: 1.2rem;
+            margin-bottom: 3rem;
             }
         /* 32px */
         svg {
@@ -67,8 +67,27 @@
             display: flex;
             width: 100%;
             margin-top: 2.3rem;
-
-            /* 23px */
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #F5F5F5;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 103%;
+                height: 140%;
+                border-radius: 21px;
+                z-index: -1;
+                opacity: 0;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+            }
             &__img {
                 margin-right: 1.7rem;
                 /* 17px */
@@ -87,11 +106,9 @@
                     /* 22px */
                 }
             }
-
             &__header {
                 margin-right: auto;
             }
-
             &__title {
                 font-weight: 500;
                 font-size: 1.6rem;
@@ -102,12 +119,9 @@
                     max-width: 173px;
                     }
             }
-
             &__subtitle {
                 font-size: 1.2rem;
-                /* 12px */
                 line-height: 1.4rem;
-                /* 14px */
                 color: #C1C1C1;
             }
 
@@ -117,9 +131,7 @@
                 &--title {
                     font-weight: 500;
                     font-size: 1.6rem;
-                    /* 16px */
                     line-height: 1.9rem;
-                    /* 19px */
                     color: #2E2E2E;
                 }
 
@@ -129,14 +141,10 @@
                     bottom: 0;
                     background-color: #F5F5F5;
                     border-radius: 1rem;
-                    /* 10px */
                     padding: 0.1rem 0.4rem 0.1rem 0.3rem;
-                    /* 1px 4px 1px 3px */
                     font-weight: 500;
                     font-size: 1rem;
-                    /* 10px */
                     line-height: 1.2rem;
-                    /* 12px */
                     color: #C1C1C1;
                 }
             }
@@ -148,28 +156,21 @@
         align-items: center;
         margin-bottom: 4.4rem;
         @include breakpoint(small-mobile) {
-            overflow-y: scroll;
-            padding-top: 15px;
+            overflow-x: scroll;
+            overflow-y: visible;
             margin-bottom: 3.3rem;
         }
         &__btn {
             background-color: #F5F5F5;
             border-radius: 1rem;
-            /* 10px */
             padding: 0.7rem 1rem;
-            /* 7px 10px */
             font-weight: 500;
             font-size: 1.2rem;
-            /* 12px */
             line-height: 1.4rem;
-            /* 14px */
             color: #2E2E2E;
             margin-right: 1.5rem;
-            /* 15px */
             transition: 0.3s;
             max-width: 14rem;
-
-            /* 140px */
             &--active {
                 background-color: #2E2E2E;
                 color: #F5F5F5;
@@ -181,7 +182,6 @@
                 }
             }
         }
-
         &-setting {
             padding: 0.5rem 1rem;
             position: relative;
@@ -202,6 +202,7 @@
             }
             @include breakpoint(small-mobile) {
                 margin-right: 0.9rem;
+                padding: .3rem 0.9rem;
             }
             svg {
                 width: 2rem;
@@ -239,6 +240,10 @@
                     }
                 &--wrapper {
                     display: flex;
+                    @include breakpoint(small-mobile) {
+                        display: flex;
+                        flex-wrap: wrap;
+                                }
                     input {
                         background-color: #F5F5F5;
                         border-radius: 1rem;
@@ -259,22 +264,30 @@
                         white-space: pre;
                         &:last-child {
                             margin-right: 0;
-                }
-                }
+                        }
+                        @include breakpoint(small-mobile) {
+                            margin-bottom: 1rem;
+                                 }
+                    }
 
                 
             }
             .card {
-               &-content {
-                   &__subtitle {
-                    color: rgba($color: #2E2E2E, $alpha: 0.6);
-                   }
-                   &__title {
-                    color: #2E2E2E;
-                    span {
+                &-item {
+                    @include breakpoint(small-mobile) {
+                        height: 6.2rem;
+                          }
+                }    
+                &-content {
+                    &__subtitle {
                         color: rgba($color: #2E2E2E, $alpha: 0.6);
                     }
-                   }
+                    &__title {
+                        color: #2E2E2E;
+                        span {
+                            color: rgba($color: #2E2E2E, $alpha: 0.6);
+                        }
+                    }
                }
                &-checkbox {
                    margin-left: auto;
@@ -333,7 +346,6 @@
         }
         &__group {
             position: relative;
-
             &-cross {
                 font-weight: 500;
                 font-size: 1.2rem;
@@ -356,6 +368,16 @@
                 }
             }
             &-btn {
+                background-color: #F5F5F5;
+                border-radius: 1rem;
+                padding: 0.7rem 1rem;
+                font-weight: 500;
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+                color: #2E2E2E;
+                margin-right: 1.5rem;
+                transition: 0.3s;
+                max-width: 14rem;
                 svg {
                     width: 1.6rem;
                     height: 1.6rem;
@@ -366,14 +388,16 @@
             &-dropdown {
                 position: absolute;
                 padding-top: 1.5rem;
-                left: -298%;
+                left: 0;
                 z-index: -3;
                 opacity: 0;
                 height: 0.1rem;
                 overflow: hidden;
                 border-radius: 1.5rem;
                 transition: 0.2s;
-
+                @include breakpoint(small-mobile) {
+                    left: -298%;
+                }
                 &-inner {
                     box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem rgba(0, 0, 0, 0.0196802);
                     border-radius: 1.5rem;
@@ -386,7 +410,7 @@
                 }
                 .card {
                     &-item {
-                        width: 48.7rem;
+                        width: 32.7rem;
                     }
                     &-content {
                         &__subtitle {
@@ -435,6 +459,7 @@
             }
         }
         input {
+            text-align: center;
             @include breakpoint(small-mobile) {
                 width: 140px;
             }

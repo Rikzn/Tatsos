@@ -2,25 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7ee71f3-ff61-48df-b553-bd341d8f084c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/css/styles.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/styles.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debit-card.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/debit-card.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/open-a-new-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/open-a-new-product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/history.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/widget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/payment-history.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/payment-history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/payments-and-transfers-inside.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/payments-and-transfers-inside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/payments-and-transfers.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/payments-and-transfers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/templates.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/templates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/click.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/click.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/components/header.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/header.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/partials/components/history.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/history.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/components/open-a-new-product.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/open-a-new-product.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/components/payments.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/payments.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/components/menu.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/menu.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/_card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_card.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/_menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_menu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_open-a-new-product.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_open-a-new-product.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_payments.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_payments.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_sidebar-nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_sidebar-nav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_templates.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_templates.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611167053480</updated>
       <workItem from="1611167056787" duration="1565000" />
+      <workItem from="1611326835962" duration="195000" />
     </task>
     <servers />
   </component>
