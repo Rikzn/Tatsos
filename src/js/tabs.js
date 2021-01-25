@@ -1,6 +1,6 @@
 // Таб на странице "Открыт новый продукт"
 const tabsBtn = document.querySelectorAll(".sidebar-nav__link");
-const tabsItems = document.querySelectorAll(".open-a-new-product__wrapper");
+const tabsItems = document.querySelectorAll(".js-tabs-item");
 
 tabsBtn.forEach(function(item) {
     item.addEventListener("click", function() {
@@ -13,11 +13,11 @@ tabsBtn.forEach(function(item) {
                 item.classList.remove('sidebar-nav__link--active');
             });
             tabsItems.forEach(function(item) {
-                item.classList.remove('open-a-new-product__wrapper--active');
+                item.classList.remove('js-tabs-item--active');
             });
     
             currentBtn.classList.add('sidebar-nav__link--active');
-            currentTab.classList.add('open-a-new-product__wrapper--active');
+            currentTab.classList.add('js-tabs-item--active');
         }
 
         

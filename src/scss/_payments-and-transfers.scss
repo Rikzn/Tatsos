@@ -2,86 +2,16 @@
     &__inner {
         max-width: 56.1rem;
     }
-
-}
-
-.search {
-    padding-top: 21.8rem;
-    padding-bottom: 6rem;
-    &-form {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        border-bottom: 0.1rem solid #C1C1C1;
-        transition: 0.3s;
-            input {
-                font-weight: 200;
-                font-size: 4.8rem;
-                line-height: 5.7rem;
-                color: #2E2E2E;
-                padding-bottom: 1.1rem;
-            }
-            svg {
-                width: 2.4rem;
-                height: 2.4rem;
-                fill: #C1C1C1;
-            }
-        }
-
-    &-btn {
-        margin-top: 2rem;
-
-        &__link {
-            padding: 0.5rem 1rem;
-            background-color: #F5F5F5;
-            border-radius: 1rem;
-            font-weight: 500;
-            font-size: 1.2rem;
-            line-height: 1.4rem;
-            cursor: pointer;
-        }
-    }
-    &__close {
-        display: none;
-    }
-
-}
-
-.categories {
-    padding-top: 3rem;
-
     &__title {
+        padding-top: 12rem;
         font-weight: 500;
-        font-size: 2.4rem;
-        line-height: 2.4rem;
-        margin-bottom: 1rem;
+        font-size: 40px;
+        line-height: 48px;
+        color: #2E2E2E;
     }
 
-    &__inner {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    &__img {
-        margin-right: 1.2rem;
-
-        svg {
-            width: 3.2rem;
-            height: 3.2rem;
-        }
-    }
-
-    &__card {
-        display: flex;
-        align-items: center;
-        margin-top: 2rem;
-        flex-basis: 50%;
-        cursor: pointer;
-    }
-
-    &__content {
-        font-weight: 500;
-        font-size: 1.6rem;
-        line-height: 1.9rem;
-    }
 }
+
+
+
+

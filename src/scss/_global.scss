@@ -8,11 +8,11 @@
 
 :root {
     --max-container-width: 124rem;
-    --content-padding: 6rem;
+    --content-padding: 1rem;
     --primary-color: #13B17C;
     @include breakpoint(desktop) {
-        --content-padding: 5rem;
-    }
+        --content-padding: 3rem;    
+        }
     @include breakpoint(small-mobile) {
         --content-padding: 2rem;
         }
@@ -251,6 +251,9 @@ select:-webkit-autofill:focus {
 }
 
 .active {
+    @include breakpoint(small-mobile) {
+        margin-bottom: 450px;    
+            }
     .card {
         &-more {
            opacity: 1;
@@ -299,6 +302,9 @@ select:-webkit-autofill:focus {
                 overflow: visible;
                 opacity: 1;
                 z-index: 99;
+                @include breakpoint(small-mobile) {
+                    width: 280px;        
+                    }
             }
         }
     }

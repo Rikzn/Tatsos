@@ -29,4 +29,18 @@
             font-weight: 800;
         }
     }
+    @include breakpoint(small-mobile) {
+        margin: 0;
+        &__inner {
+            display: flex;
+            overflow-x: scroll;
+        }
+        &__link {
+            white-space: nowrap;
+            &:first-child {
+                padding: 0;
+                padding-left: 0;
+            }
+        }
+      }
 }

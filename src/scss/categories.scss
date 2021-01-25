@@ -1,0 +1,38 @@
+.categories {
+    padding-top: 3rem;
+
+    &__title {
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 2.4rem;
+        margin-bottom: 1rem;
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        margin-right: 1.2rem;
+
+        svg {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        flex-basis: 50%;
+        cursor: pointer;
+    }
+
+    &__content {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+}

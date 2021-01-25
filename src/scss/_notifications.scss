@@ -1,0 +1,43 @@
+.notifications {
+    padding-top: 120px;
+    color: #2E2E2E;
+    &__wrapper {
+        display: flex;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 50px;
+    }
+    &-content {
+        margin-bottom: 50px;
+        h3 {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 10px;
+            max-width: 560px;
+        }
+        span {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 21px;
+            color: #C1C1C1;
+            max-width: 560px;
+        }
+    }
+    .sidebar-nav {
+        margin-top: 0;
+        &__link {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 21px;
+            color: #c1c1c1;
+            width: 250px;
+            &--active {
+                color: #2E2E2E;
+            }
+        }
+    }
+}

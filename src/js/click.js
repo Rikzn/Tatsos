@@ -11,8 +11,7 @@ export default function FilterDropdowns() {
             
             if (!element.classList.contains('active')) {
                 elements.forEach(element => element.classList.remove('active'))
-                element.classList.add('active');
-                
+                element.classList.add('active'); 
             } else {
                 elements.forEach(element => element.classList.remove('active'))
                 element.classList.remove('active');

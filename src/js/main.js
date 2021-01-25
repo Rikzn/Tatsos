@@ -1,10 +1,13 @@
 import StickySidebar from 'sticky-sidebar-v2';
+import inputmask from 'inputmask';
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
 import slider from './slider';
 import click from './click';
 import datefilter from './datefilter';
 import tabs from './tabs'; 
+import select from './select';
+import { async } from 'regenerator-runtime';
 
 
 
@@ -12,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
     click();
+    // select();
 });
 
 window.addEventListener('load', function() {
@@ -36,14 +40,67 @@ var sidebar = new StickySidebar('#sidebar', {
 });
 
 
-let inputChexbox = document.querySelector('.history-form__group-chexbox');
 
-let checkboxItem = document.querySelector('.card-checkbox-input');
-console.log(inputChexbox);
-console.log(checkboxItem);
+// Отправка данных у форм
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('form');
+    form.addEventListener('submit', formSend);
 
-function showChexbox() {
-    console.log("Привет")
-};
-showChexbox()
-// document.querySelectorAll('input[type="checkbox"]:checked').length
+    async function formSend(e) {
+        e.preventDefault();
+
+        let error = formValidate(form);
+        
+        let formData = new FormData(form);
+
+        if (error === 0) {
+            form.classList.add('contact-overlay--active');
+            let response = await fetch('sendmail.php', {
+                method: 'POST',
+                body: FormData
+            });
+            if (response.ok) {
+                let result = await response.json();
+                alert(result.message);
+                formPreview.innerHTML = '';
+                form.reset();
+            }else {
+                // alert('Ошибка');
+            }
+        } else {
+            
+        }
+    }
+    
+    function formValidate(form) {
+        let error = 0;
+        let formReq = document.querySelectorAll('._req');
+
+        for (let index = 0; index < formReq.length; index++) {
+            const input = formReq[index];
+            formRemoveError(input);
+
+            if (input.classList.contains('_text')){
+                if (input.value === '') {
+                    formAddError(input);
+                    error++;
+                }
+            }
+        }
+        return error;
+    }
+    function formAddError(input) {
+        input.parentElement.classList.add('_error');
+        input.classList.add('_error');
+    }
+    function formRemoveError(input) {
+        input.parentElement.classList.remove('_error');
+        input.classList.remove('_error');
+    }
+});
+
+// Маска для банковской карточки
+
+// let cardInput = document.querySelectorAll('input[type="number"]');
+// var im = new Inputmask('0000 0000 0000 0000');
+// im.mask(cardInput);

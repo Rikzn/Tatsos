@@ -1,7 +1,5 @@
 .history {
     padding-bottom: 1rem;
-
-    /* 10px */
     &__inner {
         display: flex;
         flex-direction: column;
@@ -153,12 +151,15 @@
 
     &-form {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         margin-bottom: 4.4rem;
         @include breakpoint(small-mobile) {
-            overflow-x: scroll;
+            margin-bottom: 3rem;
             overflow-y: visible;
-            margin-bottom: 3.3rem;
+            overflow-x: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
         &__btn {
             background-color: #F5F5F5;
@@ -226,6 +227,9 @@
                 background-color: #fff;
                 color: #C1C1C1;
                 padding: 0 1.4rem 3rem 3rem;
+                @include breakpoint(small-mobile) {
+                    box-shadow:none;
+                    }
             }
             &__item {
                 display: flex;
@@ -353,7 +357,7 @@
                 display: flex;
                 align-items: center;
                 @include breakpoint(small-mobile) {
-                    min-width: 122px;
+                    white-space: nowrap;
                  }
                 span {
                     font-weight: 500;
@@ -396,7 +400,7 @@
                 border-radius: 1.5rem;
                 transition: 0.2s;
                 @include breakpoint(small-mobile) {
-                    left: -298%;
+                    left: -113%;
                 }
                 &-inner {
                     box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem rgba(0, 0, 0, 0.0196802);
@@ -406,11 +410,16 @@
                     padding: 0 1.4rem 3rem 3rem;
                     display: flex;
                     flex-direction: column;
-                    
+                    @include breakpoint(small-mobile) {
+                        box-shadow:none;
+                    }
                 }
                 .card {
                     &-item {
                         width: 32.7rem;
+                        @include breakpoint(small-mobile) {
+                            width: auto;        
+                            }
                     }
                     &-content {
                         &__subtitle {
@@ -467,5 +476,18 @@
     }
     &__add {
         color: #05B135;
+    }
+    .card {
+        &-content {
+            &__subtitle {
+                font-size: 1rem;
+            }
+            &__title {
+                font-size: 1.5rem;
+                span {
+                    font-size: 1rem;
+                }
+            }
+        }
     }
 }
