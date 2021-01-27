@@ -18,13 +18,8 @@
     }
     &-content {
         &__subtitle {
-            font-weight: 500;
-            font-size: 4rem;
-            line-height: 4.8rem;
-            color: #2E2E2E;
             margin-bottom: 0.5rem;
             max-width: 40.3rem;
-            white-space: nowrap;
             @include breakpoint(small-mobile) {
                 white-space: inherit;
                 font-size: 3rem;

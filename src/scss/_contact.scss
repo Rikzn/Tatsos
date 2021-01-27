@@ -12,9 +12,6 @@
         flex-grow: 1;
     }
     &__title {
-        font-weight: 500;
-        font-size: 2.5em;
-        line-height: 3em;
         margin-bottom: 3.125em;
         @include breakpoint(small-mobile) {
             margin-bottom: 0;      
@@ -30,6 +27,10 @@
             margin-bottom: 1.3125em;
         }
         &__inner {
+            margin-bottom: 40px;
+            &:last-child {
+                margin-bottom: 40px;
+            }
             input {
                 padding-bottom: 0.8125em;
                 border-bottom: 0.0625em solid #C1C1C1;
@@ -103,13 +104,6 @@
             &:hover {
                 background-color:#F5F5F5;
                 transition: 0.3s;
-            }
-        }
-        &--active {
-            .contact-select {
-                &__body {
-                    display: block;
-                }
             }
         }
     }

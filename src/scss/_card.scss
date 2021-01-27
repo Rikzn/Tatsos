@@ -203,4 +203,124 @@
             border-radius: 5px;
         }
     }
+    &-selection {
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+        position: relative;
+        &__item {
+            display: flex;
+            align-items: center;
+            
+            background-color: #F5F5F5;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.5s;
+            &--score {
+                padding: 1.4rem 2rem;
+            }
+            &--tel {
+                padding: 0.8rem;
+                border-radius: 23px;
+            }
+        }
+        &__img {
+            max-width: 7.1rem;
+            border-radius: 10px;
+            margin-right: 20px;
+            &--tel {
+                margin-right: 1.1rem;
+                width: 4.8rem;
+                height: 4.8rem;
+                background-color: #F5F5F5;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 100%;
+                }
+                svg {
+                    fill: #C1C1C1;
+                    z-index: 1;
+                    margin: 0 auto;
+                }
+            }
+        }
+        &__inner {
+            margin-top: 20px;
+        }
+        &__link {
+            margin-left: auto;
+        }
+        &__title {
+            font-size: 14px;
+            line-height: 17px;
+            color: rgba($color: #2E2E2E, $alpha: 0.6);
+            &--tel {
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 18px;
+                color: #2E2E2E;
+            }
+        }
+        &__subtitle {
+            font-size: 20px;
+            line-height: 24px;
+            color: #2E2E2E;
+            margin-top: 0.5rem;
+            span {
+                color: rgba($color: #2E2E2E, $alpha: 0.6);
+            }
+            &--tel {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 18px;
+                color: #C1C1C1;
+            }
+        }
+        &__header {
+            border-radius: 15px;
+        }
+        &__body {
+            margin-top: 10px;
+            display: none;
+            box-shadow: 0px 13.7866px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 7.37098px 17.869px rgba(0, 0, 0, 0.0417275), 0px 4.13211px 10.0172px rgba(0, 0, 0, 0.035), 0px 2.19453px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 0.913195px 2.21381px rgba(0, 0, 0, 0.0196802);
+            border-radius: 15px;
+            position: absolute;
+            width: 100%;
+            z-index: 99;
+            .card-selection {
+                &__item {
+                    background-color: #fff;
+                    &:hover {
+                        background-color: #F5F5F5;
+                    }
+                }
+                &__link {
+                    display: none;
+                    transition: 0.5s;
+                }
+            }
+        }
+        &__input {
+            height: 57px;
+            margin-top: 2rem;
+            font-size: 48px;
+            line-height: 57px;
+            border-bottom: 1px solid #2E2E2E;
+            &::-webkit-input-placeholder {
+                font-weight: 200;
+                font-size: 48px;
+                line-height: 57px;
+                color: #C1C1C1;
+            }
+        }
+        &__descr {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            color: #C1C1C1;
+            margin-top: 1rem;
+        }
+        
+    }
 }

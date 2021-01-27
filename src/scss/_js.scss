@@ -1,19 +1,36 @@
-.js-tabs-item {
-    opacity: 0;
-    width: 0;
-    position: relative;
-    z-index: -2;
-    transition: 0.3s;
-    @include breakpoint(small-mobile) {
-        display: none;
-      }
-    &--active {
-        width: auto;
-        opacity: 1;
-        transition: 0.5s;
-        background-color: #fff;
-        z-index: 2;
-        display: block;
-        transition: 0.3s;
+.js {
+    &-select {
+            &--active {
+                .card-selection {
+                        &__header {
+                            .card-selection__item {
+                                background-color: #fff;
+                                box-shadow: 0px 13.7866px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 7.37098px 17.869px rgba(0, 0, 0, 0.0417275), 0px 4.13211px 10.0172px rgba(0, 0, 0, 0.035), 0px 2.19453px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 0.913195px 2.21381px rgba(0, 0, 0, 0.0196802);
+                                transition: 0.5s;
+                            }
+                        }
+                        &__body {
+                            display: block;
+                        }
+                    }
+            }
+    }
+    &-tabs-item {
+        opacity: 0;
+        width: 0;
+        position: relative;
+        z-index: -2;
+        // display: none;
+        @include breakpoint(small-mobile) {
+            display: none;
+          }
+        &--active {
+            width: auto;
+            opacity: 1;
+            background-color: #fff;
+            z-index: 2;
+            display: block;
+            transition: 0.7s;
+        }
     }
 }

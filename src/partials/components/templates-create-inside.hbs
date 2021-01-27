@@ -14,19 +14,117 @@
                         <h4 class="templates-create-new-form__title">
                            Название шаблона 
                         </h4>
-                        <input type="text" placeholder="За мобильную связь"> 
+                        <input class="templates-create-new-form__input" type="text" placeholder="За мобильную связь"> 
                     </div>
                     <div class="templates-create-new-form__item">
                         <h4 class="templates-create-new-form__title">
                            Номер телефона 
                         </h4>
-                        <input type="text" placeholder="+7 (__) ___ __ __"> 
+                        <input class="templates-create-new-form__input js-phone-mask" type="text" placeholder="+7 (___) ___ __ __"> 
                     </div>
                     <div class="templates-create-new-form__checkbox">
                             <input type="checkbox" class="checkbox-input" id="templates-checkbox">
                             <label for="templates-checkbox" class="checkbox-label">
                             </label>
                         <span>Создать автоплатеж</span>
+                    </div>
+                    <div class="templates-create-new-select">
+                        <div class="templates-create-new-select__inner">
+                            <div class="contact-form__title">Переодичность</div>
+                            <select class="js-choice">
+                                <option value="Раз в неделю">Раз в неделю</option>    
+                                <option value="">Раз в день</option>
+                                <option value="">Раз в месяц</option>
+                            </select>
+                        </div>
+                        <div class="templates-create-new-select__inner">
+                            <div class="contact-form__title">День недели</div>
+                            <select class="js-choice">
+                                <option value="Суббота">Суббота</option>    
+                                <option value="">Вторник</option>
+                                <option value="">Среда</option>
+                                <option value="">Четверг</option>
+                                <option value="">Пятница</option>
+                                <option value="">Воскресенье</option>
+                            </select>
+                        </div>
+                        <div class="templates-create-new-select__inner">
+                            <div class="contact-form__title">Повторять до</div>
+                            <select class="js-choice">
+                                <option value="Бессрочно">Бессрочно</option>    
+                                <option value="">Несколько раз</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-selection">
+                        <div class="card-selection__title">Откуда</div>
+                        <div class="card-selection__inner js-select">
+                            <div class="card-selection__header js-select__header">
+                                <div class="card-selection__item card-selection__item--score js-select__current">
+                                    <div class="card-selection__img">
+                                        <img src="/img/card-selection.png" alt="card-selection">
+                                    </div>
+                                    <div class="card-selection__content">
+                                        <div class="card-selection__title">Дебетовая карт *1256</div>
+                                        <div class="card-selection__subtitle">90 789,<span>23 ₽</span></div>
+                                    </div>
+                                    <div class="card-selection__link">
+                                        <img src="/img/select.png" alt="select">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-selection__body js-select--active">
+                                <div class="card-selection__item card-selection__item--score js-select__item">
+                                    <div class="card-selection__img">
+                                        <img src="/img/card-selection.png" alt="card-selection">
+                                    </div>
+                                    <div class="card-selection__content">
+                                        <div class="card-selection__title">Дебетовая карт *1256</div>
+                                        <div class="card-selection__subtitle">90 789,<span>23 ₽</span></div>
+                                    </div>
+                                    <div class="card-selection__link">
+                                        <img src="/img/select.png" alt="select">
+                                    </div>
+                                </div>
+                                <div class="card-selection__item card-selection__item--score js-select__item">
+                                    <div class="card-selection__img">
+                                        <img src="/img/card-selection.png" alt="card-selection">
+                                    </div>
+                                    <div class="card-selection__content">
+                                        <div class="card-selection__title">Кредитная карт *1256</div>
+                                        <div class="card-selection__subtitle">90 789,<span>23 ₽</span></div>
+                                    </div>
+                                    <div class="card-selection__link">
+                                        <img src="/img/select.png" alt="select">
+                                    </div>
+                                </div>
+                                <div class="card-selection__item card-selection__item--score js-select__item">
+                                    <div class="card-selection__img">
+                                        <img src="/img/card-selection.png" alt="card-selection">
+                                    </div>
+                                    <div class="card-selection__content">
+                                        <div class="card-selection__title">Чужая карт *1256</div>
+                                        <div class="card-selection__subtitle">90 789,<span>23 ₽</span></div>
+                                    </div>
+                                    <div class="card-selection__link">
+                                        <img src="/img/select.png" alt="select">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="card-selection">
+                        <div class="card-selection__title">Сумма</div>
+                        <input type="text" class="card-selection__input js-numeric-input" placeholder="0 ₽">
+                    </div>
+                    <div class="templates-create-new-form__btn">
+                        <button class="btn btn--off">
+                            Создать
+                        </button>
+                        <button class="btn ">
+                            Отмена
+                        </button>
                     </div>
                  </form>
             </div>

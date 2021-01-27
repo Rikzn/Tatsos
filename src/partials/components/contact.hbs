@@ -2,28 +2,15 @@
     <div class="container">
         <div class="contact__wrapper">
             <div class="contact__inner">
-                <div class="contact__title">Связаться</div>
+                <div class="contact__title title">Связаться</div>
                 <form id="form" action="#" class="contact-form">
                     <div class="contact-form__inner">
-                        <div class="contact-form__title">Тема обращения</div>
-                        <div class="contact-select">
-                            <div class="contact-select__header">
-                                <span class="contact-select__current">Сообщить об ошибке</span>
-                                <div class="contact-select__icon">
-                                    <svg>
-                                        <use xlink:href="#arrow__select"/>
-                                    </svg>
-                                    <svg>
-                                        <use xlink:href="#arrow__select"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="contact-select__body">
-                                <div class="contact-select__item">Запросить обратную связь</div>
-                                <div class="contact-select__item">Запросить обратную связь</div>
-                                <div class="contact-select__item">Запросить обратную связь</div>
-                            </div>
-                        </div>
+                        <select class="js-choice contact-select">
+                            <option value="Сообщить об ошибке">Сообщить об ошибке</option>
+                            <option>Сообщить об ошибке нам</option>
+                            <option>Сообщить об ошибке всем</option>
+                            <option>Сообщить об ошибке никому</option>
+                        </select>
                     </div>
                     <div class="contact-form__inner">
                         <div class="contact-form__title">Сообщение</div>
