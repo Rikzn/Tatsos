@@ -1,0 +1,9 @@
+.transfer {
+    &-by-card-number {
+        padding-top: 12rem;
+        padding-bottom: 9rem;
+        &__inner {
+            max-width: 560px;
+        }
+    }
+}

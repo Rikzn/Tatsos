@@ -2930,12 +2930,10 @@ select:-webkit-autofill:focus {
       z-index: -1; }
     .card-more__inner {
       padding: 0.5rem;
-      /* 5px */
       background: #FFFFFF;
       -webkit-box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem rgba(0, 0, 0, 0.0196802);
               box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem rgba(0, 0, 0, 0.0196802);
       border-radius: 1rem;
-      /* 10px */
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -2946,18 +2944,14 @@ select:-webkit-autofill:focus {
       .card-more__inner a {
         font-weight: 500;
         font-size: 1.6rem;
-        /* 16px */
         line-height: 1.9rem;
-        /* 19px */
         padding: 0.5rem 0.9rem 0.7rem 0.9rem;
-        /* 5px 9px 7px 9px */
         -webkit-transition: 0.3s;
         transition: 0.3s;
         color: #2E2E2E; }
         .card-more__inner a:hover {
           background: #F5F5F5;
           border-radius: 0.7rem;
-          /* 7px */
           -webkit-transition: 0.3s;
           transition: 0.3s; }
     .card-more--active {
@@ -3023,7 +3017,14 @@ select:-webkit-autofill:focus {
       background-color: #fff;
       position: relative;
       padding: 10px 15px;
-      border-radius: 5px; }
+      border-radius: 5px;
+      font-size: 24px;
+      line-height: 29px;
+      color: #2E2E2E; }
+    .card-mask--active {
+      background-image: url(/img/card-tinkoff.png);
+      background-repeat: no-repeat;
+      background-position: center center; }
   .card-selection {
     margin-top: 5rem;
     margin-bottom: 4rem;
@@ -3118,7 +3119,8 @@ select:-webkit-autofill:focus {
       margin-top: 2rem;
       font-size: 48px;
       line-height: 57px;
-      border-bottom: 1px solid #2E2E2E; }
+      border-bottom: 1px solid #2E2E2E;
+      padding-bottom: 10px; }
       .card-selection__input::-webkit-input-placeholder {
         font-weight: 200;
         font-size: 48px;
@@ -3130,6 +3132,41 @@ select:-webkit-autofill:focus {
       line-height: 18px;
       color: #C1C1C1;
       margin-top: 1rem; }
+  .card-replenishment__title {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    margin-bottom: 3rem; }
+  .card-replenishment-form__title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: #C1C1C1;
+    margin-bottom: 2rem; }
+  .card-replenishment-form__input {
+    font-weight: 200;
+    font-size: 4.8rem;
+    line-height: 5.7rem;
+    border-bottom: 0.1rem solid #2E2E2E;
+    margin-bottom: 1rem;
+    position: relative; }
+    .card-replenishment-form__input::-webkit-input-placeholder {
+      color: #C1C1C1; }
+  .card-replenishment-form__subtitle {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: #C1C1C1; }
+  .card-replenishment-form__item {
+    margin-bottom: 4rem; }
+  .card-replenishment-form__btn {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    border-radius: 2rem;
+    background-color: #F5F5F5;
+    padding: 2rem 7.6rem;
+    color: #2E2E2E; }
 
 .Payments-and-transfers__inner {
   max-width: 56.1rem; }
@@ -4446,7 +4483,10 @@ select:-webkit-autofill:focus {
   border-radius: 20px;
   margin-right: 2rem;
   -webkit-transition: 0.3s;
-  transition: 0.3s; }
+  transition: 0.3s;
+  display: inline-block;
+  min-width: 200px;
+  text-align: center; }
   .btn:last-child {
     margin-right: 0; }
   .btn:hover {
@@ -4465,7 +4505,13 @@ select:-webkit-autofill:focus {
       color: #C1C1C1; }
   .btn--active {
     background-color: #F1611F;
-    color: #fff; }
+    color: #fff;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .btn--active:hover {
+      background-color: #DD4F0E;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
 
 .phone-translation {
   padding-top: 12rem;
@@ -4570,3 +4616,84 @@ select:-webkit-autofill:focus {
           color: #C1C1C1;
           -webkit-transition: 1s;
           transition: 1s; }
+
+.payment-made {
+  padding-top: 12rem;
+  padding-bottom: 19rem; }
+  .payment-made__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .payment-made__inner {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  .payment-made-props {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-height: 400px; }
+    .payment-made-props__item {
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%; }
+    .payment-made-props__title {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      color: #C1C1C1;
+      margin-top: 3rem; }
+    .payment-made-props__subtitle {
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 20px;
+      color: #2E2E2E;
+      margin-top: 1rem; }
+  .payment-made__link {
+    margin-top: 6rem;
+    display: inline-block;
+    color: #fff; }
+  .payment-made .sidebar-nav {
+    margin-top: 4.5rem; }
+    .payment-made .sidebar-nav__link {
+      white-space: nowrap; }
+
+.total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4.8rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid #C1C1C1; }
+  .total__title {
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 57px;
+    color: #2E2E2E; }
+  .total__subtitle {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #C1C1C1;
+    margin-top: 0.1rem; }
+  .total__img {
+    margin-left: auto;
+    width: 6.4rem;
+    height: 6.4rem; }
+    .total__img img {
+      width: 100%; }
+
+.transfer-by-card-number {
+  padding-top: 12rem;
+  padding-bottom: 9rem; }
+  .transfer-by-card-number__inner {
+    max-width: 560px; }

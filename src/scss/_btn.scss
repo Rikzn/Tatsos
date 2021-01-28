@@ -9,6 +9,9 @@
     border-radius: 20px;
     margin-right: 2rem;
     transition: 0.3s;
+    display: inline-block;
+    min-width: 200px;
+    text-align: center;
     &:last-child {
         margin-right: 0;
     }
@@ -29,5 +32,10 @@
     &--active {
         background-color: #F1611F;
         color: #fff;
+        transition: 0.3s;
+        &:hover {
+            background-color: #DD4F0E;
+            transition: 0.3s;
+        }
     }
 }

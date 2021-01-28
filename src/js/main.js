@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let cardInputs = document.querySelectorAll('.js-card-number');
 cardInputs.forEach(input => {
-    var im = new Inputmask({mask:'9999 9999 9999 9999' });
+    var im = new Inputmask({mask:'9999 9999 9999 9999', placeholder: "0000 0000 0000 0000" });
     im.mask(input);
 });
 

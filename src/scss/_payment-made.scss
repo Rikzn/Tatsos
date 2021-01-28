@@ -1,0 +1,46 @@
+.payment-made {
+    padding-top: 12rem;
+    padding-bottom: 19rem;
+    &__wrapper {
+        display: flex;
+    }
+    &__inner {
+        flex-grow: 1;
+    }
+    &-props {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+        flex-direction: column;
+        max-height: 400px;
+        &__item {
+            flex-basis: 50%;
+            
+        }
+        &__title {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            color: #C1C1C1;
+            margin-top: 3rem;
+        }
+        &__subtitle {
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 20px;
+            color: #2E2E2E;
+            margin-top: 1rem;
+        }
+    }
+    &__link {
+        margin-top: 6rem;
+        display: inline-block;
+        color: #fff;
+    }
+    .sidebar-nav {
+        margin-top: 4.5rem;
+        &__link {
+            white-space: nowrap;
+        }
+    }
+}
