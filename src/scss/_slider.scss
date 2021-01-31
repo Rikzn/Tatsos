@@ -8,7 +8,6 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 2.2rem;
-        /* 22px */
     }
 
     &__header {
@@ -81,9 +80,7 @@
 
     &__inner {
         border-radius: 1.7rem;
-        /* 17px */
-        width: 30rem;
-        /* 300px */
+        height: 170px;
         position: relative;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
     }
@@ -133,10 +130,16 @@
     .swiper-slide {
         width: auto;
     }
+    .slider__inner {
+        
+    }
 }
 
 .swiper-container {
     overflow: visible;
     position: relative;
     z-index: -1;
+    @include breakpoint(small-mobile) {
+        z-index: 99;
+                }
 }

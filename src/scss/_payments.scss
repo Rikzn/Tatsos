@@ -1,6 +1,4 @@
 .operations {
-    padding-top: 12rem;
-    /* 120px */
     display: flex;
     @include breakpoint(small-mobile) {
         display: flex;
@@ -87,10 +85,7 @@
     }
 
     &__title {
-        display: flex;
-        align-items: center;
         transition: 0.2s;
-
         h2 {
             font-weight: 600;
             font-size: 2.4rem;
@@ -144,6 +139,11 @@
                 width: 1.5rem;
             }
         }
+    }
+    .slider__header {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
     }
 }
 

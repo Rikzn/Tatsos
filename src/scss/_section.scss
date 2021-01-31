@@ -1,0 +1,22 @@
+.section {
+    &__inner {
+        display: flex; 
+        padding-bottom: 5.6rem;
+        @include breakpoint(small-mobile) {
+            flex-direction: column-reverse;
+        }
+    }
+    &__left {
+        width: 56rem;
+        @include breakpoint(small-mobile) {
+            width: 100%;
+        }
+    }
+    &__right {
+        width: 21rem;
+        margin-left: auto;
+        @include breakpoint(small-mobile) {
+            width: 100%;
+        }
+    }
+}

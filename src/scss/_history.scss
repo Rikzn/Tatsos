@@ -172,6 +172,20 @@
             margin-right: 1.5rem;
             transition: 0.3s;
             max-width: 14rem;
+            cursor: pointer;
+            &--default {
+                background-color: #F5F5F5;
+                border-radius: 1rem;
+                padding: 0.7rem 1rem;
+                font-weight: 500;
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+                color: #2E2E2E;
+                margin-right: 1.5rem;
+                transition: 0.3s;
+                max-width: 14rem;
+                cursor: pointer;
+            }
             &--active {
                 background-color: #2E2E2E;
                 color: #F5F5F5;
@@ -184,11 +198,11 @@
             }
         }
         &-setting {
-            padding: 0.5rem 1rem;
+            padding: .2rem 0.8rem;
             position: relative;
-            background-color: #F5F5F5;
+            background-color: #f5f5f5;
             border-radius: 1rem;
-            margin-right: 3rem;
+            margin-right: 2.5rem;
             transition: 0.3s;
             cursor: pointer;
             &::before {
@@ -218,7 +232,15 @@
                 opacity: 0;
                 height: 0.1rem;
                 overflow: hidden;
-                transition: 0.2s;
+                transition: opacity 0.1s ease-out 0.1s, all 0.3s;
+                @include breakpoint(small-mobile) {
+                    top: 450px;
+                }
+                &-svg {
+                    width: 13px;
+                    height: 13px;
+                    display: none;
+                }
             }
 
             &__inner {

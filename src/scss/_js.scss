@@ -17,20 +17,23 @@
     }
     &-tabs-item {
         opacity: 0;
-        width: 0;
         position: relative;
         z-index: -2;
-        // display: none;
+        display: none;
         @include breakpoint(small-mobile) {
             display: none;
           }
         &--active {
-            width: auto;
+            // width: auto;
             opacity: 1;
             background-color: #fff;
             z-index: 2;
             display: block;
             transition: 0.7s;
         }
+    }
+    &-validate-error-field {
+        border: none;
+        border-bottom: 1px solid red !important;
     }
 }

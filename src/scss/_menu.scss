@@ -46,20 +46,15 @@ $svg-sitebar: #fff;
                 width: 0;
               }
         }
-        /* -8px */
         &__link {
-            margin-right: 1.4rem;          
-            /* 14px */
+            margin-right: 1.4rem;
             padding: 0.6rem;
             @include breakpoint(small-mobile) {
                 white-space: pre;
             }
-            /* 6px */
             span {
                 font-size: 1.6rem;
-                /* 16px */
                 line-height: 1.9rem;
-                /* 19px */
                 color: #C1C1C1;
                 font-weight: 500;
                 transition: 0.3s;
@@ -91,18 +86,14 @@ $svg-sitebar: #fff;
                 padding: 0;
                 overflow: visible;
             }
-            /* 6px */
             svg {
                 width: 2.4rem;
-                /* 24px */
                 height: 2.4rem;
-                /* 24px */
             }
 
             &:hover {
                 background: #F5F5F5;
                 border-radius: 0.7rem;
-                /* 7px */
                 transition: 0.3s;
                 overflow: initial;
 
@@ -468,7 +459,6 @@ $svg-sitebar: #fff;
         }
         
         &:hover {
-            background-color: #F5F5F5;
             @include breakpoint(small-mobile) {
                 background-color: inherit;
             }
@@ -479,7 +469,9 @@ $svg-sitebar: #fff;
                     color: rgba($color: #fff, $alpha: 0.4)
                 }
             }
-
+            &:not(.menu-nav__link--active) {
+                background-color: #F5F5F5;
+            }
         }
     }
 }

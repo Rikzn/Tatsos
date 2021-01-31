@@ -1,20 +1,20 @@
-<div class="contact">
-    <div class="container">
-        <div class="contact__wrapper">
-            <div class="contact__inner">
-                <div class="contact__title title">Связаться</div>
-                <form id="form" action="#" class="contact-form">
+<section class="section contact">
+        <div class="contact__title title">Связаться</div>
+        <div class="section__inner">
+            <div class="contact__inner section__left">
+                <form id="form" action="#" class="contact-form js-form">
                     <div class="contact-form__inner">
+                        <div class="form__subtitle">Тема обращения</div>
                         <select class="js-choice contact-select">
                             <option value="Сообщить об ошибке">Сообщить об ошибке</option>
                             <option>Сообщить об ошибке нам</option>
-                            <option>Сообщить об ошибке всем</option>
                             <option>Сообщить об ошибке никому</option>
+                            <option>Сообщить об ошибке всем</option>
                         </select>
                     </div>
-                    <div class="contact-form__inner">
-                        <div class="contact-form__title">Сообщение</div>
-                        <input type="text" class="_req _text">
+                    <div class="form__div">
+                        <input type="text" class="form__input" placeholder=" " name="fio" data-validate-field="fio">
+                        <label for="" class="form__label">Сообщение</label>
                     </div>
                     <button class="contact-form__btn">Отправить</button>
                     <div class="contact-overlay">
@@ -30,7 +30,7 @@
                     </div>
                 </form>
             </div>
-            <div class="sidebar-nav">
+            <div class="sidebar-nav section__right">
             <div class="sidebar-nav__inner">
                <div class="sidebar-nav-contact__link">
                    <a href="tel:8 843 299-11-11">8 843 299-11-11</a>
@@ -54,6 +54,4 @@
             </div>
         </div>
         </div>
-        
-    </div>
-</div>
+</section>

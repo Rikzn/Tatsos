@@ -1,27 +1,4 @@
 .open-a-new-product {
-    margin-top: 12rem;
-    padding-bottom: 8.1rem;
-    color: #2E2E2E;
-    @include breakpoint(small-mobile) {
-        margin-top: 3rem;
-        }
-    &__inner {
-        display: flex;
-        @include breakpoint(small-mobile) {
-            flex-direction: column-reverse;
-            }
-    }
-    &__title {
-        @include breakpoint(small-mobile) {
-            font-size: 3rem;
-        }
-    }
-    &__wrapper {
-        margin-top: 5rem;
-        @include breakpoint(small-mobile) {
-            margin-top: 1rem;
-            }
-    }
     &__img {
         border-radius: 2rem;
         overflow: hidden;
@@ -82,9 +59,11 @@
             }
     }
     .sidebar-nav {
-        margin-top: 10.5rem;
+        margin-top: 7rem;
         @include breakpoint(small-mobile) {
-            margin-top: 1rem;
-            }
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
     }
+
 }

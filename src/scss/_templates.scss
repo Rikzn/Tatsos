@@ -111,10 +111,6 @@
         }
     }
     &-main {
-        padding-top: 12rem;
-        @include breakpoint(small-mobile) {
-            padding-top: 3.3rem;
-                }
         .templates {
             &__wrapper {
                 max-width: none;
@@ -137,6 +133,8 @@
             &-img {
                 margin-right: 2rem;
                 position: relative;
+                width: 4.8rem;
+                height: 4.8rem;
                 button {
                     position: absolute;
                     width: 2.4rem;
@@ -207,25 +205,13 @@
     }
     &-create {
         &__title {
-        
             font-weight: 500;
             font-size: 40px;
             line-height: 48px;
             color: #2E2E2E;
         }
-        &__inner {
-            padding-top: 12rem;
-            padding-bottom: 12rem;
-        }
         .categories {
             max-width: 60rem;
-        }
-        &-inside {
-            &__inner {
-                padding-top: 12rem;
-                padding-bottom: 12rem;
-            }
-
         }
         &-new {
             max-width: 58.7rem;
@@ -239,9 +225,10 @@
                 svg {
                     width: 2.4rem;
                     height: 2.4rem;
-                    transform: rotate(90deg);
                     position: absolute;
                     left: -30px;
+                    top: 50%;
+                    transform: rotate(90deg) translate(-50%, 0);
                 }
             }
             &-form {
@@ -262,6 +249,7 @@
                         line-height: 18px;
                         color: #2E2E2E;
                         margin-top: 2rem;
+                        padding-bottom: 1rem;
                         &::-webkit-input-placeholder {
                             font-weight: 600;
                             font-size: 15px;
@@ -333,6 +321,11 @@
                         margin-right: auto;
                     }
                 }
+            }
+        }
+        .payments {
+            &__wrapper {
+                margin-top: 0;
             }
         }
     }

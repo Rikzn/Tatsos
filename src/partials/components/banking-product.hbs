@@ -1,31 +1,28 @@
-<div class="banking-product">
-    <div class="container">
-        <div class="banking-product__wrapper">
-            <div class="banking-product__inner js-tabs-item js-tabs-item--active" id="tab_1">
-                <div class="banking-product">
-                    <div class="banking-product-img">
-                        <img src="/img/debit-card.png" alt="Card">
-                    </div>
-                    <div class="banking-product-content">
-                        <p class="banking-product-content__subtitle title">
-                            Дебетовая карт *1256
-                        </p>
-                        <p class="banking-product-content__title">
-                            90 789,<span>23 ₽</span>
-                        </p>
-                    </div>
-                </div>
+<section class="section">
+        <div class="card-big">
+            <div class="card-big__img">
+                <img src="/img/debit-card.png" alt="Card">
+            </div>
+            <div class="card-big__content">
+                <p class="card-big-content__subtitle title">
+                    Дебетовая карт *1256
+                </p>
+                <p class="card-big-content__title">
+                    90 789,<span>23 ₽</span>
+                </p>
+            </div>
+        </div>
+        <div class="section__inner">
+            <div class="section__left js-tabs-item js-tabs-item--active" id="tab_1">
                 <div class="banking-product-requisites">
                     <div class="banking-product-requisites__descr">
                         <p class="banking-product-requisites__title">Номер карты</p>
-                        <p class="banking-product-requisites__subtitle" id="number">
-                            9172 0000 0000 1256
-                            <button class="copy-btn" data-clipboard-target="#number">
+                        <button class="banking-product-requisites__subtitle copy-btn"  data-clipboard-text="9172 0000 0000 1256">
+                        9172 0000 0000 1256 
                                 <svg class="copy">
                                     <use xlink:href="#copy"/>
                                 </svg>
-                            </button>      
-                        </p>
+                        </button>
                     </div>
                     <div class="banking-product-requisites__descr">
                         <p class="banking-product-requisites__title">Срок действия</p>
@@ -37,12 +34,12 @@
                     </div>
                     <div class="banking-product-requisites__descr">
                         <p class="banking-product-requisites__title">CVC2</p>
-                        <p class="banking-product-requisites__subtitle">
-                            745
-                            <svg>
+                        <div class="banking-product-requisites__subtitle">
+                            <input class="CVC" type="number" value="745" readonly>
+                            <svg class="svgBtn">
                                 <use xlink:href="#eye" />
                             </svg>
-                        </p>
+                        </div>
                     </div>
                 </div>
                 <div class="history__inner">
@@ -409,20 +406,7 @@
             </div>
                 </div>
             </div>
-            <div class="banking-product__inner js-tabs-item" id="tab_2">
-                <div class="banking-product">
-                    <div class="banking-product-img">
-                        <img src="/img/debit-card.png" alt="Card">
-                    </div>
-                    <div class="banking-product-content">
-                        <p class="banking-product-content__subtitle title">
-                            Дебетовая карт *1256
-                        </p>
-                        <p class="banking-product-content__title">
-                            90 789,<span>23 ₽</span>
-                        </p>
-                    </div>
-                </div>
+            <div class="section__left js-tabs-item" id="tab_2">
                 <div class="card-replenishment">
                     <div class="card-replenishment__title">Пополнение карты</div>
                     <form action="#" class="card-replenishment-form">
@@ -441,20 +425,7 @@
                     </form>
                 </div>
             </div>
-            <div class="banking-product__inner js-tabs-item" id="tab_3">
-                <div class="banking-product">
-                    <div class="banking-product-img">
-                        <img src="/img/debit-card.png" alt="Card">
-                    </div>
-                    <div class="banking-product-content">
-                        <p class="banking-product-content__subtitle title">
-                            Дебетовая карт *1256
-                        </p>
-                        <p class="banking-product-content__title">
-                            90 789,<span>23 ₽</span>
-                        </p>
-                    </div>
-                </div>
+            <div class="section__left js-tabs-item" id="tab_3">
                 <div class="banking-product-data">
                     <h3 class="banking-product-data_-title">Реквизиты</h3>
                     <div class="banking-product-data__inner">
@@ -489,20 +460,7 @@
                     </div>
                 </div>
             </div>
-            <div class="banking-product__inner js-tabs-item" id="tab_4">
-                <div class="banking-product">
-                    <div class="banking-product-img">
-                        <img src="/img/debit-card.png" alt="Card">
-                    </div>
-                    <div class="banking-product-content">
-                        <p class="banking-product-content__subtitle title">
-                            Дебетовая карт *1256
-                        </p>
-                        <p class="banking-product-content__title">
-                            90 789,<span>23 ₽</span>
-                        </p>
-                    </div>
-                </div>
+            <div class="section__left js-tabs-item" id="tab_4">
                 <div class="banking-product-reference">
                     <h3 class="banking-product-reference__title">Справки и выписки</h3>
                     <p class="banking-product-reference__descr">
@@ -536,7 +494,7 @@
                     </a>
                 </div>
             </div>
-            <div class="sidebar-nav">
+            <div class="sidebar-nav section__right">
                 <div class="sidebar-nav__inner">
                     <div class="sidebar-nav__link sidebar-nav__link--active" data-tab="#tab_1">
                         <svg>
@@ -583,5 +541,4 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+</section>

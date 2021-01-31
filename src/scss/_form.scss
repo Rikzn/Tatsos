@@ -1,0 +1,51 @@
+.form {
+    &-tel {
+        margin-top: 5rem;
+        &__title {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+            color: #C1C1C1;
+            padding-bottom: 3rem;
+        }
+        &__input {
+            color: #2E2E2E;
+            border-bottom: 1px solid #2E2E2E;
+            padding-bottom: 2rem;
+            transition: 1s;
+            height: 3rem;
+            padding-bottom: 1.3rem;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 18px;
+            &::placeholder { 
+                font-weight: 200;
+                font-size: 15px;
+                line-height: 18px;
+                color: #C1C1C1;
+                transition: 1s;
+               }
+            &-big {
+                margin-top: 2rem;
+                height: 6rem;
+                font-weight: 200;
+                font-size: 48px;
+                line-height: 57px;
+                &::placeholder { 
+                    font-weight: 200;
+                    font-size: 48px;
+                    line-height: 57px;
+                    color: #C1C1C1;
+                    transition: 1s;
+                   }
+            }
+        }
+    }
+    &__subtitle {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        color: #C1C1C1;
+        padding-bottom: 2rem;
+    }
+}

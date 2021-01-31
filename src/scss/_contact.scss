@@ -1,33 +1,16 @@
 .contact {
     color: #2E2E2E;
-    &__wrapper {
-        padding-top: 7.5em;
-        display: flex;
-        @include breakpoint(small-mobile) {
-            flex-direction: column;
-            padding-top: 0;      
-            }
-    }
-    &__inner {
-        flex-grow: 1;
-    }
     &__title {
-        margin-bottom: 3.125em;
+        margin-bottom: 4.5rem;
         @include breakpoint(small-mobile) {
             margin-bottom: 0;      
             }
     }
     &-form {
         position: relative;
-        &__title {
-            font-weight: 500;
-            font-size: 0.9375em;
-            line-height: 1.125em;
-            color: #C1C1C1;
-            margin-bottom: 1.3125em;
-        }
         &__inner {
             margin-bottom: 40px;
+            position: relative;
             &:last-child {
                 margin-bottom: 40px;
             }
@@ -35,6 +18,25 @@
                 padding-bottom: 0.8125em;
                 border-bottom: 0.0625em solid #C1C1C1;
             }
+        }
+        
+        &__input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+        &__label {
+            position: absolute;
+            left: 1rem;
+            top: 0;
+        }
+        .contact-form__input:focus + .contact-form__label {
+            top: -2rem;
+        }
+        .contact-form__input:not(:placeholder-shown).contact-form__input:not(:focus) + .contact-form__label {
+            left: 1rem;
+            top: -4rem;
         }
         &__btn {
             padding: 1.25em 3em;
@@ -159,10 +161,6 @@
         border-bottom: 0.0625em solid red;
     }
     .sidebar-nav {
-        margin-top: 11.5rem;
-        @include breakpoint(small-mobile) {
-            margin-top: 3.5rem;      
-            }
         &__inner {
             @include breakpoint(small-mobile) {
                 flex-direction: column;      
@@ -171,26 +169,28 @@
         &-contact {
             &__link {
                 font-weight: 500;
-                font-size: 1.5em;
-                line-height: 1.5em;
+                font-size: 2.4rem;
+                line-height: 2.4rem;
                 display: flex;
                 flex-direction: column;
-                margin-bottom: 1.875em;
+                margin-bottom: 3rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
                 @include breakpoint(small-mobile) {
                     margin-bottom: 0;      
                     }
                 span {
                     color: #c1c1c1;
                     font-weight: 500;
-                    font-size: 1em;
-                    line-height: 1em;
-                    margin-top: 0.625em;
-                    padding-bottom: 1.25em;
+                    font-size: 1.6rem;
+                    line-height: 1.6rem;
+                    margin-top: 1rem;
                 }
             }
             &__item {
                 display: flex;
-                margin-bottom: 1.875em;
+                margin-bottom: 3rem;
                 svg {
                     width: 2em;
                     height: 2em;
@@ -198,8 +198,8 @@
                 span {
                     max-width: 12.75em;
                     font-weight: 500;
-                    font-size: 1em;
-                    line-height: 1.1875em;
+                    font-size: 1.6rem;
+                    line-height: 1.9rem;
                     padding-left: 0.875em;
                 }
             }

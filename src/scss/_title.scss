@@ -1,0 +1,23 @@
+.title {
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    color: #2E2E2E;
+    white-space: nowrap;
+    display: flex;
+    &-main {
+        font-weight: 500;
+        font-size: 4rem;
+        line-height: 4.8rem;
+        color: #2E2E2E;
+        padding-bottom: 5rem;
+        @include breakpoint(small-mobile) {
+            padding-bottom: 1rem;
+            font-size: 3rem;
+        }
+    }
+    &:hover {
+        opacity: 0.6;
+        transition: 0.2s;
+    }
+}

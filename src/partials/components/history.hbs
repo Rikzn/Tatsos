@@ -1,18 +1,21 @@
 <section class="history">
     <div class="container">
         <div class="history__inner">
-            <h2 class="history-header title">
+            <a href="#" class="history-header title">
                 Последние операции
                 <svg>
                     <use xlink:href="#chevron-down" />
                 </svg>
-            </h2>
+            </a>
             <div class="history-form">
                 <div class="history-form-setting history-form-btn filters__select-group js-filters-dropdown">
                     <svg class="filters__select-group-btn">
                         <use xlink:href="#settings-history" />
                     </svg>
                     <div class="history-form-setting__dropdown">
+                        <svg class="history-form-setting__dropdown-svg">
+                            <use xlink:href="#delete" />
+                        </svg>
                         <div class="history-form-setting__inner">
                             <div class="history-form-setting__item">
                                 <p class="history-form-setting__item--title">Период</p>
@@ -20,8 +23,6 @@
                                     <button class="history-form-setting__item--btn history-form__btn">Сегодня</button>
                                     <button class="history-form-setting__item--btn history-form__btn">Вчера</button>
                                     <button class="history-form-setting__item--btn history-form__btn">В этом месяце</button>
-                                    <input class="history-form__btn" type="text" name="datefilter"
-                                        value="15 июня — 15 декабря" />
                                 </div>
                             </div>
                             <div class="history-form-setting__item">
@@ -118,7 +119,7 @@
                 </div>
                 <button class="history-form__btn">Пополнение</button>
                 <button class="history-form__btn">Списание</button>
-                <input  readonly class="history-form__btn" type="text" name="datefilter" value="Выберите дату" />
+                <input  readonly class="history-form__btn--default" type="text" name="datefilter" value="Выберите дату" />
                 <div class="history-form__group filters__select-group js-filters-dropdown">
                     <div class="history-form__group-btn">
                         <div class="history-form__group-cross filters__select-group-btn">

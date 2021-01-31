@@ -56,9 +56,7 @@ body {
     flex-direction: column;
     font-family: SF Pro Display,sans-serif;
     color: black;
-//     @include breakpoint(small-mobile) {               
-//         pointer-events:none;
-//         }
+    overflow-y: scroll
 }
 
 main {
@@ -243,22 +241,7 @@ select:-webkit-autofill:focus {
     background-color: transparent;
 }
 
-.title {
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 48px;
-    color: #2E2E2E;
-    white-space: nowrap;
-    &:hover {
-        opacity: 0.6;
-        transition: 0.2s;
-    }
-}
-
 .active {
-    @include breakpoint(small-mobile) {
-        margin-bottom: 450px;    
-            }
     .card {
         &-more {
            opacity: 1;
@@ -307,10 +290,32 @@ select:-webkit-autofill:focus {
                 overflow: visible;
                 opacity: 1;
                 z-index: 99;
+                width: 500px;
                 @include breakpoint(small-mobile) {
                     width: 280px;        
                     }
             }
         }
     }
+    @include breakpoint(small-mobile) {
+        .history-form-setting__dropdown {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            z-index: 999;
+            padding-top: 0;
+            &-svg {
+                position: absolute;
+                right: 25px;
+                top: 25px;
+                width: 15px;
+                height: 15px;
+                display: block;
+                cursor: pointer;
+            }
+            }
+        
+        }
 }

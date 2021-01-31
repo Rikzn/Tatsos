@@ -33,6 +33,8 @@ select();
     elements.forEach(el => {
         const choices = new Choices(el, {
             searchEnabled: false,
+            shouldSort: false,
+            itemSelectText: '',
         });
     });
   }

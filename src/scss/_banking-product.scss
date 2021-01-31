@@ -1,45 +1,7 @@
 .banking-product {
-    display: flex;
-    align-items: flex-start;
-    @include breakpoint(small-mobile) {
-        flex-direction: column;
-      }
-    &-img {
-        width: 12.6rem;
-        margin-right: 3rem;
-        border-radius: 10px;
-        @include breakpoint(small-mobile) {
-            margin-bottom: 10px;
-            width: 11.6rem;
-          }
-    }
-    &__inner {
-        display: none;
-    }
-    &-content {
-        &__subtitle {
-            margin-bottom: 0.5rem;
-            max-width: 40.3rem;
-            @include breakpoint(small-mobile) {
-                white-space: inherit;
-                font-size: 3rem;
-              }
-        }
-        &__title {
-            font-weight: 400;
-            font-size: 2.4rem;
-            line-height: 2.9rem;
-            color: #2E2E2E;
-            span {
-                font-weight: 400;
-                font-size: 2.4rem;
-            }
-        }
-    }
     &-requisites {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 5.3rem;
         border-radius: 2rem;
         background-color: #F5F5F5;
         padding: 1rem 4rem 4rem 4rem;
@@ -67,31 +29,31 @@
             transition: 0.3s;
             white-space: nowrap;
             &:hover {
-                button {
+                svg {
                     opacity: 1;
-                    transition: 0.3s;
                 }
             }
             svg {
                 width: 2.4rem;
                 height: 2.4rem;
                 fill: #000000;
-                margin-left: 2.3rem;
             }
-            button {
+            input {
+                width: 45px;
+            }
+            .copy {
+                margin-left: 0.9rem;
+                width: 1.8rem;
+                height: 1.8rem;
+                fill: #F1611F;
                 opacity: 0;
-                svg {
-                    width: 1.8rem;
-                    height: 1.8rem;
-                    fill: #F1611F;
-                    margin-left: 0.9rem;
-                }
+                transition: 0.5s;
             }
         }
     }
     &__wrapper {
         display: flex;
-        padding-top: 12.4rem;
+        justify-content: space-between;
         @include breakpoint(small-mobile) {
             padding-top: 3.3rem;
             flex-direction: column-reverse;
@@ -257,6 +219,8 @@
     }
     .sidebar-nav {
         margin-top: 12.5rem;
+        margin-left: auto;
+        width: 203px;
         @include breakpoint(small-mobile) {
             margin-top: 0;
           }
@@ -267,12 +231,6 @@
                 width: 0;
             }
           }
-          &__link {
-              &:hover {
-                  background-color: #fff;
-              }
-          }
-
     }
     &--active {
         display: block;

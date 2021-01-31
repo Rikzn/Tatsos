@@ -2,6 +2,7 @@
 @import 'mixins';
 @import 'global';
 @import 'layout';
+@import 'title';
 @import 'menu';
 @import 'fontface';
 @import 'sidebar';
@@ -10,7 +11,6 @@
 @import 'history';
 @import 'widget';
 @import 'card';
-@import 'payments-and-transfers';
 @import 'payments-and-transfers-inside';
 @import 'payment-history';
 @import 'open-a-new-product';
@@ -30,4 +30,6 @@
 @import 'payment-made';
 @import 'total';
 @import 'transfer';
-
+@import 'form';
+@import 'mobile-connection';
+@import 'section';
