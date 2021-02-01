@@ -10,6 +10,9 @@
     --max-container-width: 124rem;
     --content-padding: 1rem;
     --primary-color: #F1611F;
+    @include breakpointMF(ultra-desktop) {   
+        --content-padding: 6rem;
+        }
     @include breakpoint(desktop) {
         --content-padding: 3rem;    
         }
@@ -23,7 +26,9 @@ html {
     scroll-behavior: smooth;
     font-size: 10px;
     -webkit-text-size-adjust: 100%;
-  
+    @include breakpointMF(ultra-desktop) {   
+        font-size: 11px;
+        }
     @include noHighlight();
     @include breakpoint(desktop) {
         font-size: 9px;
