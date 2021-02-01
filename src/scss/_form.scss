@@ -3,8 +3,8 @@
         margin-top: 5rem;
         &__title {
             font-weight: 500;
-            font-size: 15px;
-            line-height: 18px;
+            font-size: 1.5rem;
+            line-height: 1.8rem;
             color: #C1C1C1;
             padding-bottom: 3rem;
         }
@@ -43,9 +43,30 @@
     }
     &__subtitle {
         font-weight: 500;
-        font-size: 15px;
-        line-height: 18px;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
         color: #C1C1C1;
         padding-bottom: 2rem;
+    }
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        position: relative;
+        height: 4.5rem;
+        margin-top: 4rem;
+        margin-bottom: 1.5rem;
+        flex-basis: 45%;
+        &:nth-child(odd) {
+            margin-right: 4rem;
+        }
+        &--wide {
+            flex-basis: 100%;
+            margin-right: 0;
+            &:nth-child(odd) {
+                margin-right: 0;
+            }
+        }
     }
 }

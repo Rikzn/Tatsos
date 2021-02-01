@@ -43,38 +43,6 @@ var sidebar = new StickySidebar('#sidebar', {
 });
 
 
-
-
-
-// Валидатор
-let validateForms = function(selector, rules, successModal, yaGoal) {
-	new window.JustValidate(selector, {
-		rules: rules,
-		submitHandler: function(form) {
-			let formData = new FormData(form);
-
-			let xhr = new XMLHttpRequest();
-
-			xhr.onreadystatechange = function() {
-				if (xhr.readyState === 4) {
-					if (xhr.status === 200) {
-						console.log('Отправлено');
-					}
-				}
-			}
-
-			xhr.open('POST', 'mail.php', true);
-			xhr.send(formData);
-
-			form.reset();
-		}
-	});
-}
-
-validateForms('.js-form', { email: {required: true, email: true}, tel: {required: true} }, '.thanks-popup', 'send goal');
-
-
-
 // Маска для банковской карточки
 
 let cardInputs = document.querySelectorAll('.js-card-number');
@@ -91,35 +59,62 @@ cardMask.forEach(input => {
 
 
 // Скрыть или показать CVC2
-let svg = document.querySelectorAll('.CVC');
+    
+    // let inputCvc = document.getElementById('CVC');
+    // console.log(inputCvc);
 
-svg.forEach(element => {
-    let InputCVC = document.querySelector('.svgBtn');
+    // inputCvc.addEventListener('click', cvcOpen);
 
-    InputCVC.addEventListener('click', event => {
-        event.preventDefault();
-        
-        if (!element.classList.contains('type=[number]')) {
-            svg.forEach(element => element.classList.remove('active'))
-            element.classList.add('active'); 
-        } else {
-            svg.forEach(element => element.classList.remove('active'))
-            element.classList.remove('active');
-        }
-    });
-});
+
+    // function cvcOpen() {
+    //     if (inputCvc.type= 'number') {
+    //         inputCvc.setAttribute('type', 'password');
+    //     } else if (inputCvc.type= 'password') 
+    //         {
+    //         inputCvc.setAttribute('type', 'number');
+    //     }
+    // };
+    
 
 
 // Чекбокс на странице создание шаблонов
 
-// const chexbox = document.querySelectorAll('.templates-create-new-form__checkbox');
+const chexbox = document.querySelectorAll('.templates-create-new-form__checkbox');
+const checkboxDropdown = document.querySelector('.checkbox__dropdown');
+    chexbox.forEach(function (chexbox) {
+            chexbox.addEventListener('click', function(e) {
+                if (e.target.classList.contains('checkbox-input')) {
+                    e.target.classList.toggle('history-form__btn--active');
+                    checkboxDropdown.classList.toggle('checkbox__dropdown--active');
+                }
+            });
+        });
 
-//     chexbox.forEach(function (chexbox) {
-//             chexbox.addEventListener('click', function(e) {
-//                 if (e.target.classList.contains('checkbox-input')) {
-//                     e.target.classList.toggle('history-form__btn--active');
-//                 }
-//             });
-//         });
 
-// console.log('chexbox');
+
+// Валидатор
+    // let validateForms = function(selector, rules, successModal) {
+    //     new window.JustValidate(selector, {
+    //         rules: rules,
+    //         submitHandler: function(form) {
+    //             let formData = new FormData(form);
+
+    //             let xhr = new XMLHttpRequest();
+
+    //             xhr.onreadystatechange = function() {
+    //                 if (xhr.readyState === 4) {
+    //                     if (xhr.status === 200) {
+    //                         console.log('Отправлено');
+    //                     }
+    //                 }
+    //             }
+
+    //             xhr.open('POST', 'mail.php', true);
+    //             xhr.send(formData);
+
+    //             form.reset();
+    //         }
+    //     });
+    // }
+
+    // validateForms('.js-form', { email: {required: true, email: true}, tel: {required: true} }, '.thanks-popup');

@@ -5,12 +5,12 @@ export default function FilterDropdowns() {
 
     elements.forEach(element => {
         const btn = element.querySelector('.filters__select-group-btn');
-        const close = document.querySelector('.history-form-setting__dropdown-svg');
 
         btn.addEventListener('click', event => {
             event.preventDefault();
             
             if (!element.classList.contains('active')) {
+                const close = document.querySelector('.history-form-setting__dropdown-svg');
                 elements.forEach(element => element.classList.remove('active'))
                 element.classList.add('active');
 
@@ -20,13 +20,12 @@ export default function FilterDropdowns() {
             }
         });
 
-        close.addEventListener('click', event => {
-            event.preventDefault();
-            if(!element.classList.contains('active')) {
-                elements.forEach(element => element.classList.remove('active'))
-                element.classList.remove('active');
-            }
-        });
+        // console.log(close);
+        // close.addEventListener('click', CloseActive);
+
+        // function CloseActive() {
+        //     alert(Yes);
+        // } 
 
 
         document.addEventListener('click', event => {

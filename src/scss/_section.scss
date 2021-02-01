@@ -1,4 +1,9 @@
 .section {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 5.6rem;
+    }
     &__inner {
         display: flex; 
         padding-bottom: 5.6rem;

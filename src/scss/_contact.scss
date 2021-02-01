@@ -9,17 +9,11 @@
     &-form {
         position: relative;
         &__inner {
-            margin-bottom: 40px;
-            position: relative;
-            &:last-child {
-                margin-bottom: 40px;
-            }
             input {
                 padding-bottom: 0.8125em;
                 border-bottom: 0.0625em solid #C1C1C1;
             }
         }
-        
         &__input {
             position: absolute;
             left: 0;
@@ -30,13 +24,6 @@
             position: absolute;
             left: 1rem;
             top: 0;
-        }
-        .contact-form__input:focus + .contact-form__label {
-            top: -2rem;
-        }
-        .contact-form__input:not(:placeholder-shown).contact-form__input:not(:focus) + .contact-form__label {
-            left: 1rem;
-            top: -4rem;
         }
         &__btn {
             padding: 1.25em 3em;

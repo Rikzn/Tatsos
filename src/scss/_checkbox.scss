@@ -1,0 +1,12 @@
+.checkbox {
+    &__dropdown {
+        opacity: 0;
+        height: 0;
+        transition: 0.1s;
+        &--active {
+            opacity: 1;
+            height: auto;
+            transition: 0.4s;
+        }
+    }
+}

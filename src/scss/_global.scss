@@ -9,7 +9,7 @@
 :root {
     --max-container-width: 124rem;
     --content-padding: 1rem;
-    --primary-color: #13B17C;
+    --primary-color: #F1611F;
     @include breakpoint(desktop) {
         --content-padding: 3rem;    
         }
@@ -20,6 +20,7 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-size: 10px;
     -webkit-text-size-adjust: 100%;
   
@@ -318,4 +319,11 @@ select:-webkit-autofill:focus {
             }
         
         }
+}
+
+.exit {
+    margin-top: 6rem;
+    span {
+        color: #FF0000;
+    }
 }

@@ -1,0 +1,23 @@
+.settings {
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #2E2E2E;
+        margin-top: 6rem;
+    }
+    &-form {
+        &__item {
+            margin-right: 4rem;
+            &:nth-child(odd) {
+                margin-right: 6rem;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .sidebar-nav {
+        margin-top: 3rem;
+    }
+}

@@ -206,8 +206,8 @@
     &-create {
         &__title {
             font-weight: 500;
-            font-size: 40px;
-            line-height: 48px;
+            font-size: 4rem;
+            line-height: 4.8rem;
             color: #2E2E2E;
         }
         .categories {
@@ -217,8 +217,8 @@
             max-width: 58.7rem;
             &__title {
                 font-weight: 500;
-                font-size: 24px;
-                line-height: 24px;
+                font-size: 2.4rem;
+                line-height: 2.4rem;
                 color: #2E2E2E;
                 margin-top: 6rem;
                 position: relative;
@@ -226,7 +226,7 @@
                     width: 2.4rem;
                     height: 2.4rem;
                     position: absolute;
-                    left: -30px;
+                    left: -3rem;
                     top: 50%;
                     transform: rotate(90deg) translate(-50%, 0);
                 }
@@ -237,23 +237,23 @@
                 }
                 &__title {
                         font-weight: 500;
-                        font-size: 15px;
-                        line-height: 18px;
+                        font-size: 1.5rem;
+                        line-height: 1.8rem;
                         color: #C1C1C1;
                 }
                 &__input {
                         height: 3.1rem;
-                        border-bottom: 1px solid #2E2E2E;
+                        border-bottom: 0.1rem solid #2E2E2E;
                         font-weight: 600;
-                        font-size: 15px;
-                        line-height: 18px;
+                        font-size: 1.5rem;
+                        line-height: 1.8rem;
                         color: #2E2E2E;
                         margin-top: 2rem;
                         padding-bottom: 1rem;
                         &::-webkit-input-placeholder {
                             font-weight: 600;
-                            font-size: 15px;
-                            line-height: 18px;
+                            font-size: 1.5rem;
+                            line-height: 1.8rem;
                             color: #000;
                         }
                 }
@@ -261,12 +261,12 @@
                     margin-top: 6rem;
                     display: flex;
                     align-items: center;
-                    margin-bottom: 40px;
+                    margin-bottom: 4rem;
                     .checkbox {
                         
                         &-label {
                             background-color: #F5F5F5;
-                            border-radius: 20px;
+                            border-radius: 2rem;
                             width: 5.6rem;
                             height: 3.2rem;
                             margin-right: 2rem;
@@ -278,13 +278,13 @@
                                 display: block;
                                 height: 2.8rem;
                                 width: 2.8rem;
-                                box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
-                                border-radius: 20px;
+                                box-shadow: 0rem 0.3rem 0.4rem rgba(0, 0, 0, 0.15);
+                                border-radius: 2rem;
                                 position: absolute;
                                 transition: 1s;
                                 top: 50%;
                                 transform: translate(0, -50%);
-                                left: 2px;
+                                left: 0.2rem;
                             }
                         }
                         &-input {
@@ -305,20 +305,8 @@
                         } 
                     span {
                         font-weight: 500;
-                        font-size: 16px;
-                        line-height: 19px;
-                    }
-                }
-            }
-            &-select {
-                display: flex;
-                flex-wrap: wrap;
-                &__inner {
-                    flex-basis: 40%;
-                    width: 26rem;
-                    margin-bottom: 30px;
-                    &:nth-child(odd) {
-                        margin-right: auto;
+                        font-size: 1.6rem;
+                        line-height: 1.9rem;
                     }
                 }
             }

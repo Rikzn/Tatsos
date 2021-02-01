@@ -1,0 +1,33 @@
+.select {
+    display: flex;
+    flex-wrap: wrap;
+    &__inner {
+        margin-bottom: 4rem;
+        position: relative;
+        &:last-child {
+            margin-bottom: 4rem;
+        }
+    }
+    &__subtitle {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        color: #C1C1C1;
+        padding-bottom: 2rem;
+    }
+    &__item {
+        flex-basis: 40%;
+        width: 26rem;
+        margin-bottom: 3rem;
+        &:nth-child(odd) {
+            margin-right: auto;
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        color: #C1C1C1;
+        margin-bottom: 2rem;
+    }
+}
