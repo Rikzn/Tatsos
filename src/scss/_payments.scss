@@ -1,5 +1,6 @@
 .operations {
     display: flex;
+    justify-content: space-between;
     @include breakpoint(small-mobile) {
         display: flex;
         flex-direction: column;

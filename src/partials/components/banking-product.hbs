@@ -17,11 +17,8 @@
                 <div class="banking-product-requisites">
                     <div class="banking-product-requisites__descr">
                         <p class="banking-product-requisites__title">Номер карты</p>
-                        <button class="banking-product-requisites__subtitle copy-btn"  data-clipboard-text="9172 0000 0000 1256">
+                        <button class="banking-product-requisites__subtitle"  data-clipboard-text="9172 0000 0000 1256">
                         9172 0000 0000 1256 
-                                <svg class="copy">
-                                    <use xlink:href="#copy"/>
-                                </svg>
                         </button>
                     </div>
                     <div class="banking-product-requisites__descr">
@@ -35,7 +32,7 @@
                     <div class="banking-product-requisites__descr">
                         <p class="banking-product-requisites__title">CVC2</p>
                         <div class="banking-product-requisites__subtitle">
-                            <input class="CVC" type="number" value="745" readonly id="CVC">
+                            <input class="CVC" type="password" value="745" readonly id="CVC">
                             <svg class="svgBtn">
                                 <use xlink:href="#eye" />
                             </svg>
@@ -428,7 +425,7 @@
             <div class="section__left js-tabs-item" id="tab_3">
                 <div class="banking-product-data">
                     <h3 class="banking-product-data_-title">Реквизиты</h3>
-                    <div class="banking-product-data__inner">
+                    <div class="banking-product-data__inner" id="bar">
                         <div class="banking-product-data__item">
                             <span>Получатель</span><span>Евгений Иванов</span>
                         </div>
@@ -454,9 +451,9 @@
                             <span>КПП</span><span>85648648654</span>
                         </div>
                     </div>
-                    <div class="banking-product-data__btn">
-                        <button>Распечатать</button>
-                        <button>Скопировать</button>
+                    <div>
+                        <button class="btn">Распечатать</button>
+                        <button class="btn copy-btn" data-clipboard-target="#bar">Скопировать</button>
                     </div>
                 </div>
             </div>

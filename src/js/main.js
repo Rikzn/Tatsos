@@ -46,7 +46,7 @@ var sidebar = new StickySidebar('#sidebar', {
 // Маска для банковской карточки
 
 let cardInputs = document.querySelectorAll('.js-card-number');
-cardInputs.forEach(input => {
+Array.from(cardInputs).forEach(input => {
     var im = new Inputmask({mask:'9999 9999 9999 9999', placeholder: "0000 0000 0000 0000" });
     im.mask(input);
 });
@@ -56,25 +56,6 @@ cardMask.forEach(input => {
     var im = new Inputmask({mask:'+7 (999) 999 99 99', placeholder: "+7 (000) 000 00 00" });
     im.mask(input);
 });
-
-
-// Скрыть или показать CVC2
-    
-    // let inputCvc = document.getElementById('CVC');
-    // console.log(inputCvc);
-
-    // inputCvc.addEventListener('click', cvcOpen);
-
-
-    // function cvcOpen() {
-    //     if (inputCvc.type= 'number') {
-    //         inputCvc.setAttribute('type', 'password');
-    //     } else if (inputCvc.type= 'password') 
-    //         {
-    //         inputCvc.setAttribute('type', 'number');
-    //     }
-    // };
-    
 
 
 // Чекбокс на странице создание шаблонов
