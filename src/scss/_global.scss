@@ -258,17 +258,27 @@ select:-webkit-autofill:focus {
            }
         }
     }
-    .menu__authorized-user-more-dropdown {
-        opacity: 1;
-        overflow: visible;
-        height: auto;
-        z-index: 99;
-        left: -7rem;
-        top: 20px;
-        padding-top: 0.5rem;
-        &-inner {
-            height: auto;
+    .menu__authorized-user {
+        &-more {
+            svg {
+                transform: rotate(-180deg);
+                transition: 0.3s;
+            }
+            &-dropdown {
+                opacity: 1;
+                overflow: visible;
+                height: auto;
+                z-index: 99;
+                left: -6rem;
+                top: 20px;
+                padding-top: 0.5rem;
+                &-inner {
+                    height: auto;
+                }
+            }
         }
+        
+        
     }
     .history-form {
         &__group {
@@ -320,9 +330,8 @@ select:-webkit-autofill:focus {
                 height: 15px;
                 display: block;
                 cursor: pointer;
+                }
             }
-            }
-        
         }
 }
 
