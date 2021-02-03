@@ -2,7 +2,7 @@ $widgetTitle: #fff;
 
 .sidebar {
     height: 100vh;
-    z-index: 0;
+    z-index: 99;
     display: flex;
     width: 45rem;
     flex-shrink: 0;
@@ -13,7 +13,9 @@ $widgetTitle: #fff;
     }
     @include breakpoint(small-mobile) {
         padding: 0;
-        width: auto;
+        position: fixed;
+        width: 100%;
+        z-index: 0;
             }
     &__inner {
         position: relative;
@@ -55,16 +57,21 @@ $widgetTitle: #fff;
         }
     &__link {
         background: #F1611F;
-        border-radius: 2rem; /* 20px */
-        padding: 2.1rem; /* 21px */
+        border-radius: 2rem;
+        padding: 2.1rem;
         display: block;
         text-align: center;
         margin-top: auto;
+        transition: 0.3s;
         span {
             font-weight: 500;
             font-size: 1.6rem; /* 16px */
             line-height: 1.9rem; /* 19px */
             color: #FFFFFF;
+        }
+        &:hover {
+            background-color: #DD4F0E;
+            transition: 0.3s;
         }
         @include breakpoint(small-mobile) {
             margin-top: 1.8rem;

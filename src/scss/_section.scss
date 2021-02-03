@@ -17,6 +17,11 @@
         @include breakpoint(small-mobile) {
             width: 100%;
         }
+        &--wrapper {
+            background-color: #F5F5F5;
+            padding: 3rem;
+            border-radius: 2rem;
+        }
     }
     &__right {
         width: 21rem;

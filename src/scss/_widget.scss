@@ -1,5 +1,5 @@
 .widget {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.2rem;
     @include breakpoint(small-mobile) {
         margin-bottom: 2.1rem;
       }
@@ -13,6 +13,7 @@
         cursor: pointer;
 
         &--active {
+            padding-bottom: 5px;
             svg {
                 transform: rotate(180deg);
             }
@@ -22,6 +23,7 @@
     &__body {
         font-weight: 200;
         font-size: 6.4rem;
+        line-height: 6.4rem;
         color: #fff;
         overflow: hidden;
         max-height: 0;
@@ -35,6 +37,8 @@
         span {
             font-size: 2.8rem;
             transition: 0.3s;
+            color: #696767;
+            font-weight: 300;
         }
 
         &--active {
@@ -51,10 +55,12 @@
         width: 2rem;
         height: 2rem;
         fill: #fff;
+        opacity: 0.5;
         transition: 0.3s;
         vertical-align: super;
         position: relative;
         z-index: -1;
+        margin-left: 4px;
     }
 
     &-card {

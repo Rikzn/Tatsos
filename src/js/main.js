@@ -1,4 +1,5 @@
-import StickySidebar from 'sticky-sidebar-v2';
+// import StickySidebar from 'sticky-sidebar-v2';
+import StickySidebar from 'sticky-sidebar';
 import Inputmask from 'inputmask';
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
@@ -83,6 +84,13 @@ const checkboxDropdown = document.querySelector('.checkbox__dropdown');
         }
         });
 
+        // Количество выбранных чекбоксов
+        let checkCount = $('.history-form__group-dropdown-inner').find('input[checkbox]:checked').length;
+        console.log(checkCount);
+
+        // let checkText = document.querySelector('.history-form__group-chexbox');
+        
+
 
 
 // Валидатор
@@ -111,3 +119,7 @@ const checkboxDropdown = document.querySelector('.checkbox__dropdown');
     // }
 
     // validateForms('.js-form', { email: {required: true, email: true}, tel: {required: true} }, '.thanks-popup');
+
+
+
+

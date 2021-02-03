@@ -394,9 +394,9 @@ $svg-sitebar: #fff;
                     color: rgba($color: #fff, $alpha: 0.4)
                 }
             }
-            &:not(.menu-nav__link--active) {
-                background-color: #F5F5F5;
-            }
+            // &:not(.menu-nav__link--active) {
+            //     background-color: #F5F5F5;
+            // }
         }
     }
 }
