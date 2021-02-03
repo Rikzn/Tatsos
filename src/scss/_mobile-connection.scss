@@ -1,0 +1,50 @@
+.mobile-connection {
+    color: #2E2E2E;
+    margin-top: 6rem;
+    &__title {
+        display: flex;
+        font-weight: 500;
+        font-size: 2.4rem; 
+        line-height: 2.4rem; 
+        svg {
+            width: 2.4rem; 
+            height: 2.4rem; 
+            transform: rotate(90deg);
+            margin-right: 0.3rem; 
+        }
+    }
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 3rem; 
+    }
+    &__card { 
+        width: 26.4rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem; 
+        cursor: pointer;
+        transition: 0.3s;
+        padding: 0.4rem 0 0.4rem 0.4rem;
+        &:nth-child(odd) {
+            margin-right: 4.8%;
+        } 
+        &:hover {
+            background: #F5F5F5;
+            border-radius: 1.7rem; 
+            transition: 0.3s;
+        }
+        @include breakpoint(desktop) {               
+            
+            }
+    }
+    &__img {
+        width: 4rem; 
+        margin-right: 2rem; 
+    }
+    &__descr {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem; 
+    }
+}

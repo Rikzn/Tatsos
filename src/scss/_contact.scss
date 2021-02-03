@@ -25,23 +25,6 @@
             left: 1rem;
             top: 0;
         }
-        &__btn {
-            padding: 1.25em 3em;
-            font-weight: 500;
-            font-size: 1em;
-            line-height: 1.1875em;
-            color: #fff;
-            background-color: #F1611F;
-            border-radius: 1.25em;
-            margin-top: 3.125em;
-            transition: 0.3s;
-            text-align: center;
-            cursor: pointer;
-            &:hover {
-                opacity: 0.8;
-                transition: 0.3s;
-            }
-        }
     }
     &-select {
         position: relative;
@@ -120,28 +103,24 @@
         }
     }
     &-popap {
+        padding: 3rem;
         &__header {
             display: flex;
-            padding: 1.875em 1.875em 0 1.875em;
             svg {
-                width: 3.875em;
-                height: 3.875em;
+                width: 6.2rem;
+                height: 6.2rem;
                 fill: #05B135;
             }
         }
         &__title {
             font-weight: 200;
-            font-size: 3em;
-            line-height: 3.5625em;
+            font-size: 4.8rem;
+            line-height: 5.7rem;
             max-width: 24.9375em;
             @include breakpoint(small-mobile) {
                 font-size: 2em;
                 line-height: 1.5625em;     
                     }
-        }
-        &__btn {
-            max-width: 12.5em;
-            margin-left: 1.875em;
         }
     }
     ._error {

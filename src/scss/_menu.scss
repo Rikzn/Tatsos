@@ -291,7 +291,10 @@ $svg-sitebar: #fff;
                 height: 2rem;
                 }
             }
-        
+        &-link {
+            display: flex;
+            align-items: center;
+        }
         &-name {
             font-weight: 500;
             font-size: 1.6rem;
@@ -300,7 +303,9 @@ $svg-sitebar: #fff;
 
         &-more {
             svg {
-                transition: 0.3sЮЮЮЮЮЮЮЮЮЮЮ;
+                position: relative;
+                z-index: -2;
+                transition: 0.3s;
             }
             &-dropdown {
                 position: absolute;
@@ -357,6 +362,9 @@ $svg-sitebar: #fff;
             padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
             padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
         }
+        @include breakpointMF(ultra-desktop) {   
+            max-width: 1250px;
+            }
         @include breakpoint(small-mobile) {
             padding: 0;
             display: flex;

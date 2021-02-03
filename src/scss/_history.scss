@@ -4,32 +4,6 @@
         display: flex;
         flex-direction: column;
     }
-
-    &-header {
-        display: flex;
-        align-items: center;
-        font-weight: 500;
-        font-size: 2.4rem;
-        /* 24px */
-        line-height: 2.4rem;
-        /* 24px */
-        margin-bottom: 3.2rem;
-        @include breakpoint(small-mobile) {
-            width: 100%;
-            margin-bottom: 3rem;
-            }
-        /* 32px */
-        svg {
-            width: 2.4rem;
-            height: 2.4rem;
-            transform: rotate(-90deg);
-            margin-left: 0.8rem;
-            @include breakpoint(small-mobile) {
-                margin-left: auto;
-                }
-        }
-    }
-
     &-card {
         padding-bottom: 5rem;
 
@@ -37,9 +11,7 @@
             display: flex;
             width: 100%;
             padding-bottom: 1.7rem;
-            /* 17px */
             border-bottom: 0.1rem
-                /* 1px */
                 solid rgba($color: #C1C1C1, $alpha: 0.3);
         }
 
@@ -47,17 +19,13 @@
             flex-grow: 1;
             font-weight: 500;
             font-size: 1.2rem;
-            /* 12px */
             line-height: 1.4rem;
-            /* 14px */
             color: #C1C1C1;
         }
 
         &__sum {
             font-size: 1.2rem;
-            /* 12px */
             line-height: 1.4rem;
-            /* 14px */
             color: #C1C1C1;
         }
 
@@ -88,20 +56,16 @@
             }
             &__img {
                 margin-right: 1.7rem;
-                /* 17px */
                 width: 4rem;
-                /* 40px */
                 height: 4.1rem;
-                /* 41px */
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
+                background-color: #F5F5F5;
+                border-radius: 1.3rem;
                 svg {
                     width: 2.2rem;
-                    /* 22px */
                     height: 2.2rem;
-                    /* 22px */
                 }
             }
             &__header {
@@ -153,6 +117,7 @@
         display: flex;
         align-items: flex-start;
         margin-bottom: 4.4rem;
+        margin-top: 3.2rem;
         @include breakpoint(small-mobile) {
             margin-bottom: 3rem;
             overflow-y: visible;
@@ -175,6 +140,7 @@
             cursor: pointer;
             &--default {
                 background-color: #F5F5F5;
+                position: relative;
                 border-radius: 1rem;
                 padding: 0.7rem 1rem;
                 font-weight: 500;
@@ -261,7 +227,7 @@
                     font-size: 1.2rem;
                     line-height: 1.4rem;
                     color: #C1C1C1;
-                    margin-top: 3rem;
+                    margin-top: 2rem;
                     margin-bottom: 1.9rem;
                     }
                 &--wrapper {
@@ -269,7 +235,7 @@
                     @include breakpoint(small-mobile) {
                         display: flex;
                         flex-wrap: wrap;
-                                }
+                    }
                     input {
                         background-color: #F5F5F5;
                         border-radius: 1rem;
@@ -502,7 +468,8 @@
     .card {
         &-content {
             &__subtitle {
-                font-size: 1rem;
+                font-size: 1.4rem;
+                line-height: 1.7rem;
             }
             &__title {
                 font-size: 1.5rem;

@@ -77,14 +77,10 @@
     }
     &-content {
         margin-top: 0.8rem;
-
-        /* 8px */
         &__title {
             font-weight: 500;
             font-size: 1.2rem;
-            /* 12px */
             line-height: 1.4rem;
-            /* 14px */
             text-align: center;
         }
     }
@@ -129,6 +125,7 @@
                 width: 50%;
                 margin-right: 0;
                 flex-direction: row;
+                margin-bottom: 1.5rem;
             }
             &-img {
                 margin-right: 2rem;
@@ -171,6 +168,7 @@
                     font-size: 1.2rem;
                     line-height: 1.4rem;
                     color: #C1C1C1;
+                    margin-top: 4px; 
                 }
             }
             &__title {

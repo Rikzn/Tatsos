@@ -11,14 +11,20 @@
             &:last-child {
                 margin-right: 0;
             }
+            @include breakpoint(small-mobile) {
+               &:first-child {
+                   display: inline-block;
+                   margin-bottom: 1rem;
+               }
+            }
         }
         &::before {
             content: '';
             position: absolute;
             top: 50%;
-            left: 44%;
+            left: 50%;
             transform: translate(-50%, -50%);
-            width: 92%;
+            width: 105%;
             height: 220%;
             background-color:#F5F5F5;
             border-radius: 3.1rem;
@@ -31,6 +37,11 @@
                 opacity: 1;
                 transition: 0.3s
             }
+            @include breakpoint(small-mobile) {
+               &::before {
+                   opacity: 0;
+               }
+                }
         }
     }
     .successfully {

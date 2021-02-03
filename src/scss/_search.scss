@@ -1,6 +1,4 @@
 .search {
-    padding-top: 5rem;
-    padding-bottom: 6rem;
     &-form {
         width: 100%;
         display: flex;
@@ -20,7 +18,10 @@
                 fill: #C1C1C1;
             }
         }
-
+    &-container {
+        margin-top: 5rem;
+        margin-bottom: 6rem;
+    }
     &-btn {
         margin-top: 2rem;
 

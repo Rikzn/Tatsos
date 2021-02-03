@@ -10,15 +10,13 @@ import tabs from './tabs';
 import select from './select';
 import { async } from 'regenerator-runtime';
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
     slider();
     OnlyNumeric();
     FilterDropdowns();
-    // select();
+    select();
 });
 
 window.addEventListener('load', function() {
@@ -26,11 +24,8 @@ window.addEventListener('load', function() {
     setTimeout(() => document.body.classList.add('animatable'), 300)
 });
 
-
 // копирование при нажатие
 var clipboard = new ClipboardJS('.copy-btn');
-
-
 
 // Фиксация сайдбара 
 
@@ -41,7 +36,6 @@ var sidebar = new StickySidebar('#sidebar', {
     bottomSpacing: 0,
     minWidth: 576
 });
-
 
 // Маска для банковской карточки
 
@@ -69,6 +63,24 @@ const checkboxDropdown = document.querySelector('.checkbox__dropdown');
                     checkboxDropdown.classList.toggle('checkbox__dropdown--active');
                 }
             });
+        });
+
+        import { Swiper, Autoplay, Navigation } from 'swiper';
+
+        Swiper.use([Autoplay, Navigation]);
+  
+        const swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        loopedSlides: 5,
+        autoplay: {
+            delay: 5000,
+        },
+        navigation: {
+            nextEl: '.slider__next',
+            prevEl: '.slider__prev',
+        }
         });
 
 

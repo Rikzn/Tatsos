@@ -1,4 +1,3 @@
-     // Клик по "..." в блоке widget 
 
 export default function FilterDropdowns() {
     const elements = Array.from(document.querySelectorAll('.js-filters-dropdown'));
@@ -20,14 +19,6 @@ export default function FilterDropdowns() {
             }
         });
 
-        // console.log(close);
-        // close.addEventListener('click', CloseActive);
-
-        // function CloseActive() {
-        //     alert(Yes);
-        // } 
-
-
         document.addEventListener('click', event => {
             const insideGroup = event.target.matches('.filters__select-group') || event.target.closest('.filters__select-group');
             if (!insideGroup) {
@@ -35,8 +26,7 @@ export default function FilterDropdowns() {
             } 
         });
     });
-} 
-  
+
     // раскрытия виджета
 
     const widgets = document.querySelectorAll('.widget');
@@ -50,14 +40,24 @@ export default function FilterDropdowns() {
         });
     });
 
+    // Клик в блоке Истории операций
 
-        // Клик в блоке Истории операций
-        const btnActive = document.querySelectorAll('.history-form__btn');
+    const btnActive = document.querySelectorAll('.history-form__btn');
 
-        btnActive.forEach(function (btnActive) {
-            btnActive.addEventListener('click', function(e) {
-                if (e.target.classList.contains('history-form__btn')) {
-                    e.target.classList.toggle('history-form__btn--active');
-                }
-            });
+    btnActive.forEach(function (btnActive) {
+        btnActive.addEventListener('click', function(e) {
+            if (e.target.classList.contains('history-form__btn')) {
+                e.target.classList.toggle('history-form__btn--active');
+            }
         });
+    });
+
+
+
+
+} 
+  
+    
+
+
+        

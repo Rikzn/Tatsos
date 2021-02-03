@@ -267,10 +267,7 @@ select:-webkit-autofill:focus {
     }
     .menu__authorized-user {
         &-more {
-            svg {
-                transform: rotate(-180deg);
-                transition: 0.3s;
-            }
+            
             &-dropdown {
                 opacity: 1;
                 overflow: visible;
@@ -282,6 +279,12 @@ select:-webkit-autofill:focus {
                 &-inner {
                     height: auto;
                 }
+            }
+        }
+        &-link {
+            svg {
+                transform: rotate(-180deg);
+                transition: 0.3s;
             }
         }
         
