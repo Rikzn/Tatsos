@@ -1,5 +1,5 @@
 // import StickySidebar from 'sticky-sidebar-v2';
-import StickySidebar from 'sticky-sidebar';
+// import StickySidebar from 'sticky-sidebar';
 import Inputmask from 'inputmask';
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
@@ -30,13 +30,13 @@ var clipboard = new ClipboardJS('.copy-btn');
 
 // Фиксация сайдбара 
 
-var sidebar = new StickySidebar('#sidebar', {
-    containerSelector: '#main-content',
-    innerWrapperSelector: '.sidebar__inner',
-    topSpacing: 0,
-    bottomSpacing: 0,
-    minWidth: 576
-});
+// var sidebar = new StickySidebar('#sidebar', {
+//     containerSelector: '#main-content',
+//     innerWrapperSelector: '.sidebar__inner',
+//     topSpacing: 0,
+//     bottomSpacing: 0,
+//     minWidth: 576
+// });
 
 // Маска для банковской карточки
 

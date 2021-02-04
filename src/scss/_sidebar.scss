@@ -74,8 +74,9 @@ $widgetTitle: #fff;
             transition: 0.3s;
         }
         @include breakpoint(small-mobile) {
-            margin-top: 1.8rem;
+            margin-top: auto;
             margin-right: 20px; 
+            margin-bottom: 250px;
         }
     }
     &-logo {

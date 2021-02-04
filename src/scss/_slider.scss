@@ -58,11 +58,8 @@
 
     &__next {
         margin-left: 0.8rem;
-        /* 8px */
         border-radius: 1rem;
-        /* 10px */
         padding: 0.9rem 0.9rem 0.9rem 0.7rem;
-        /* 9px 9px 9px 7px */
         transition: 0.3s;
         outline: none;
         @include breakpoint(small-mobile) {
@@ -89,26 +86,17 @@
         top: 0;
         left: 0;
         margin-top: 1.2rem;
-        /* 12px */
         margin-left: 1.2rem;
-        /* 12px */
         background-color: #F1611F;
         border-top-right-radius: 0.3rem;
-        /* 3px */
         border-bottom-right-radius: 1.1rem;
-        /* 11px */
         border-top-left-radius: 1.1rem;
-        /* 11px */
         border-bottom-left-radius: 0.3rem;
-        /* 3px */
         font-weight: 500;
         font-size: 1.2rem;
-        /* 12px */
         line-height: 1.4rem;
-        /* 14px */
         color: #ffffff;
         padding: 0.4rem 1rem;
-        /* 4px 10px */
     }
 
     &__title {
@@ -116,14 +104,10 @@
         bottom: 0;
         left: 0;
         margin-bottom: 1.8rem;
-        /* 18px */
         margin-left: 2.1rem;
-        /* 21px */
         font-weight: 700;
         font-size: 2rem;
-        /* 20px */
         line-height: 2.4rem;
-        /* 24px */
         color: #ffffff;
     }
     .swiper-slide {
@@ -136,6 +120,11 @@
             width: 100%;
             border-radius: 17px;
         }
+    }
+    .swiper-wrapper {
+        @include breakpoint(desktop) {   
+            width: 60rem;
+          }
     }
 }
 

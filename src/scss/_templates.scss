@@ -1,7 +1,7 @@
 .templates {
     &__inner {
         position: relative;
-        right: -1rem;
+        margin-left: auto;
         @include breakpoint(small-mobile) {
             margin-top: 3.7rem;
             right: 0;

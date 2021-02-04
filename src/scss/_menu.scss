@@ -3,9 +3,7 @@ $svg-sitebar: #fff;
 .menu {
     &__inner {
         display: flex;
-        /* 450px */
         padding-top: 2.8rem;
-        /* 28px */
         position: absolute;
         align-items: baseline;
         z-index: 100;
@@ -211,9 +209,7 @@ $svg-sitebar: #fff;
         }
         svg {
             width: 2.4rem;
-            /* 24px */
             height: 2.4rem;
-            /* 24px */
         }
     }
 
@@ -353,23 +349,9 @@ $svg-sitebar: #fff;
     &__wrapper {
         display: flex;
         justify-content: space-between;
-        width: 100%;
-        // max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
-        max-width: 87rem;
-        margin: 0 auto;
-        padding: 0 var(--content-padding);
-        @supports (width: max(20vw, 100px)) {
-            padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
-            padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
-        }
-        @include breakpointMF(ultra-desktop) {   
-            max-width: 1250px;
-            }
-        @include breakpoint(small-mobile) {
-            padding: 0;
-            display: flex;
+        @include breakpoint(small-mobile) {   
             flex-direction: column-reverse;
-        }
+            }
     }
 
     &-hover {

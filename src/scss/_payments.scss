@@ -1,6 +1,5 @@
 .operations {
     display: flex;
-    justify-content: space-between;
     @include breakpoint(small-mobile) {
         display: flex;
         flex-direction: column;
@@ -78,7 +77,9 @@
 
     &__inner {
         color: #2E2E2E;
-        margin-right: 6%;
+        @include breakpoint(laptop) {   
+            margin-right: 5rem;
+            }
         @include breakpoint(small-mobile) {
             margin-right: 0;
             }
