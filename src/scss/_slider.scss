@@ -1,8 +1,9 @@
 .slider {
     min-width: 0;
-    padding-bottom: 6.3rem;
+    padding-bottom: 5.3rem;
     @include breakpoint(small-mobile) {
         margin-top: 0.9rem;
+        padding-bottom: 3rem;
     }
     &__wrapper {
         display: flex;
@@ -42,11 +43,14 @@
 
     &__prev {
         border-radius: 1rem;
-        /* 10px */
         padding: 0.9rem 0.7rem 0.9rem 0.9rem;
-        /* 9px 7px 9px 9px */
         transition: 0.3s;
         outline: none;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @include breakpoint(small-mobile) {
             display: none;
         }
@@ -62,6 +66,11 @@
         padding: 0.9rem 0.9rem 0.9rem 0.7rem;
         transition: 0.3s;
         outline: none;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @include breakpoint(small-mobile) {
             display: none;
         }

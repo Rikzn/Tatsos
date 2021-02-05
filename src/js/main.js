@@ -1,4 +1,4 @@
-// import StickySidebar from 'sticky-sidebar-v2';
+import StickySidebar from 'sticky-sidebar-v2';
 // import StickySidebar from 'sticky-sidebar';
 import Inputmask from 'inputmask';
 import polyfills from './polyfills';
@@ -7,11 +7,13 @@ import OnlyNumeric from './OnlyNumeric';
 import slider from './slider';
 import FilterDropdowns from './FilterDropdowns';
 import datefilter from './datefilter';
-import tabs from './tabs'; 
+import tabs from './tabs';
 import select from './select';
-import { async } from 'regenerator-runtime';
+import {
+    async
+} from 'regenerator-runtime';
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     polyfills();
     detectTouch();
     slider();
@@ -20,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     select();
 });
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     document.body.classList.add('loaded');
     setTimeout(() => document.body.classList.add('animatable'), 300)
 });
@@ -30,25 +32,32 @@ var clipboard = new ClipboardJS('.copy-btn');
 
 // Фиксация сайдбара 
 
-// var sidebar = new StickySidebar('#sidebar', {
-//     containerSelector: '#main-content',
-//     innerWrapperSelector: '.sidebar__inner',
-//     topSpacing: 0,
-//     bottomSpacing: 0,
-//     minWidth: 576
-// });
+var sidebar = new StickySidebar('#sidebar', {
+    containerSelector: '#main-content',
+    innerWrapperSelector: '.sidebar__inner',
+    topSpacing: 0,
+    bottomSpacing: 0,
+    minWidth: 576
+});
 
 // Маска для банковской карточки
 
 let cardInputs = document.querySelectorAll('.js-card-number');
 Array.from(cardInputs).forEach(input => {
-    var im = new Inputmask({mask:'9999 9999 9999 9999', placeholder: "0000 0000 0000 0000" });
+    var im = new Inputmask({
+        mask: '9999 9999 9999 9999',
+        placeholder: "0000 0000 0000 0000"
+    });
     im.mask(input);
 });
 
 let cardMask = document.querySelectorAll('.js-phone-mask');
 cardMask.forEach(input => {
-    var im = new Inputmask({mask:'+7 (999) 999 99 99', placeholder: "+7 (000) 000 00 00" });
+    var im = new Inputmask({
+        mask: '+7 (999) 999 99 99',
+        placeholder: "+7 (000) 000 00 00",
+        showMaskOnHover: false
+    });
     im.mask(input);
 });
 
@@ -57,69 +66,65 @@ cardMask.forEach(input => {
 
 const chexbox = document.querySelectorAll('.templates-create-new-form__checkbox');
 const checkboxDropdown = document.querySelector('.checkbox__dropdown');
-    chexbox.forEach(function (chexbox) {
-            chexbox.addEventListener('click', function(e) {
-                if (e.target.classList.contains('checkbox-input')) {
-                    e.target.classList.toggle('history-form__btn--active');
-                    checkboxDropdown.classList.toggle('checkbox__dropdown--active');
-                }
-            });
-        });
-
-        import { Swiper, Autoplay, Navigation } from 'swiper';
-
-        Swiper.use([Autoplay, Navigation]);
-  
-        const swiper = new Swiper('.swiper-container', {
-        direction: 'horizontal',
-        slidesPerView: 'auto',
-        spaceBetween: 30,
-        loopedSlides: 5,
-        autoplay: {
-            delay: 5000,
-        },
-        navigation: {
-            nextEl: '.slider__next',
-            prevEl: '.slider__prev',
+chexbox.forEach(function (chexbox) {
+    chexbox.addEventListener('click', function (e) {
+        if (e.target.classList.contains('checkbox-input')) {
+            e.target.classList.toggle('history-form__btn--active');
+            checkboxDropdown.classList.toggle('checkbox__dropdown--active');
         }
-        });
+    });
+});
 
-        // Количество выбранных чекбоксов
-        let checkCount = $('.history-form__group-dropdown-inner').find('input[checkbox]:checked').length;
-        console.log(checkCount);
+import { Swiper, Autoplay, Navigation } from 'swiper';
 
-        // let checkText = document.querySelector('.history-form__group-chexbox');
-        
+Swiper.use([Autoplay, Navigation]);
+
+const swiper = new Swiper('.swiper-container', {
+direction: 'horizontal',
+slidesPerView: 'auto',
+spaceBetween: 30,
+loopedSlides: 5,
+autoplay: {
+    delay: 5000,
+},
+navigation: {
+    nextEl: '.slider__next',
+    prevEl: '.slider__prev',
+}
+});
+
+// Количество выбранных чекбоксов
+let checkCount = $('.history-form__group-dropdown-inner').find('input[checkbox]:checked').length;
+console.log(checkCount);
+
+// let checkText = document.querySelector('.history-form__group-chexbox');
+
 
 
 
 // Валидатор
-    // let validateForms = function(selector, rules, successModal) {
-    //     new window.JustValidate(selector, {
-    //         rules: rules,
-    //         submitHandler: function(form) {
-    //             let formData = new FormData(form);
+// let validateForms = function(selector, rules, successModal) {
+//     new window.JustValidate(selector, {
+//         rules: rules,
+//         submitHandler: function(form) {
+//             let formData = new FormData(form);
 
-    //             let xhr = new XMLHttpRequest();
+//             let xhr = new XMLHttpRequest();
 
-    //             xhr.onreadystatechange = function() {
-    //                 if (xhr.readyState === 4) {
-    //                     if (xhr.status === 200) {
-    //                         console.log('Отправлено');
-    //                     }
-    //                 }
-    //             }
+//             xhr.onreadystatechange = function() {
+//                 if (xhr.readyState === 4) {
+//                     if (xhr.status === 200) {
+//                         console.log('Отправлено');
+//                     }
+//                 }
+//             }
 
-    //             xhr.open('POST', 'mail.php', true);
-    //             xhr.send(formData);
+//             xhr.open('POST', 'mail.php', true);
+//             xhr.send(formData);
 
-    //             form.reset();
-    //         }
-    //     });
-    // }
+//             form.reset();
+//         }
+//     });
+// }
 
-    // validateForms('.js-form', { email: {required: true, email: true}, tel: {required: true} }, '.thanks-popup');
-
-
-
-
+// validateForms('.js-form', { email: {required: true, email: true}, tel: {required: true} }, '.thanks-popup');

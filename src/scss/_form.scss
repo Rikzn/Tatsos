@@ -7,6 +7,7 @@
             color: #C1C1C1;
             padding-bottom: 3rem;
         }
+
         &__input {
             color: #2E2E2E;
             border-bottom: 1px solid #2E2E2E;
@@ -17,29 +18,33 @@
             font-weight: 600;
             font-size: 15px;
             line-height: 18px;
-            &::placeholder { 
+
+            &::placeholder {
                 font-weight: 200;
                 font-size: 15px;
                 line-height: 18px;
                 color: #C1C1C1;
                 transition: 1s;
-               }
+            }
+
             &-big {
                 margin-top: 2rem;
                 height: 6rem;
                 font-weight: 200;
                 font-size: 48px;
                 line-height: 57px;
-                &::placeholder { 
+
+                &::placeholder {
                     font-weight: 200;
                     font-size: 48px;
                     line-height: 57px;
                     color: #C1C1C1;
                     transition: 1s;
-                   }
+                }
             }
         }
     }
+
     &__subtitle {
         font-weight: 500;
         font-size: 1.5rem;
@@ -47,24 +52,39 @@
         color: #C1C1C1;
         padding-bottom: 2rem;
     }
+
     &__inner {
         display: flex;
         flex-wrap: wrap;
     }
+
     &__item {
         position: relative;
         height: 4.5rem;
         margin-top: 4rem;
         margin-bottom: 1.5rem;
         flex-basis: 45%;
+
         &:nth-child(odd) {
             margin-right: 4rem;
         }
+
         &--wide {
             flex-basis: 100%;
             margin-right: 0;
+
             &:nth-child(odd) {
                 margin-right: 0;
+            }
+        }
+    }
+
+    &-box {
+        display: flex;
+        .form__div {
+            width: 21rem;
+            &:first-child {
+                margin-right: 3.4rem;
             }
         }
     }

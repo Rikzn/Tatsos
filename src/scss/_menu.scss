@@ -1,6 +1,33 @@
 $svg-sitebar: #fff;
 
 .menu {
+    &-hover {
+        padding: 0.5rem 0.6rem;
+        border-radius: 0.7rem;
+        transition: 0.3s;
+
+        @include breakpoint(small-mobile) {
+            padding: 0;
+        }
+
+        &:hover {
+            background-color: #F5F5F5;
+
+            @include breakpoint(small-mobile) {
+                background-color: inherit;
+            }
+
+            span {
+                color: #000000;
+                transition: 0.3s;
+
+                @include breakpoint(small-mobile) {
+                    color: rgba($color: #fff, $alpha: 0.4)
+                }
+            }
+        }
+    }
+
     &__inner {
         display: flex;
         padding-top: 2.8rem;
@@ -9,6 +36,7 @@ $svg-sitebar: #fff;
         z-index: 100;
         width: 100%;
         padding-left: 45rem;
+
         @include breakpoint(small-mobile) {
             right: 0rem;
             display: flex;
@@ -16,15 +44,16 @@ $svg-sitebar: #fff;
             padding-left: 0;
             position: fixed;
             z-index: 1;
-            }
+        }
     }
 
     &__logo {
         display: none;
-            @include breakpoint(small-mobile) {
-                display: block;
-                margin-right: auto;
-                width: 14.6rem;
+
+        @include breakpoint(small-mobile) {
+            display: block;
+            margin-right: auto;
+            width: 14.6rem;
         }
     }
 
@@ -32,43 +61,57 @@ $svg-sitebar: #fff;
         display: flex;
         align-items: center;
         margin-left: -0.8rem;
+
         @include breakpoint(small-mobile) {
             overflow-x: scroll;
             width: 100%;
-            padding-left: 2rem;
             margin-top: 2rem;
             margin-left: 0;
             border-bottom: 0.1rem solid rgba($color: #fff, $alpha: 0.2);
             scrollbar-width: none;
+
             &::-webkit-scrollbar {
                 width: 0;
-              }
+            }
         }
+
         &__link {
             margin-right: 1.4rem;
             padding: 0.6rem;
+
             @include breakpoint(small-mobile) {
                 white-space: pre;
             }
+
             span {
                 font-size: 1.6rem;
                 line-height: 1.9rem;
                 color: #C1C1C1;
                 font-weight: 500;
                 transition: 0.3s;
+
                 @include breakpoint(small-mobile) {
                     color: rgba($color: #fff, $alpha: 0.4)
                 }
             }
 
             &--active {
+                &:hover {
+                    background-color: #fff;
+                }
+
                 span {
                     color: #000000;
+
+                    &:hover {
+                        background-color: #fff;
+                    }
+
                     @include breakpoint(small-mobile) {
                         color: rgba($color: #fff, $alpha: 1.0)
                     }
                 }
-                
+
             }
         }
 
@@ -78,12 +121,14 @@ $svg-sitebar: #fff;
             cursor: pointer;
             position: relative;
             overflow: hidden;
-            padding: 0.6rem;
+            padding: .6rem .1rem .6rem .6rem;
+
             @include breakpoint(small-mobile) {
-                pointer-events:none;
+                pointer-events: none;
                 padding: 0;
                 overflow: visible;
             }
+
             svg {
                 width: 2.4rem;
                 height: 2.4rem;
@@ -107,9 +152,7 @@ $svg-sitebar: #fff;
                                 opacity: 1;
                                 transition: 0.3s, opacity 1s;
                                 padding: 2rem 2rem 0 0;
-                                /* 20px 20px */
                                 top: 2rem;
-                                /* 20px */
                             }
                         }
                     }
@@ -130,6 +173,7 @@ $svg-sitebar: #fff;
                 /* 19px */
                 color: #C1C1C1;
                 transition: 0.3s;
+
                 @include breakpoint(small-mobile) {
                     display: none;
                 }
@@ -138,58 +182,52 @@ $svg-sitebar: #fff;
             &-dropdown {
                 position: absolute;
                 border-radius: 1rem;
-                /* 10px */
                 top: 2rem;
-                /* 20px */
                 padding-top: 0.5rem;
-                /* 5px */
                 opacity: 0;
                 transition: 0.3s;
+
                 @include breakpoint(small-mobile) {
                     position: relative;
                     top: 0;
                     opacity: 1;
                     padding: 0;
                 }
+
                 li {
                     padding-bottom: 2rem;
-                    /* 20px */
                 }
 
                 &-inner {
                     padding: 0.5rem;
-                    /* 5px */
                     background-color: #fff;
-                    box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem
-                        /* 0px 13.7866px 33.4221px 0px 7.37098px 17.869px 0px 4.13211px 10.0172px 0px 2.19453px 5.32008px 0px 0.913195px 2.21381px */
-                        rgba(0, 0, 0, 0.0196802);
+                    box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem rgba(0, 0, 0, 0.0196802);
                     border-radius: 1rem;
-                    /* 10px */
                     display: flex;
                     flex-direction: column;
+
                     @include breakpoint(small-mobile) {
                         background-color: transparent;
                         flex-direction: row;
                         color: rgba($color: #fff, $alpha: 0.4);
                         padding: 0;
                     }
+
                     a {
                         font-weight: 500;
                         font-size: 1.6rem;
-                        /* 16px */
                         line-height: 1.9rem;
-                        /* 19px */
                         padding: 0.5rem 0.9rem 0.7rem 0.9rem;
-                        /* 5px 9px 7px 9px */
                         transition: 0.3s;
+
                         @include breakpoint(small-mobile) {
                             padding: 0;
                             margin-right: 1.4rem;
                         }
+
                         &:hover {
                             background: #F5F5F5;
                             border-radius: 0.7rem;
-                            /* 7px */
                             transition: 0.3s;
                         }
                     }
@@ -201,12 +239,12 @@ $svg-sitebar: #fff;
     &-navigation {
         display: flex;
         align-items: center;
+
         @include breakpoint(small-mobile) {
-            padding-left: 2rem;
-            padding-right: 2rem;
             width: 100%;
             align-items: flex-end;
         }
+
         svg {
             width: 2.4rem;
             height: 2.4rem;
@@ -217,16 +255,17 @@ $svg-sitebar: #fff;
         margin-right: 1rem;
         display: flex;
         position: relative;
+
         @include breakpoint(small-mobile) {
             color: #fff;
             margin-right: 1.5rem;
             top: 0.6rem;
         }
+
         input {
             position: absolute;
             opacity: 0;
-            border-bottom: 0.1rem
-                solid #a2a2a2;
+            border-bottom: 0.1rem solid #a2a2a2;
             padding: 0.5rem 2.5rem 0.5rem 1rem;
             font-size: 1.6rem;
             right: 0;
@@ -236,9 +275,7 @@ $svg-sitebar: #fff;
 
             &:hover {
                 width: 13rem;
-                /* 130px */
                 right: -0.3rem;
-                /* -3px */
                 transition: 0.3s;
                 opacity: 1;
             }
@@ -247,6 +284,7 @@ $svg-sitebar: #fff;
 
     &__call {
         margin-right: 0.4rem;
+
         @include breakpoint(small-mobile) {
             display: none;
         }
@@ -256,9 +294,11 @@ $svg-sitebar: #fff;
         margin-right: 2.5rem;
         position: relative;
         cursor: pointer;
+
         @include breakpoint(small-mobile) {
             display: none;
         }
+
         &-count {
             position: absolute;
             top: 0.2rem;
@@ -278,19 +318,23 @@ $svg-sitebar: #fff;
         align-items: center;
         padding-left: 0.6rem;
         transition: 0.4s;
-        @include breakpoint(small-mobile) {               
+
+        @include breakpoint(small-mobile) {
             color: #fff;
             padding-left: 0;
             margin-bottom: 0;
+
             svg {
                 width: 2rem;
                 height: 2rem;
-                }
             }
+        }
+
         &-link {
             display: flex;
             align-items: center;
         }
+
         &-name {
             font-weight: 500;
             font-size: 1.6rem;
@@ -303,6 +347,7 @@ $svg-sitebar: #fff;
                 z-index: -2;
                 transition: 0.3s;
             }
+
             &-dropdown {
                 position: absolute;
                 left: -6rem;
@@ -313,18 +358,20 @@ $svg-sitebar: #fff;
                 z-index: -1;
                 height: 0;
                 overflow: hidden;
-                @include breakpoint(small-mobile) {               
+
+                @include breakpoint(small-mobile) {
                     color: #000;
-                    }
+                }
+
                 &-inner {
                     display: flex;
                     flex-direction: column;
                     height: 0;
                     padding: 0.5rem;
                     background: #FFFFFF;
-                    box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem
-                        rgba(0, 0, 0, 0.0196802);
+                    box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem rgba(0, 0, 0, 0.0196802);
                     border-radius: 1rem;
+
                     a {
                         font-weight: 500;
                         font-size: 1.6rem;
@@ -332,11 +379,13 @@ $svg-sitebar: #fff;
                         padding: 0.5rem 0.9rem 0.7rem 0.9rem;
                         transition: 0.3s;
                         margin-bottom: 0.5rem;
+
                         &:hover {
                             background-color: #F5F5F5;
                             border-radius: 0.7rem;
                             transition: 0.3s;
                         }
+
                         &:last-child {
                             margin-bottom: 0;
                         }
@@ -349,36 +398,65 @@ $svg-sitebar: #fff;
     &__wrapper {
         display: flex;
         justify-content: space-between;
-        @include breakpoint(small-mobile) {   
+
+        @include breakpoint(small-mobile) {
             flex-direction: column-reverse;
-            }
+        }
     }
 
-    &-hover {
-        padding: 0.5rem 0.6rem;
-        /* 5px 6px */
-        border-radius: 0.7rem;
-        /* 7px */
-        transition: 0.3s;
-        @include breakpoint(small-mobile) {
-            // pointer-events:none;
-            padding: 0;
-        }
-        
-        &:hover {
-            @include breakpoint(small-mobile) {
-                background-color: inherit;
-            }
-            span {
-                color: #000000;
-                transition: 0.3s;
-                @include breakpoint(small-mobile) {
-                    color: rgba($color: #fff, $alpha: 0.4)
+    &-entrance {
+
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 12.8rem;
+
+        &__item {
+            a {
+                span {
+                    font-weight: 500;
+                    font-size: 2rem;
+                    line-height: 2rem;
+                    color: #2E2E2E;
+                    &:hover {
+                        transition: 0.3s;
+                        color: #F1611F;
+                    }
                 }
             }
-            // &:not(.menu-nav__link--active) {
-            //     background-color: #F5F5F5;
-            // }
+
+            span {
+                font-weight: 500;
+                font-size: 1.2rem;
+                line-height: 1.2rem;
+                color: #C1C1C1;
+            }
+            a {
+                margin-right: 2.6rem;
+
+                svg {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    cursor: pointer;
+    
+                    &:last-child {
+                        margin-right: 0;
+                    }
+    
+                    &:hover {
+                        transition: 0.3s;
+                        fill: #F1611F;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &:last-child {
+                margin-right: 11rem;
+            }
         }
     }
 }

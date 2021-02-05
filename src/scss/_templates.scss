@@ -3,7 +3,7 @@
         position: relative;
         margin-left: auto;
         @include breakpoint(small-mobile) {
-            margin-top: 3.7rem;
+            margin-top: 2.5rem;
             right: 0;
             }
     }
@@ -53,10 +53,6 @@
         &:nth-child(3n) {
             margin-right: 0;
         }
-        &:hover {
-            opacity: 0.8;
-            transition: 0.3s;
-        }
         @include breakpoint(small-mobile) {
             margin-bottom: 0;
             margin-right: 2rem;
@@ -87,6 +83,7 @@
     &-img {
         width: 4.8rem;
         height: 4.8rem;
+        border-radius: 19px;
         @include breakpoint(desktop) {
             width: 4rem;
             height: 4rem;

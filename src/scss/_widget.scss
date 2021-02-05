@@ -27,9 +27,10 @@
         color: #fff;
         overflow: hidden;
         max-height: 0;
-        transition: 0.3s;
         opacity: 0;
-
+        transition-property: opacity, max-width;
+        transition-duration: 0.5s, 0.3s;
+        
         p {
             transition: 0.3s;
         }
@@ -43,11 +44,10 @@
 
         &--active {
             max-height: 20rem;
-            transition: 0.3s;
             opacity: 1;
-            transition-property: opacity, max-height;
-            transition-delay: 0.2s, 0.1s;
             overflow: visible;
+            transition-property: opacity, max-height;
+            transition-duration: 1s, 0.3s;
         }
     }
 

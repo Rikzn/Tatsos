@@ -3,7 +3,6 @@
     @include breakpoint(small-mobile) {
         display: flex;
         flex-direction: column;
-        padding-top: 2.8rem;
         }
 }
 
@@ -16,9 +15,13 @@
         flex-wrap: wrap;
         margin-top: 3rem;
         justify-content: space-between;
+        @include breakpointMF(ultra-desktop) {   
+            max-width: 66.1rem;
+            }
         @include breakpoint(small-mobile) {
             flex-wrap: nowrap;
             flex-direction: column;
+            margin-top: 0;
             }
     }
 

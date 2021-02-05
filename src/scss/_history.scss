@@ -112,7 +112,6 @@
             }
         }
     }
-
     &-form {
         display: flex;
         align-items: flex-start;
@@ -122,6 +121,7 @@
             margin-bottom: 3rem;
             overflow-y: visible;
             overflow-x: scroll;
+            align-items: center;
             &::-webkit-scrollbar {
                 display: none;
             }
@@ -201,6 +201,7 @@
                 transition: opacity 0.1s ease-out 0.1s, all 0.3s;
                 @include breakpoint(small-mobile) {
                     top: 450px;
+                    display: none;
                 }
                 &-svg {
                     width: 13px;

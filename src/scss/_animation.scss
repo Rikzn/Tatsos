@@ -1,0 +1,26 @@
+.animation {
+    &__plus {
+        border-radius: 50px;
+        &:hover {
+            animation: plus 0.9s ease-in-out infinite;
+            transition: 0.3s;
+        }
+    }
+    &__hover {
+        &:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+            svg {
+                fill: #F1611F;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+
+@keyframes plus {
+    100% { transform: scale(1.0); }
+    50% { transform: scale(1.2); }
+    0% { transform: scale(1.0); }
+}

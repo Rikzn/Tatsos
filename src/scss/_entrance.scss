@@ -1,0 +1,65 @@
+.entrance {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15.6rem;
+    padding-bottom: 5.8rem;
+    height: 94vh;
+    span {
+        font-size: 1.5rem;
+        line-height: 22px;
+        color: #F5F5F5;
+        margin-top: 2.1rem;
+        display: block;
+    }
+    &__service {
+        display: flex;
+        margin-top: 3rem;
+        &--item {
+            width: 6rem;
+            height: 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            border: 1px solid #FFFFFF;
+            padding: 1.4rem;
+            &:nth-child(odd) {
+                margin-right: 2rem;
+            }
+            svg {
+                width: 3.2rem;
+                height: 3.2rem;
+                fill: #FFFFFF;
+            }
+        }
+    }
+    &__link {
+        span {
+            color: #F1611F;
+        }
+    }
+    &__left {
+        width: 45.4rem;
+    }
+    &__footer {
+        margin-top: auto;
+        ul {
+            li {
+                font-weight: 500;
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+                color: #C1C1C1;
+                margin-top: 1.6rem;
+                &:first-child {
+                    margin-top: 0;
+                }
+                &:last-child {
+                    margin-top: 2.8rem;
+                }
+            }
+        }
+    }
+    &-nav {
+        margin-top: 11rem;
+    }
+}
