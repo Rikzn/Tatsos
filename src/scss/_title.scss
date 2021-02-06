@@ -25,6 +25,10 @@
         line-height: 2.4rem;
         color: #2E2E2E;
         margin-right: 1rem;
+        &:hover {
+            opacity: 0.6;
+            transition: 0.2s;
+        }
     }  
     &__entrance {
         font-weight: 600;

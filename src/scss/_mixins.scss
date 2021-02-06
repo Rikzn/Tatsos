@@ -133,7 +133,7 @@
 
 @mixin breakpointMF($class) {
     @if $class == ultra-desktop {
-        @media only screen and (min-width: 1600px) {
+        @media only screen and (min-width: 1700px) {
             @content;
         }
     }    @else if $class == large-desktop {

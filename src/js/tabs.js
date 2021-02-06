@@ -1,5 +1,5 @@
 // Таб на странице "Открыт новый продукт"
-const tabsBtn = document.querySelectorAll(".sidebar-nav__link");
+const tabsBtn = document.querySelectorAll(".js-tabs-link");
 const tabsItems = document.querySelectorAll(".js-tabs-item");
 
 tabsBtn.forEach(function(item) {
@@ -18,6 +18,32 @@ tabsBtn.forEach(function(item) {
     
             currentBtn.classList.add('sidebar-nav__link--active');
             currentTab.classList.add('js-tabs-item--active');
+        }
+
+        
+    });
+});
+
+// Таб меняют картинку на странице "Настройка"
+const tabsLink = document.querySelectorAll(".sidebar-item");
+const tabsBg = document.querySelectorAll(".sidebar-img");
+
+tabsLink.forEach(function(item) {
+    item.addEventListener("click", function() {
+        let currentBg = item;
+        let tabIdBg = currentBg.getAttribute("data-tab");
+        let currentTab = document.querySelector(tabIdBg);
+
+        if( ! currentBg.classList.contains('sidebar-item--active')) {
+            tabsLink.forEach(function(item) {
+                item.classList.remove('sidebar-item--active');
+            });
+            tabsBg.forEach(function(item) {
+                item.classList.remove('sidebar-img--active');
+            });
+    
+            currentBg.classList.add('sidebar-item--active');
+            currentTab.classList.add('sidebar-img--active');
         }
 
         
