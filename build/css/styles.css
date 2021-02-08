@@ -955,7 +955,7 @@ button.swiper-pagination-bullet {
   --max-container-width: 124rem;
   --content-padding: 1rem;
   --primary-color: #F1611F; }
-  @media only screen and (min-width: 1600px) {
+  @media only screen and (min-width: 1700px) {
     :root {
       --content-padding: 6rem; } }
   @media only screen and (max-width: 1400px) {
@@ -972,7 +972,7 @@ html {
   font-size: 10px;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent; }
-  @media only screen and (min-width: 1600px) {
+  @media only screen and (min-width: 1700px) {
     html {
       font-size: 11px; } }
   @media only screen and (max-width: 1400px) {
@@ -1274,7 +1274,7 @@ select:-webkit-autofill:focus {
   max-width: 870px;
   margin: 0 auto;
   padding: 0 var(--content-padding); }
-  @media only screen and (min-width: 1600px) {
+  @media only screen and (min-width: 1700px) {
     .container {
       max-width: 1250px; } }
   @supports (width: max(20vw, 100px)) {
@@ -1378,6 +1378,10 @@ select:-webkit-autofill:focus {
     line-height: 2.4rem;
     color: #2E2E2E;
     margin-right: 1rem; }
+    .title-heading:hover {
+      opacity: 0.6;
+      -webkit-transition: 0.2s;
+      transition: 0.2s; }
   .title__entrance {
     font-weight: 600;
     font-size: 2.4rem;
@@ -1891,9 +1895,7 @@ select:-webkit-autofill:focus {
     .sidebar__wrapper::-webkit-scrollbar-thumb {
       background-color: rgba(255, 255, 255, 0.8);
       border-radius: 1rem;
-      /* 10px */
       height: 7.5rem;
-      /* 75px */
       -webkit-box-shadow: inset 0.1rem 0.1rem 1rem #f3faf7;
               box-shadow: inset 0.1rem 0.1rem 1rem #f3faf7; }
     @media only screen and (max-width: 576px) {
@@ -1901,7 +1903,7 @@ select:-webkit-autofill:focus {
         height: auto;
         overflow-x: visible; } }
   .sidebar__link {
-    background: #F1611F;
+    background: #f1611f;
     border-radius: 2rem;
     padding: 2.1rem;
     display: block;
@@ -1912,12 +1914,10 @@ select:-webkit-autofill:focus {
     .sidebar__link span {
       font-weight: 500;
       font-size: 1.6rem;
-      /* 16px */
       line-height: 1.9rem;
-      /* 19px */
-      color: #FFFFFF; }
+      color: #ffffff; }
     .sidebar__link:hover {
-      background-color: #DD4F0E;
+      background-color: #dd4f0e;
       -webkit-transition: 0.3s;
       transition: 0.3s; }
     @media only screen and (max-width: 576px) {
@@ -1925,17 +1925,28 @@ select:-webkit-autofill:focus {
         margin-top: auto;
         margin-bottom: 100px; } }
   .sidebar-logo {
-    width: 15.8rem; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 37px; }
     @media only screen and (max-width: 576px) {
       .sidebar-logo {
         display: none; } }
+    .sidebar-logo img {
+      width: 15.8rem; }
+    .sidebar-logo svg {
+      fill: #fff;
+      width: 2.3rem;
+      height: 2.3em;
+      margin-left: auto; }
   .sidebar-img {
     position: fixed;
     top: 0rem;
     left: 0rem;
     width: 100%;
     height: 800px;
-    z-index: -1; }
+    z-index: -1;
+    display: none; }
     .sidebar-img img {
       width: 100%;
       height: 100vh;
@@ -1951,6 +1962,8 @@ select:-webkit-autofill:focus {
       width: 100%;
       height: 100vh;
       background-color: rgba(37, 37, 37, 0.8); }
+    .sidebar-img--active {
+      display: block; }
   .sidebar__content {
     padding: 2.8rem 5rem 5.7rem 5rem;
     height: 100vh;
@@ -1965,6 +1978,20 @@ select:-webkit-autofill:focus {
       .sidebar__content {
         padding: 0 20px;
         width: auto; } }
+  .sidebar-item {
+    background-color: #F1611F;
+    border-radius: 150px;
+    width: 5.1rem;
+    height: 5.1rem;
+    margin-left: auto;
+    margin-top: 3rem;
+    margin-right: -14px; }
+    .sidebar-item img {
+      border-radius: 150px;
+      width: 5.1rem;
+      height: 5.1rem; }
+    .sidebar-item--active img {
+      border: 1px solid #F1611F; }
 
 .operations {
   display: -webkit-box;
@@ -1994,7 +2021,7 @@ select:-webkit-autofill:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
-  @media only screen and (min-width: 1600px) {
+  @media only screen and (min-width: 1700px) {
     .payments__wrapper {
       max-width: 66.1rem; } }
   @media only screen and (max-width: 576px) {
@@ -2124,7 +2151,8 @@ select:-webkit-autofill:focus {
   margin-top: 0.3rem; }
   .payments-content__subtitle img {
     margin-left: 0.4rem;
-    width: 1.5rem; }
+    width: 1.5rem;
+    height: 1.9rem; }
 
 .payments .slider__header {
   font-weight: 500;
@@ -2320,7 +2348,7 @@ select:-webkit-autofill:focus {
         -webkit-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
         width: 103%;
-        height: 140%;
+        height: 166%;
         border-radius: 21px;
         z-index: -1;
         opacity: 0;
@@ -2745,8 +2773,8 @@ select:-webkit-autofill:focus {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    -webkit-transition-property: opacity, max-width;
-    transition-property: opacity, max-width;
+    -webkit-transition-property: opacity, max-height;
+    transition-property: opacity, max-height;
     -webkit-transition-duration: 0.5s, 0.3s;
             transition-duration: 0.5s, 0.3s; }
     .widget__body p {
@@ -3248,8 +3276,7 @@ select:-webkit-autofill:focus {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 25rem;
-  margin-top: 3rem; }
+  max-width: 25rem; }
   @media only screen and (max-width: 576px) {
     .templates__wrapper {
       max-width: none;
@@ -3293,6 +3320,7 @@ select:-webkit-autofill:focus {
   width: 29%;
   margin-bottom: 2.8rem;
   margin-right: 6%;
+  margin-top: 2.1rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer; }
@@ -4833,7 +4861,7 @@ select:-webkit-autofill:focus {
       -webkit-box-shadow: 0px 33px 80px rgba(0, 0, 0, 0.07), 0px 13.7866px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 7.37098px 17.869px rgba(0, 0, 0, 0.0417275), 0px 4.13211px 10.0172px rgba(0, 0, 0, 0.035), 0px 2.19453px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 0.91319px 2.21381px rgba(0, 0, 0, 0.0196802);
               box-shadow: 0px 33px 80px rgba(0, 0, 0, 0.07), 0px 13.7866px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 7.37098px 17.869px rgba(0, 0, 0, 0.0417275), 0px 4.13211px 10.0172px rgba(0, 0, 0, 0.035), 0px 2.19453px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 0.91319px 2.21381px rgba(0, 0, 0, 0.0196802);
       border-radius: 1rem; }
-      @media only screen and (min-width: 1600px) {
+      @media only screen and (min-width: 1700px) {
         .card-big__img {
           width: auto; } }
       @media only screen and (max-width: 576px) {

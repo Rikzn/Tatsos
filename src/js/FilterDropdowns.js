@@ -29,16 +29,35 @@ export default function FilterDropdowns() {
 
     // раскрытия виджета
 
-    const widgets = document.querySelectorAll('.widget');
+    let widgets = document.querySelectorAll('.widget');
 
-    widgets.forEach(function (widget) {
-        widget.addEventListener('click', function(e) {
-            if (e.target.classList.contains('widget__title')) {
-                e.target.classList.toggle('widget__title--active');
-                e.target.nextElementSibling.classList.toggle('widget__body--active');
-            }
-        });
-    });
+    
+
+    // Медиа запрос экран меньше 700px скрипт работает
+    // if (window.matchMedia("(min-width:700px)").matches) {     
+    //     widgets.forEach(function (widget) {
+    //         widget.addEventListener('click', function(e) {
+    //             if (e.target.classList.contains('widget__title')) {
+    //                 e.target.classList.toggle('widget__title--active');
+    //                 e.target.nextElementSibling.classList.toggle('widget__body--active');
+    //             }
+    //         });
+    //     });
+    // } else {
+    //     widgets.forEach(function (widget) {
+    //         widget.addEventListener('click', function(e) {
+    //             if (e.target.classList.contains('widget__title--active')) {
+    //                 console.log('12')
+    //                 e.target.classList.remove('widget__title--active');
+    //                 e.target.nextElementSibling.classList.remove('widget__body--active');
+    //             }
+                
+    //         });
+    //     });   
+    // }
+
+    
+
 
     // Клик в блоке Истории операций
 

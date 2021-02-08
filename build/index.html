@@ -93,8 +93,8 @@
             </div>
     </menu>    <div id="main-content" class="page-content main">
         <div id="sidebar" class="sidebar">              
-            <div class="sidebar__inner">
-                <div class="sidebar-img">
+            <div class="sidebar__inner" id="imgBox">
+                <div class="sidebar-img sidebar-img--active parallax" data-depth='0.0'>
                     <img src="/img/sidebar_bg.jpg" alt="sidebar_bg">
                 </div>
                     <div class="sidebar__content">
@@ -454,48 +454,48 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide">
-                    <div class="slider__inner">
+                <a href="#" class="swiper-slide">
+                    <div class="slider__inner animation__hover">
                         <img src="/img/slider-1.jpg" alt="slider-1">
                         <div class="slider__tag">Советы</div>
                         <div class="slider__title">Кредит на любые цели </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider__inner">
+                </a>
+                <a href="#" class="swiper-slide">
+                    <div class="slider__inner animation__hover">
                         <img src="/img/slider-2.jpg" alt="slider-2">
                         <div class="slider__tag">Советы</div>
                         <div class="slider__title">Автокредит Премиум</div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider__inner">
+                </a>
+                <a href="#" class="swiper-slide">
+                    <div class="slider__inner animation__hover">
                         <img src="/img/slider-3.jpg" alt="slider-3">
                         <div class="slider__tag">Безопастность</div>
                         <div class="slider__title">Автокредит Премиум</div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider__inner">
+                </a>
+                <a href="#" class="swiper-slide">
+                    <div class="slider__inner animation__hover">
                         <img src="/img/slider-1.jpg" alt="slider-1">
                         <div class="slider__tag">Советы</div>
                         <div class="slider__title">Кредит на любые цели </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider__inner">
+                </a>
+                <a href="#" class="swiper-slide">
+                    <div class="slider__inner animation__hover">
                         <img src="/img/slider-2.jpg" alt="slider-2">
                         <div class="slider__tag">Советы</div>
                         <div class="slider__title">Автокредит Премиум</div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slider__inner">
+                </a>
+                <a href="#" class="swiper-slide">
+                    <div class="slider__inner animation__hover">
                         <img src="/img/slider-3.jpg" alt="slider-3">
                         <div class="slider__tag">Безопастность</div>
                         <div class="slider__title">Автокредит Премиум</div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
 </section><section class="history">
@@ -868,6 +868,8 @@
             </main>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="/assets/js/just-validate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
         <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js" ></script>
         <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js" ></script>
         <script src="/assets/js/clipboard.min.js"></script>

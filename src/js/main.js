@@ -12,6 +12,7 @@ import select from './select';
 import clipboard from './clipboard';
 import mask from './mask';
 import checkbox from './checkbox';
+import sticky from './sticky';
 import { async } from 'regenerator-runtime';
 
 
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     OnlyNumeric();
     FilterDropdowns();
     select();
+    sticky();
 });
 
 window.addEventListener('load', function () {
@@ -30,12 +32,23 @@ window.addEventListener('load', function () {
 });
 
 
-// Медиа запрос экран меньше 700px скрипт работает
-// if (window.matchMedia("(max-width:700px)").matches) {
-//     alert('Media Query Matched!')
-// }
 
 
+// Параллакс эффект 
+const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#hero",
+      start: "top top",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+  
+  gsap.utils.toArray(".parallax").forEach(layer => {
+    const depth = layer.dataset.depth;
+    const movement = -(layer.offsetHeight * depth)
+    tl.to(layer, {y: movement, top: -15, ease: "none"}, 0)
+  });
 
 
 // Количество выбранных чекбоксов
@@ -43,9 +56,6 @@ let checkCount = $('.history-form__group-dropdown-inner').find('input[checkbox]:
 let chosen = document.querySelector('.history-form__group-chexbox');
 
 chosen.innerHTML = checkCount;
-console.log(checkCount);
-console.log(chosen);
-// let checkText = document.querySelector('.history-form__group-chexbox');
 
 
 

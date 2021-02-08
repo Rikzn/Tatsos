@@ -3,12 +3,48 @@
   <component name="ChangeListManager">
     <list default="true" id="d7ee71f3-ff61-48df-b553-bd341d8f084c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/banking-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/banking-product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/between-accounts.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/between-accounts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contribution.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/contribution.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/styles.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/styles.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debit-account.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/debit-account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/entrance.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/entrance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/history-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/history-item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/sidebar_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/img/sidebar_bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/mobile-connection-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/mobile-connection-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/mobile-connection.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/mobile-connection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/notifications.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/notifications.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/open-a-new-product.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/open-a-new-product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/partner.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/partner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/payment-for-mobile-communication.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/payment-for-mobile-communication.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/payment-history.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/payment-history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/payment-made-card.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/payment-made-card.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/payment-made-number.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/payment-made-number.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/payment-made.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/payment-made.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/payments-and-transfers-inside.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/payments-and-transfers-inside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/payments-and-transfers.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/payments-and-transfers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/phone-translation-tel.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/phone-translation-tel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/phone-translation.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/phone-translation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/requisites.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/requisites.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/specials.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/specials.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/templates-create-inside.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/templates-create-inside.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/templates-create.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/templates-create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/templates-main.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/templates-main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/transfer-by-card-number-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/transfer-by-card-number-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/transfer-by-card-number.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/transfer-by-card-number.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/visit-history.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/visit-history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/FilterDropdowns.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/FilterDropdowns.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/components/payments-and-transfers-inside.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/payments-and-transfers-inside.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/components/templates-create-inside.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/templates-create-inside.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/sticky.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/sticky.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/components/sidebar.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/sidebar.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/layouts/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/layouts/layout.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +83,7 @@
       <workItem from="1611167056787" duration="1565000" />
       <workItem from="1611326835962" duration="195000" />
       <workItem from="1612083041229" duration="712000" />
+      <workItem from="1612673239577" duration="191000" />
     </task>
     <servers />
   </component>
