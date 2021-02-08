@@ -107,6 +107,9 @@ $widgetTitle: #fff;
             height: 100vh;
             object-fit: cover;
             object-position: -104px;
+            &:last-child {
+                transform: rotate(-180deg);
+            }
         }
         &::before {
             content: '';
@@ -149,5 +152,18 @@ $widgetTitle: #fff;
                 border: 1px solid #F1611F;
             }
         }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48px;
+        color: #FFFFFF;
+        position: absolute;
+        max-width: 15rem;
+        margin-top: 3rem;
+    }
+    &-settings {
+        position: relative;
+        margin-top: 2rem;
     }
 }

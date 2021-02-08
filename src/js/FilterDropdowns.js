@@ -34,42 +34,42 @@ export default function FilterDropdowns() {
     
 
     // Медиа запрос экран меньше 700px скрипт работает
-    // if (window.matchMedia("(min-width:700px)").matches) {     
-    //     widgets.forEach(function (widget) {
-    //         widget.addEventListener('click', function(e) {
-    //             if (e.target.classList.contains('widget__title')) {
-    //                 e.target.classList.toggle('widget__title--active');
-    //                 e.target.nextElementSibling.classList.toggle('widget__body--active');
-    //             }
-    //         });
-    //     });
-    // } else {
-    //     widgets.forEach(function (widget) {
-    //         widget.addEventListener('click', function(e) {
-    //             if (e.target.classList.contains('widget__title--active')) {
-    //                 console.log('12')
-    //                 e.target.classList.remove('widget__title--active');
-    //                 e.target.nextElementSibling.classList.remove('widget__body--active');
-    //             }
-                
-    //         });
-    //     });   
-    // }
-
-    const accordions = document.querySelectorAll('.accordion-item');
-
-    for(item of accordions) {
-        item.addEventListener('click', function() {
-            if(this.classList.contains('active')) {
-                this.classList.remove('active');
-            } else {
-                for(el of accordions) {
-                    el.classList.remove('active');
+    if (window.matchMedia("(min-width:700px)").matches) {     
+        widgets.forEach(function (widget) {
+            widget.addEventListener('click', function(e) {
+                if (e.target.classList.contains('widget__title')) {
+                    e.target.classList.toggle('widget__title--active');
+                    e.target.nextElementSibling.classList.toggle('widget__body--active');
                 }
-                this.classList.add('active');
-            }
-        })
+            });
+        });
+    } else {
+        widgets.forEach(function (widget) {
+            widget.addEventListener('click', function(e) {
+                if (e.target.classList.contains('widget__title--active')) {
+                    console.log('12')
+                    e.target.classList.remove('widget__title--active');
+                    e.target.nextElementSibling.classList.remove('widget__body--active');
+                }
+                
+            });
+        });   
     }
+
+    // const accordions = document.querySelectorAll('.js-accordion');
+
+    // for(item of accordions) {
+    //     item.addEventListener('click', function() {
+    //         if(this.classList.contains('active')) {
+    //             this.classList.remove('active');
+    //         } else {
+    //             for(el of accordions) {
+    //                 el.classList.remove('active');
+    //             }
+    //             this.classList.add('active');
+    //         }
+    //     })
+    // }
 
 
     // Клик в блоке Истории операций

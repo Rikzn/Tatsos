@@ -1,6 +1,5 @@
 import StickySidebar from 'sticky-sidebar-v2';
 // import StickySidebar from 'sticky-sidebar';
-import Inputmask from 'inputmask';
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
 import OnlyNumeric from './OnlyNumeric';
@@ -10,7 +9,7 @@ import datefilter from './datefilter';
 import tabs from './tabs';
 import select from './select';
 import clipboard from './clipboard';
-import mask from './mask';
+import maskInput from './mask';
 import checkbox from './checkbox';
 import sticky from './sticky';
 import { async } from 'regenerator-runtime';
@@ -24,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     FilterDropdowns();
     select();
     sticky();
+    maskInput();
 });
 
 window.addEventListener('load', function () {
@@ -52,12 +52,20 @@ const tl = gsap.timeline({
 
 
 // Количество выбранных чекбоксов
-let checkCount = $('.history-form__group-dropdown-inner').find('input[checkbox]:checked').length;
+
 let chosen = document.querySelector('.history-form__group-chexbox');
+let checkBoxItem = document.querySelectorAll('.js-checkbox');
 
-chosen.innerHTML = checkCount;
+chosen.addEventListener('click', checkBox);
 
+function checkBox() {
 
+  // let checkCount = $('history-form__group-dropdown-inner').find('input[checkbox]:checked').length;
+  let checkCount = document.querySelectorAll('input[checkbox]:checked').length;
+  
+  chosen.innerHTML = checkCount;
+  console.log(checkCount);
+}
 
 
 // Валидатор
