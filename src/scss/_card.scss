@@ -204,15 +204,7 @@
     }
     &-selection {
         margin-top: 4rem;
-        position: relative; 
-        svg {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            width: 2.4rem;
-            height: 2.4rem;
-            transform: translate(0, -50%);
-        }     
+        position: relative;   
         &__item {
             display: flex;
             align-items: center;
@@ -384,6 +376,22 @@
                         width: 2.4rem;
                     }
                 }
+                
+            }
+            &-svg {
+                font-weight: 500;
+                font-size: 1.5rem;
+                line-height: 1.8rem;
+                color: #C1C1C1;
+                position: relative;
+                svg {
+                    position: absolute;
+                    right: 50%;
+                    top: 50%;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    transform: translate(-50%, -50%);
+                }   
             }
         }
     

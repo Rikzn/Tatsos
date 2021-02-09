@@ -34,6 +34,7 @@
         position: relative;
         z-index: -2;
         display: none;
+        white-space: nowrap;
         @include breakpoint(small-mobile) {
             display: none;
           }
