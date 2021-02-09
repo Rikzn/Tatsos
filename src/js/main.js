@@ -10,25 +10,28 @@ import tabs from './tabs';
 import select from './select';
 import clipboard from './clipboard';
 import maskInput from './mask';
-import checkbox from './checkbox';
 import sticky from './sticky';
+import checkBox from './checkbox';
 import { async } from 'regenerator-runtime';
 
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
-    slider();
     OnlyNumeric();
     FilterDropdowns();
     select();
     sticky();
     maskInput();
+    slider();
+    checkBox();
 });
 
 window.addEventListener('load', function () {
     document.body.classList.add('loaded');
+    
     setTimeout(() => document.body.classList.add('animatable'), 300)
+
 });
 
 
@@ -49,23 +52,6 @@ const tl = gsap.timeline({
     const movement = -(layer.offsetHeight * depth)
     tl.to(layer, {y: movement, top: -15, ease: "none"}, 0)
   });
-
-
-// Количество выбранных чекбоксов
-
-let chosen = document.querySelector('.history-form__group-chexbox');
-let checkBoxItem = document.querySelectorAll('.js-checkbox');
-
-chosen.addEventListener('click', checkBox);
-
-function checkBox() {
-
-  // let checkCount = $('history-form__group-dropdown-inner').find('input[checkbox]:checked').length;
-  let checkCount = document.querySelectorAll('input[checkbox]:checked').length;
-  
-  chosen.innerHTML = checkCount;
-  console.log(checkCount);
-}
 
 
 // Валидатор

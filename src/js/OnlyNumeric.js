@@ -5,11 +5,11 @@ export default function OnlyNumeric() {
     
         input.addEventListener('input', () => {
             const value = input.value;
-            const newCleanedValue = parseInt(value.replace(/[^\d]+/g,''), 10);
+            const newCleanedValue = parseInt(value.replace(/[^\d]+/g,''));
             if (isNaN(newCleanedValue)) {
                 input.value = '';
             } else {
-                input.value = newCleanedValue.toLocaleString();
+                input.value = newCleanedValue.toLocaleString() + '₽';
             }
         })
        
@@ -21,7 +21,7 @@ export default function OnlyNumeric() {
     
         input.addEventListener('input', () => {
             const value = input.value;
-            const newCleanedValue = parseInt(value.replace(/[^\d]+/g,''), 10);
+            const newCleanedValue = parseInt(value.replace(/[^\d]+/g,''));
             if (isNaN(newCleanedValue)) {
                 input.value = '';
             } else {

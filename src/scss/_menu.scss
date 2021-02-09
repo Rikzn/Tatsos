@@ -168,11 +168,10 @@ $svg-sitebar: #fff;
                 align-items: center;
                 display: flex;
                 font-size: 1.6rem;
-                /* 16px */
                 line-height: 1.9rem;
-                /* 19px */
                 color: #C1C1C1;
                 transition: 0.3s;
+                font-weight: 500;
 
                 @include breakpoint(small-mobile) {
                     display: none;
@@ -301,13 +300,13 @@ $svg-sitebar: #fff;
 
         &-count {
             position: absolute;
-            top: 0.2rem;
-            right: -0.1rem;
-            background-color: #F1611F;
+            top: -0.1rem;
+            right: -.1rem;
+            background-color: #f1611f;
             border-radius: 20rem;
-            color: #fff !important;
+            color: #fff!important;
             font-size: 1rem;
-            padding: 0.1rem 0.3rem;
+            padding: .2rem .4rem .2rem .3rem;
         }
     }
 
@@ -316,7 +315,8 @@ $svg-sitebar: #fff;
         display: flex;
         cursor: pointer;
         align-items: center;
-        padding-left: 0.6rem;
+        padding-left: .7rem;
+        padding-right: 0.1rem;
         transition: 0.4s;
 
         @include breakpoint(small-mobile) {

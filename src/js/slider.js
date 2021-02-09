@@ -4,7 +4,7 @@ import { Swiper, Autoplay, Navigation } from 'swiper';
 Swiper.use([Autoplay, Navigation]);
 
 
-export default function Slider() {
+export default function slider() {
 
     const swiper = new Swiper('.swiper-container', {
     direction: 'horizontal',
@@ -19,5 +19,5 @@ export default function Slider() {
         prevEl: '.slider__prev',
     }
     });
-  
+
 } 

@@ -116,7 +116,6 @@
         display: flex;
         align-items: flex-start;
         margin-bottom: 4.4rem;
-        margin-top: 3.2rem;
         @include breakpoint(small-mobile) {
             margin-bottom: 3rem;
             overflow-y: visible;
@@ -132,7 +131,7 @@
             padding: 0.7rem 1rem;
             font-weight: 500;
             font-size: 1.2rem;
-            line-height: 1.4rem;
+            line-height: normal;
             color: #2E2E2E;
             margin-right: 1.5rem;
             transition: 0.3s;
@@ -145,7 +144,7 @@
                 padding: 0.7rem 1rem;
                 font-weight: 500;
                 font-size: 1.2rem;
-                line-height: 1.4rem;
+                line-height: normal;
                 color: #2E2E2E;
                 margin-right: 1.5rem;
                 transition: 0.3s;
@@ -466,6 +465,9 @@
     }
     &__add {
         color: #05B135;
+    }
+    &__title {
+        margin-bottom: 3.2rem;
     }
     .card {
         &-content {

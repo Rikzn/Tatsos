@@ -58,7 +58,8 @@ $widgetTitle: #fff;
     &__link {
         background: #f1611f;
         border-radius: 2rem;
-        padding: 2.1rem;
+        padding-top: 1.8rem;
+        padding-bottom: 2rem;
         display: block;
         text-align: center;
         margin-top: auto;
@@ -66,7 +67,7 @@ $widgetTitle: #fff;
         span {
             font-weight: 500;
             font-size: 1.6rem;
-            line-height: 1.9rem;
+            line-height: normal;
             color: #ffffff;
         }
         &:hover {

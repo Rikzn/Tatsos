@@ -26,9 +26,9 @@
             <div class="menu__inner">
                 <div class="menu__wrapper container">
                     <nav class="menu-nav">
-                        <a href="#" class="menu-hover menu-nav__link menu-nav__link--active"><span>Мой банк</span></a>
+                        <a href="/" class="menu-hover menu-nav__link menu-nav__link--active"><span>Мой банк</span></a>
                         <a href="#" class="menu-hover menu-nav__link"><span>Платежи и переводы</span></a>
-                        <a href="#" class="menu-hover menu-nav__link"><span>История</span></a>
+                        <a href="/visit-history.html" class="menu-hover menu-nav__link"><span>История</span></a>
                         <div class="menu-nav__more">
                             <div class="menu-nav__more-btn">
                                 Еще
@@ -40,7 +40,7 @@
                                 <div class="menu-nav__more-dropdown-inner">
                                     <a href="#" class="menu-hover">Партнеры</a>
                                     <a href="#" class="menu-hover">Спецпредложения</a>
-                                    <a href="#" class="menu-hover">Настройки</a>
+                                    <a href="/settings.html" class="menu-hover">Настройки</a>
                                 </div>
                             </div>
                         </div>
@@ -96,12 +96,13 @@
             <div class="sidebar__inner" id="imgBox">
                 <div class="sidebar-img sidebar-img--active parallax" data-depth='0.0'>
                     <img src="/img/sidebar_bg.jpg" alt="sidebar_bg">
+                    <img src="/img/sidebar_bg.jpg" alt="sidebar_bg">
                 </div>
                     <div class="sidebar__content">
                         <div class="sidebar-logo">
                             <img src="/img/logo.png" alt="Tatsosbank">
                         </div>
-                        <div class="widget widget-main">
+                        <div class="widget widget-main js-accordion">
                             <div class="widget__title widget__title--active">
                                 Всего денег
                                 <svg class="widget-SVG">
@@ -113,7 +114,7 @@
                             </div>
                         </div>
                         <div class="sidebar__wrapper">
-                            <div class="widget">
+                            <div class="widget js-accordion">
                                 <div class="widget__title widget__title--active">
                                     Карты и счета
                                     <svg class="widget-SVG">
@@ -173,7 +174,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="widget">
+                            <div class="widget js-accordion">
                                 <div class="widget__title">
                                     Вклады
                                     <svg class="widget-SVG">
@@ -233,7 +234,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="widget">
+                            <div class="widget js-accordion">
                                 <div class="widget__title">
                                     Кредиты
                                     <svg class="widget-SVG">
@@ -310,7 +311,7 @@
                     </svg>
                 </a>
                 <div class="payments__wrapper">
-                    <a class="payments__card">
+                    <a href="#" class="payments__card">
                         <div class="payments-img">
                             <svg>
                                 <use xlink:href="#payments"/>
@@ -321,7 +322,7 @@
                             <p class="payments-content__subtitle">ЖКХ, услуги, штрафы</p>
                         </div>
                     </a>
-                    <a class="payments__card">
+                    <a href="#" class="payments__card">
                         <div class="payments-img">
                             <svg>
                                 <use xlink:href="#card"/>
@@ -332,7 +333,7 @@
                             <p class="payments-content__subtitle"></p>
                         </div>
                     </a>
-                    <a class="payments__card">
+                    <a href="/transfer-by-card-number-2.html" class="payments__card">
                         <div class="payments-img">
                             <svg>
                                 <use xlink:href="#telefon"/>
@@ -343,7 +344,7 @@
                             <p class="payments-content__subtitle">Система быстрых плтежей <img src="/img/spb.png" alt="spb"></p>
                         </div>
                     </a>
-                    <a class="payments__card">
+                    <a href="#" class="payments__card">
                         <div class="payments-img">
                             <svg>
                                 <use xlink:href="#score"/>
@@ -354,7 +355,7 @@
                             <p class="payments-content__subtitle"></p>
                         </div>
                     </a>
-                    <a class="payments__card">
+                    <a href="#" class="payments__card">
                         <div class="payments-img">
                             <svg>
                                 <use xlink:href="#upload"/>
@@ -365,7 +366,7 @@
                             <p class="payments-content__subtitle"></p>
                         </div>
                     </a>
-                    <a class="payments__card">
+                    <a href="/requisites.html" class="payments__card">
                         <div class="payments-img">
                             <svg>
                                 <use xlink:href="#doc"/>
@@ -379,53 +380,50 @@
                 </div>
             </div>
             <div class="templates__inner">
-                <a href="#" class="templates__title title">
+                <a href="/templates-main.html" class="templates__title title">
                     <h2>Шаблоны</h2>
                     <svg class="templates__title-svg">
                         <use xlink:href="#chevron-down"/>
                     </svg>
                 </a>
                 <div class="templates__wrapper">
-                    <div class="templates__card animation__hover">
+                    <a href="#" class="templates__card animation__hover">
                         <div class="templates-img">
                             <img src="/img/apple.png" alt="apple">  
                         </div>
                         <div class="templates-content">
                             <h3 class="templates-content__title">Apple Music</h3>
                         </div>
-                    </div>
-                    <div class="templates__card animation__hover">
+                    </a>
+                    <a href="#" class="templates__card animation__hover">
                         <div class="templates-img">
                             <img src="/img/tinkoff.png" alt="tinkoff">  
                         </div>
                         <div class="templates-content">
                             <h3 class="templates-content__title">Маме на <br> Тинёк</h3>
                         </div>
-                    </div>
-                    <div class="templates__card animation__hover">
+                    </a>
+                    <a href="#" class="templates__card animation__hover">
                         <div class="templates-img">
                             <img src="/img/alpfa.png" alt="alpfa">  
                         </div>
                         <div class="templates-content">
                             <h3 class="templates-content__title">Себе на <br> Альфа Банк</h3>
                         </div>
-                    </div>
-                    <div class="templates__card animation__hover">
+                    </a>
+                    <a href="#" class="templates__card animation__hover">
                         <div class="templates-img">
                             <img src="/img/rub.png" alt="rub">  
                         </div>
                         <div class="templates-content">
                             <h3 class="templates-content__title">Кредит за <br> теливизор...</h3>
                         </div>
-                    </div>
-                    <div class="templates__card">
+                    </a>
+                    <a href="/templates-create.html" class="templates__card">
                         <div class="templates-img animation__plus">
                             <img src="/img/plus.png" alt="plus">
                         </div>
-                        <div class="templates-content">
-                            <h3 class="templates-content__title"></h3>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -500,122 +498,13 @@
         </div>
 </section><section class="history">
         <div class="history__inner">
-            <a href="#" class="section__title">
+            <a href="#" class="section__title history__title">
                 <h2 class="title-heading">Последние операции</h2>
                 <svg>
                     <use xlink:href="#chevron-down" />
                 </svg>
             </a>
             <div class="history-form">
-                <div class="history-form-setting history-form-btn filters__select-group js-filters-dropdown">
-                    <svg class="filters__select-group-btn">
-                        <use xlink:href="#settings-history" />
-                    </svg>
-                    <div class="history-form-setting__dropdown">
-                        <svg class="history-form-setting__dropdown-svg">
-                            <use xlink:href="#delete" />
-                        </svg>
-                        <div class="history-form-setting__inner">
-                            <div class="history-form-setting__item">
-                                <p class="history-form-setting__item--title">Период</p>
-                                <div class="history-form-setting__item--wrapper">
-                                    <button class="history-form-setting__item--btn history-form__btn">Сегодня</button>
-                                    <button class="history-form-setting__item--btn history-form__btn">Вчера</button>
-                                    <button class="history-form-setting__item--btn history-form__btn">В этом месяце</button>
-                                </div>
-                            </div>
-                            <div class="history-form-setting__item">
-                                <p class="history-form-setting__item--title">Счета и карты</p>
-                                <label href="#" class="card-item">
-                                    <div class="card-img">
-                                        <img src="/img/card_2.png" alt="Card">
-                                    </div>
-                                    <div class="card-content">
-                                        <p class="card-content__subtitle">
-                                            Дебетовая карт *1256
-                                        </p>
-                                        <p class="card-content__title">
-                                            90 789,<span>23 ₽</span>
-                                        </p>
-                                    </div>
-                                    <div class="card-checkbox">
-                                        <input type="checkbox">
-                                        <span class="card-checkbox__false"></span>
-                                    </div>
-                                </label>
-                                <label href="#" class="card-item">
-                                    <div class="card-img">
-                                        <img src="/img/card_2.png" alt="Card">
-                                    </div>
-                                    <div class="card-content">
-                                        <p class="card-content__subtitle">
-                                            Дебетовая карт *1256
-                                        </p>
-                                        <p class="card-content__title">
-                                            90 789,<span>23 ₽</span>
-                                        </p>
-                                    </div>
-                                    <div class="card-checkbox">
-                                        <input type="checkbox">
-                                        <span class="card-checkbox__false"></span>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="history-form-setting__item">
-                                <p class="history-form-setting__item--title">Кредиты</p>
-                                <label href="#" class="card-item">
-                                    <div class="card-img">
-                                        <img src="/img/card_2.png" alt="Card">
-                                    </div>
-                                    <div class="card-content">
-                                        <p class="card-content__subtitle">
-                                            Дебетовая карт *1256
-                                        </p>
-                                        <p class="card-content__title">
-                                            90 789,<span>23 ₽</span>
-                                        </p>
-                                    </div>
-                                    <div class="card-checkbox">
-                                        <input type="checkbox">
-                                        <span class="card-checkbox__false"></span>
-                                    </div>
-                                </label>
-                                <label href="#" class="card-item">
-                                    <div class="card-img">
-                                        <img src="/img/card_2.png" alt="Card">
-                                    </div>
-                                    <div class="card-content">
-                                        <p class="card-content__subtitle">
-                                            Дебетовая карт *1256
-                                        </p>
-                                        <p class="card-content__title">
-                                            90 789,<span>23 ₽</span>
-                                        </p>
-                                    </div>
-                                    <div class="card-checkbox">
-                                        <input type="checkbox">
-                                        <span class="card-checkbox__false"></span>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="history-form-setting__item">
-                                <p class="history-form-setting__item--title">Вид платежа</p>
-                                <div class="history-form-setting__item--wrapper">
-                                    <button class="history-form-setting__item--btn history-form__btn">Пополнение</button>
-                                    <button class="history-form-setting__item--btn history-form__btn">Списание</button>
-                                </div>
-                            </div>
-                            <div class="history-form-setting__item">
-                                <p class="history-form-setting__item--title">Категория</p>
-                                <div class="history-form-setting__item--wrapper">
-                                    <button class="history-form-setting__item--btn history-form__btn">Транспорт</button>
-                                    <button class="history-form-setting__item--btn history-form__btn">Развлечения</button>
-                                    <button class="history-form-setting__item--btn history-form__btn">Покупки</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <button class="history-form__btn">Пополнение</button>
                 <button class="history-form__btn">Списание</button>
                 <input  readonly class="history-form__btn--default" type="text" name="datefilter" value="Выберите дату" />
@@ -632,7 +521,7 @@
                         <div class="history-form__group-dropdown-inner">
                             <div class="history-form-setting__item">
                                 <p class="history-form-setting__item--title">Счета и карты</p>
-                                <label href="#" class="card-item">
+                                <label href="#" class="card-item js-checkbox">
                                     <div class="card-img">
                                         <img src="/img/card_2.png" alt="Card">
                                     </div>
@@ -649,7 +538,7 @@
                                         <span class="card-checkbox__false"></span>
                                     </div>
                                 </label>
-                                <label href="#" class="card-item">
+                                <label href="#" class="card-item js-checkbox">
                                     <div class="card-img">
                                         <img src="/img/card_2.png" alt="Card">
                                     </div>
@@ -669,7 +558,7 @@
                             </div>
                             <div class="history-form-setting__item">
                                 <p class="history-form-setting__item--title">Кредиты</p>
-                                <label href="#" class="card-item">
+                                <label href="#" class="card-item js-checkbox">
                                     <div class="card-img">
                                         <img src="/img/card_2.png" alt="Card">
                                     </div>
@@ -686,7 +575,7 @@
                                         <span class="card-checkbox__false"></span>
                                     </div>
                                 </label>
-                                <label href="#" class="card-item">
+                                <label href="#" class="card-item js-checkbox">
                                     <div class="card-img">
                                         <img src="/img/card_2.png" alt="Card">
                                     </div>
