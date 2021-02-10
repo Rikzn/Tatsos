@@ -9,7 +9,7 @@
         color: #2E2E2E;
         margin-bottom: 2.6rem;
         cursor: pointer;
-        transition: 0.3s;
+        transition: 0.1s;
         &:last-child {
             margin-bottom: 0;
         }
@@ -41,6 +41,10 @@
         }
         &--active {
             font-weight: 800;
+            &::before {
+                width: 122%;
+                left: 54%;
+            }
         }
         @include breakpoint(small-mobile) {
             margin-right: 15px;

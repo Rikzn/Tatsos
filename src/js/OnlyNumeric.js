@@ -5,7 +5,11 @@ export default function OnlyNumeric() {
     
         input.addEventListener('input', () => {
             const value = input.value;
+            const key = event.key;
             const newCleanedValue = parseInt(value.replace(/[^\d]+/g,''));
+            if (key === "Backspace" || key === "Delete") {
+                return false;
+            }
             if (isNaN(newCleanedValue)) {
                 input.value = '';
             } else {

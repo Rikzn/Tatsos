@@ -34,7 +34,6 @@
         position: relative;
         z-index: -2;
         display: none;
-        white-space: nowrap;
         @include breakpoint(small-mobile) {
             display: none;
           }
@@ -45,6 +44,9 @@
             display: block;
             transition: 0.7s;
         }
+    }
+    &-tabs-link {
+        white-space: nowrap;
     }
     &-validate-error-field {
         border: none;

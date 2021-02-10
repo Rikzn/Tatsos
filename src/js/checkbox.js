@@ -14,16 +14,24 @@
         });
 
         // Количество выбранных чекбоксов
-        let chosen = document.querySelector('.history-form__group-chexbox');
-        let checkBoxItem = document.querySelectorAll('.js-checkbox');
-        chosen.addEventListener('click', checkBox);
-        function checkBox () {
-        // let checkCount = $('history-form__group-dropdown-inner').find('input[checkbox]:checked').length;
-        let checkCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
+
         
-        chosen.innerHTML = checkCount;
-        console.log(checkCount);
-        } 
+        let checkBoxItem = document.querySelectorAll('.js-checkbox');
+        
+        for (let item of checkBoxItem) {
+            item.addEventListener('click', checkBox);
+            let chosen = document.querySelector('.history-form__group-chexbox');
+            function checkBox () {
+                let checkCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
+                chosen.innerHTML = checkCount;
+                console.log(checkCount);
+                console.log(chosen);
+                } 
+        }
+            
+       
+
+        
         
 } 
 

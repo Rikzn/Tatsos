@@ -44,7 +44,12 @@
             }
         }
     }
-
+    &__title {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        color: #C1C1C1;
+    }
     &__subtitle {
         font-weight: 500;
         font-size: 1.5rem;
@@ -52,7 +57,14 @@
         color: #C1C1C1;
         padding-bottom: 2rem;
     }
-
+    &__descr {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        color: #C1C1C1;
+        padding-top: 6.3rem;
+        display: block;
+    }
     &__inner {
         display: flex;
         flex-wrap: wrap;

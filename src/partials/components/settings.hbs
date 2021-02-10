@@ -1,52 +1,85 @@
 <section class="settings section">
     <h2 class="title">Настройки</h2>
     <div class="section__inner">
-        <form class="section__left">
+        <form class="section__left js-tabs-item " id="tab_1">
             <div class="form__inner">
                 <div class="form__item">
-                    <input type="text" class="form__input" readonly value="Имя" placeholder=" " >
+                    <input type="text" class="form__input" readonly value="Имя" placeholder=" ">
                     <label for="" class="form__label">Имя</label>
                 </div>
                 <div class="form__item">
-                    <input type="text" class="form__input" readonly value="Фамилия" placeholder=" " >
+                    <input type="text" class="form__input" readonly value="Фамилия" placeholder=" ">
                     <label for="" class="form__label">Фамилия</label>
                 </div>
                 <div class="form__item">
-                    <input type="text" class="form__input" placeholder=" " >
+                    <input type="text" class="form__input" placeholder=" ">
                     <label for="" class="form__label">Логин</label>
                 </div>
                 <div class="form__item">
-                    <input type="text" class="form__input" placeholder=" " >
+                    <input type="text" class="form__input" placeholder=" ">
                     <label for="" class="form__label">Электронная почта</label>
                 </div>
                 <div class="form__item">
-                    <input type="text" class="form__input" placeholder=" " >
+                    <input type="text" class="form__input" placeholder=" ">
                     <label for="" class="form__label">Телефон</label>
                 </div>
             </div>
             <div class="settings__title">Изменить пароль</div>
             <div class="form__inner">
                 <div class="form__item settings-form__item">
-                    <input type="password" class="form__input" placeholder=" " >
+                    <input type="password" class="form__input" placeholder=" ">
                     <label for="" class="form__label">Старый пароль</label>
                 </div>
                 <div class="form__item settings-form__item">
-                    <input type="password" class="form__input" placeholder=" " >
+                    <input type="password" class="form__input" placeholder=" ">
                     <label for="" class="form__label">Новый пароль</label>
                 </div>
                 <div class="form__item settings-form__item">
-                    <input type="password" class="form__input" placeholder=" " >
+                    <input type="password" class="form__input" placeholder=" ">
                     <label for="" class="form__label">Повторите новый пароль</label>
                 </div>
             </div>
             <button class="btn btn--active">Сохранить изменения</button>
         </form>
+        <div class="section__left js-tabs-item js-tabs-item--active" id="tab_2">
+            <div class="checkbox__title">Входящие переводы</div>
+            <div class="checkbox">
+                <input type="checkbox" class="checkbox-input" id="templates-checkbox-1">
+                <label for="templates-checkbox-1" class="checkbox-label">
+                </label>
+                <span>Возможность принимать переводы, отправленные по Системе быстрых платежей</span>
+            </div>
+            <div class="checkbox__title">Исходящие переводы</div>
+            <div class="checkbox">
+                <input type="checkbox" class="checkbox-input" id="templates-checkbox-2">
+                <label for="templates-checkbox-2" class="checkbox-label">
+                </label>
+                <span>Возможность отправлять переводы по Системе быстрых платежей</span>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" class="checkbox-input" id="templates-checkbox-3">
+                <label for="templates-checkbox-3" class="checkbox-label">
+                </label>
+                <span>Согласие для дистанционного оформления услуги Системы быстрых платежей АО НСПК</span>
+            </div>
+            <button class="btn btn--active">Сохранить изменения</button>
+            <div class="checkbox__title checkbox__title-big">Установка банка по умолчанию СПБ</div>
+            <div class="form__item">
+                    <input type="text" class="form__input" placeholder=" ">
+                    <label for="" class="form__label">Телефон</label>
+                    <span class="form__descr">Нажмите кнопку "Установить", чтобы ТАТСОЦБАНК стал Вашим банком по умолчанию в СБП и автоматически предлагался как банк получателя, когда клиенты других банков делают перевод через СБП по Вашему номеру телефона +7(904)***-*3-28.</span>
+            </div>
+            <button class="btn btn--active settings__btn">Установить</button>
+        </div>
         <div class="section__right">
             <div class="sidebar-nav">
                 <div class="sidebar-nav__inner">
-                    <a href="/" class="sidebar-nav__link sidebar-nav__link--active">
+                    <div class="sidebar-nav__link js-tabs-link sidebar-nav__link--active" data-tab="#tab_1">
                         <span>Личные данные</span>
-                    </a>       
+                    </div>
+                    <div class="sidebar-nav__link js-tabs-link" data-tab="#tab_2">
+                        <span>Система быстрых платежей</span>
+                    </div>
                     <a href="#" class="sidebar-nav__link exit">
                         <span>Выйти</span>
                     </a>

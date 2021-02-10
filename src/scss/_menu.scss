@@ -247,6 +247,9 @@ $svg-sitebar: #fff;
         svg {
             width: 2.4rem;
             height: 2.4rem;
+            @include breakpoint(small-mobile) {
+                fill: #fff;
+                    }
         }
     }
 
@@ -261,24 +264,6 @@ $svg-sitebar: #fff;
             top: 0.6rem;
         }
 
-        input {
-            position: absolute;
-            opacity: 0;
-            border-bottom: 0.1rem solid #a2a2a2;
-            padding: 0.5rem 2.5rem 0.5rem 1rem;
-            font-size: 1.6rem;
-            right: 0;
-            width: 0;
-            top: 50%;
-            transform: translateY(-50%);
-
-            &:hover {
-                width: 13rem;
-                right: -0.3rem;
-                transition: 0.3s;
-                opacity: 1;
-            }
-        }
     }
 
     &__call {

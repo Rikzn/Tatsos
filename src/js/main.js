@@ -3,7 +3,6 @@ import StickySidebar from 'sticky-sidebar-v2';
 import polyfills from './polyfills';
 import detectTouch from './detectTouch';
 import OnlyNumeric from './OnlyNumeric';
-import slider from './slider';
 import FilterDropdowns from './FilterDropdowns';
 import datefilter from './datefilter';
 import tabs from './tabs';
@@ -12,6 +11,7 @@ import clipboard from './clipboard';
 import maskInput from './mask';
 import sticky from './sticky';
 import checkBox from './checkbox';
+import slider from './slider';
 import { async } from 'regenerator-runtime';
 
 
@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('load', function () {
     document.body.classList.add('loaded');
-    
     setTimeout(() => document.body.classList.add('animatable'), 300)
 
 });
@@ -50,7 +49,7 @@ const tl = gsap.timeline({
   gsap.utils.toArray(".parallax").forEach(layer => {
     const depth = layer.dataset.depth;
     const movement = -(layer.offsetHeight * depth)
-    tl.to(layer, {y: movement, top: -15, ease: "none"}, 0)
+    tl.to(layer, {y: movement, top: -30, ease: "none"}, 0)
   });
 
 
