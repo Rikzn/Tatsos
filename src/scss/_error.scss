@@ -1,0 +1,24 @@
+.error {
+    position: absolute;
+    background-color: red;
+    bottom: -85%;
+    right: -32%;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 9px 10px;
+    svg {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+    p {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: #FFFFFF;
+        margin-left: 1rem;
+    }
+    &--active {
+        transform: translateX(-155%);
+    }
+}

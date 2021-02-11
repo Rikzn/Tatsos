@@ -8,12 +8,14 @@ export default function OnlyNumeric() {
             const key = event.key;
             const newCleanedValue = parseInt(value.replace(/[^\d]+/g,''));
             if (key === "Backspace" || key === "Delete") {
+                console.log("ghbd")
                 return false;
+                
             }
             if (isNaN(newCleanedValue)) {
                 input.value = '';
             } else {
-                input.value = newCleanedValue.toLocaleString() + '₽';
+                input.value = newCleanedValue.toLocaleString();
             }
         })
        

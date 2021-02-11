@@ -1,5 +1,6 @@
 .contact {
     color: #2E2E2E;
+    position: relative;
     &__title {
         margin-bottom: 4.5rem;
         @include breakpoint(small-mobile) {

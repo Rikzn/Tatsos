@@ -1,43 +1,43 @@
 <section class="section contact">
-        <div class="contact__title title">Связаться</div>
-        <div class="section__inner">
-            <div class="contact__inner section__left">
-                <form id="form" action="#" class="contact-form js-form">
-                    <div class="select__inner">
-                        <div class="select__subtitle">Тема обращения</div>
-                        <select class="js-choice contact-select">
-                            <option value="Сообщить об ошибке">Сообщить об ошибке</option>
-                            <option>Сообщить об ошибке нам</option>
-                            <option>Сообщить об ошибке никому</option>
-                            <option>Сообщить об ошибке всем</option>
-                        </select>
-                    </div>
-                    <div class="form__div">
-                        <input type="text" class="form__input" placeholder=" " name="fio" data-validate-field="fio">
-                        <label for="" class="form__label">Сообщение</label>
-                    </div>
-                    <button class="btn">Отправить</button>
-                    <div class="contact-overlay">
-                        <div class="contact-popap">
-                            <div class="contact-popap__header">
-                                <h2 class="contact-popap__title">Спасибо за обращение!</h2>
-                                <svg>
-                                    <use xlink:href="#checkmark-form"/>
-                                </svg>
-                            </div>
-                            <button type="reset" class="btn btn--active">Написать еще</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="sidebar-nav section__right">
-            <div class="sidebar-nav__inner">
-               <div class="sidebar-nav-contact__link">
-                   <a href="tel:8 843 299-11-11">8 843 299-11-11</a>
+    <div class="contact__title title">Связаться</div>
+    <div class="section__inner">
+        <div class="contact__inner section__left">
+            <form id="form" action="#" class="contact-form js-form">
+                <div class="select__inner">
+                    <div class="select__subtitle">Тема обращения</div>
+                    <select class="js-choice contact-select">
+                        <option value="Сообщить об ошибке">Сообщить об ошибке</option>
+                        <option>Сообщить об ошибке нам</option>
+                        <option>Сообщить об ошибке никому</option>
+                        <option>Сообщить об ошибке всем</option>
+                    </select>
                 </div>
-               <div class="sidebar-nav-contact__link">
-                   <a href="tel:8-800-350-51-51">8-800-350-51-51</a>
-                    <span>для регионов России</span>                   
+                <div class="form__div">
+                    <input type="text" class="form__input" placeholder=" " name="fio" data-validate-field="fio">
+                    <label for="" class="form__label">Сообщение</label>
+                </div>
+                <button class="btn">Отправить</button>
+                <div class="contact-overlay">
+                    <div class="contact-popap">
+                        <div class="contact-popap__header">
+                            <h2 class="contact-popap__title">Спасибо за обращение!</h2>
+                            <svg>
+                                <use xlink:href="#checkmark-form" />
+                            </svg>
+                        </div>
+                        <button type="reset" class="btn btn--active">Написать еще</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="sidebar-nav section__right">
+            <div class="sidebar-nav__inner">
+                <div class="sidebar-nav-contact__link">
+                    <a href="tel:8 843 299-11-11">8 843 299-11-11</a>
+                </div>
+                <div class="sidebar-nav-contact__link">
+                    <a href="tel:8-800-350-51-51">8-800-350-51-51</a>
+                    <span>для регионов России</span>
                 </div>
                 <a href="#" class="sidebar-nav-contact__item">
                     <svg>
@@ -53,5 +53,11 @@
                 </a>
             </div>
         </div>
+        <div class="error">
+            <svg>
+                <use xlink:href="#error-close" />
+            </svg>
+            <p>Текст ошибки</p>
         </div>
+    </div>
 </section>

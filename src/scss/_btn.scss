@@ -16,10 +16,16 @@
     &:last-child {
         margin-right: 0;
     }
+    a {
+        color: #2E2E2E;
+    }
     &:hover {
         background-color: #F1611F;
         transition: 0.3s;
         color: #fff;
+        a {
+            color: #fff;
+        }
     }
     span {
         color: #fff;
@@ -41,5 +47,11 @@
             background-color: #DD4F0E;
             transition: 0.3s;
         }
+        a {
+            color: #fff;
+        }
+    }
+    &-graph {
+     
     }
 }

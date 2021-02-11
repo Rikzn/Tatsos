@@ -8,12 +8,12 @@
     &::before {
         content: '';
         position: absolute;
-        width: 107%;
-        height: 99%;
+        width: 108%;
+        height: 121%;
         top: 50%;
-        left: 49%;
+        left: 50%;
         transform: translate(-50%, -50%);
-        background: #000000;
+        background: #000;
         border-radius: 1.5rem;
         opacity: 0;
         z-index: -1;

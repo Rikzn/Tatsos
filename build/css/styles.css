@@ -1394,10 +1394,6 @@ select:-webkit-autofill:focus {
     font-size: 2.4rem;
     line-height: 2.9rem;
     color: #FFFFFF; }
-  .title:hover {
-    opacity: 0.6;
-    -webkit-transition: 0.2s;
-    transition: 0.2s; }
   .title svg {
     width: 2.4rem;
     height: 2.4rem;
@@ -1434,7 +1430,7 @@ select:-webkit-autofill:focus {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-  z-index: 100;
+  z-index: 50;
   width: 100%;
   padding-left: 45rem; }
   @media only screen and (max-width: 576px) {
@@ -1840,7 +1836,6 @@ select:-webkit-autofill:focus {
   .sidebar__wrapper {
     height: 55vh;
     padding-right: 1.3rem;
-    overflow-x: hidden;
     padding-left: 2.2rem;
     margin-left: -1.8rem;
     scrollbar-color: rgba(255, 255, 255, 0.8) rgba(255, 255, 255, 0.1);
@@ -1887,7 +1882,9 @@ select:-webkit-autofill:focus {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-height: 37px; }
+    max-height: 37px;
+    position: relative;
+    z-index: 99; }
     @media only screen and (max-width: 576px) {
       .sidebar-logo {
         display: none; } }
@@ -1903,12 +1900,12 @@ select:-webkit-autofill:focus {
     top: 0rem;
     left: 0rem;
     width: 100%;
-    height: 800px;
+    height: 100%;
     z-index: -1;
     display: none; }
     .sidebar-img img {
       width: 100%;
-      height: 100vh;
+      height: 100%;
       -o-object-fit: cover;
          object-fit: cover;
       -o-object-position: -104px;
@@ -1922,7 +1919,15 @@ select:-webkit-autofill:focus {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100vh;
+      height: 100%;
+      background-color: rgba(37, 37, 37, 0.8); }
+    .sidebar-img::after {
+      content: '';
+      position: absolute;
+      bottom: -99%;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-color: rgba(37, 37, 37, 0.8); }
     .sidebar-img--active {
       display: block; }
@@ -3238,6 +3243,28 @@ select:-webkit-autofill:focus {
         .sidebar-nav__link:hover::before {
           opacity: 0; } }
 
+.sidebar-nav-contact__item {
+  position: relative; }
+  .sidebar-nav-contact__item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 114%;
+    height: 170%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    opacity: 0;
+    z-index: -1; }
+  .sidebar-nav-contact__item:hover::before {
+    opacity: 1;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+
 .templates__inner {
   position: relative;
   margin-left: auto; }
@@ -3590,7 +3617,8 @@ select:-webkit-autofill:focus {
     margin-top: 5rem; }
 
 .contact {
-  color: #2E2E2E; }
+  color: #2E2E2E;
+  position: relative; }
   .contact__title {
     margin-bottom: 4.5rem; }
     @media only screen and (max-width: 576px) {
@@ -3983,11 +4011,15 @@ select:-webkit-autofill:focus {
   margin-top: 5rem; }
   .btn:last-child {
     margin-right: 0; }
+  .btn a {
+    color: #2E2E2E; }
   .btn:hover {
     background-color: #F1611F;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     color: #fff; }
+    .btn:hover a {
+      color: #fff; }
   .btn span {
     color: #fff; }
   .btn--off {
@@ -4008,6 +4040,8 @@ select:-webkit-autofill:focus {
       background-color: #DD4F0E;
       -webkit-transition: 0.3s;
       transition: 0.3s; }
+    .btn--active a {
+      color: #fff; }
 
 .payment-made-props {
   display: -webkit-box;
@@ -4514,13 +4548,13 @@ select:-webkit-autofill:focus {
   .card::before {
     content: '';
     position: absolute;
-    width: 107%;
-    height: 99%;
+    width: 108%;
+    height: 121%;
     top: 50%;
-    left: 49%;
+    left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    background: #000000;
+    background: #000;
     border-radius: 1.5rem;
     opacity: 0;
     z-index: -1;
@@ -5074,3 +5108,90 @@ select:-webkit-autofill:focus {
         margin-top: 2.8rem; }
   .entrance-nav {
     margin-top: 11rem; }
+
+.graph__title {
+  margin-bottom: 2.5rem; }
+
+.graph-title-block span {
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #2E2E2E;
+  margin-left: 7.4rem; }
+  .graph-title-block span:last-child {
+    margin-left: 8.5rem; }
+
+.graph-item {
+  margin-top: 1.5rem; }
+  .graph-item span {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: #2E2E2E;
+    margin-right: 5.5rem; }
+    .graph-item span:first-child {
+      width: 2rem;
+      display: inline-block;
+      text-align: end; }
+    .graph-item span:last-child {
+      margin-right: 0; }
+  .graph-item-good span {
+    color: #C1C1C1;
+    text-decoration: line-through; }
+    .graph-item-good span:first-child {
+      position: relative; }
+      .graph-item-good span:first-child::before {
+        content: '';
+        position: absolute;
+        background-image: url(/img/good.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 90%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+  .graph-item-error span {
+    color: red; }
+    .graph-item-error span:first-child {
+      position: relative; }
+      .graph-item-error span:first-child::before {
+        content: '';
+        position: absolute;
+        background-image: url(/img/error.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 90%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+  .graph-item-actual span {
+    font-weight: 600; }
+
+.error {
+  position: absolute;
+  background-color: red;
+  bottom: -85%;
+  right: -32%;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 9px 10px; }
+  .error svg {
+    width: 3.2rem;
+    height: 3.2rem; }
+  .error p {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: #FFFFFF;
+    margin-left: 1rem; }
+  .error--active {
+    -webkit-transform: translateX(-155%);
+            transform: translateX(-155%); }
