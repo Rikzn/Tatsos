@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    @include breakpoint(small-mobile) {   
+    @include breakpoint(mobile) {   
         display: flex;      
         flex-direction: column;
         }
@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column;
     padding: 12rem 0;
-    @include breakpoint(small-mobile) {
+    @include breakpoint(mobile) {
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         background-color: #fff;

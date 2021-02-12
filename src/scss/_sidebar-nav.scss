@@ -46,7 +46,7 @@
                 left: 54%;
             }
         }
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             margin-right: 15px;
             &:last-child {
                 margin-right: 0;
@@ -54,7 +54,7 @@
             }
         }
     }
-    @include breakpoint(small-mobile) {
+    @include breakpoint(mobile) {
         margin: 0;
         &__inner {
             display: flex;

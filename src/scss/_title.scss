@@ -6,6 +6,11 @@
     white-space: nowrap;
     display: flex;
     align-items: flex-end;
+    svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        transform: rotate(-90deg);
+    }
     &-main {
         font-weight: 500;
         font-size: 4rem;
@@ -35,6 +40,17 @@
             opacity: 0.6;
             transition: 0.2s;
         }
+        &__inner {
+            position: relative;
+            svg {
+                width: 2.4rem;
+                height: 2.4rem;
+                position: absolute;
+                left: -3rem;
+                top: 56%;
+                transform: rotate(90deg) translate(-50%, 0);
+            }
+        }
     }  
     &__entrance {
         font-weight: 600;
@@ -42,9 +58,5 @@
         line-height: 2.9rem;
         color: #FFFFFF;
     }
-    svg {
-        width: 2.4rem;
-        height: 2.4rem;
-        transform: rotate(-90deg);
-    }
+
 }

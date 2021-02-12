@@ -1,5 +1,13 @@
   export default function Select() {
       
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+
+
+
+
+    // кастомный селект
     let select = function() {
         let selectHeader = document.querySelectorAll('.js-select__header');
         let selectItem = document.querySelectorAll('.js-select__item');
@@ -28,18 +36,18 @@
     select();
     
     
-      const defaultSelect = () => {
-        const elements = document.querySelectorAll('.js-choice');
-        elements.forEach(el => {
-            const choices = new Choices(el, {
-                searchEnabled: false,
-                shouldSort: false,
-                itemSelectText: '',
-            });
-        });
-      }
+    //   const defaultSelect = () => {
+    //     const elements = document.querySelectorAll('.js-choice');
+    //     elements.forEach(el => {
+    //         const choices = new Choices(el, {
+    //             searchEnabled: false,
+    //             shouldSort: false,
+    //             itemSelectText: '',
+    //         });
+    //     });
+    //   }
       
-      defaultSelect();
+    //   defaultSelect();
 
 
 

@@ -3,7 +3,7 @@
             <div class="title-main">
                 Последние операции
             </div>
-            <div class="search">
+            <div class="search bot">
                 <form action="#" class="search-form js-form">
                         <input type="text" class="search-input" placeholder="Поиск" required>
                         <button>
@@ -14,7 +14,7 @@
                 </form>
             </div>
             <div class="history-form">
-                <div class="history-form-setting history-form-btn filters__select-group js-filters-dropdown">
+                {{!-- <div class="history-form-setting history-form-btn filters__select-group js-filters-dropdown">
                     <svg class="filters__select-group-btn">
                         <use xlink:href="#settings-history" />
                     </svg>
@@ -122,14 +122,14 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
                 <button class="history-form__btn">Пополнение</button>
                 <button class="history-form__btn">Списание</button>
                 <input  readonly class="history-form__btn--default" type="text" name="datefilter" value="Выберите дату" />
                 <div class="history-form__group filters__select-group js-filters-dropdown">
                     <div class="history-form__group-btn">
                         <div class="history-form__group-cross filters__select-group-btn">
-                            Счета и карты: <span class="history-form__group-chexbox">2</span>
+                            Счета и карты: <span class="history-form__group-chexbox">0</span>
                             <svg class="history-form__group-cross-svg">
                                 <use xlink:href="#chevron-down" />
                             </svg>
@@ -139,7 +139,7 @@
                         <div class="history-form__group-dropdown-inner">
                             <div class="history-form-setting__item">
                                 <p class="history-form-setting__item--title">Счета и карты</p>
-                                <label href="#" class="card-item">
+                                <label href="#" class="card-item js-checkbox">
                                     <div class="card-img">
                                         <img src="/img/card_2.png" alt="Card">
                                     </div>
@@ -156,7 +156,7 @@
                                         <span class="card-checkbox__false"></span>
                                     </div>
                                 </label>
-                                <label href="#" class="card-item">
+                                <label href="#" class="card-item js-checkbox">
                                     <div class="card-img">
                                         <img src="/img/card_2.png" alt="Card">
                                     </div>
@@ -176,7 +176,7 @@
                             </div>
                             <div class="history-form-setting__item">
                                 <p class="history-form-setting__item--title">Кредиты</p>
-                                <label href="#" class="card-item">
+                                <label href="#" class="card-item js-checkbox">
                                     <div class="card-img">
                                         <img src="/img/card_2.png" alt="Card">
                                     </div>
@@ -193,7 +193,7 @@
                                         <span class="card-checkbox__false"></span>
                                     </div>
                                 </label>
-                                <label href="#" class="card-item">
+                                <label href="#" class="card-item js-checkbox">
                                     <div class="card-img">
                                         <img src="/img/card_2.png" alt="Card">
                                     </div>

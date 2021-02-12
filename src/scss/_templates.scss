@@ -17,30 +17,6 @@
             align-items: baseline;
             }
     }
-    &__title {
-        padding-left: 0.4rem;
-        @include breakpoint(small-mobile) {
-            padding-left: 0;
-            }
-        h2 {
-            font-weight: 600;
-            font-size: 2.4rem;
-            line-height: 2.9rem;
-            margin-right: 1.2rem;
-            @include breakpoint(small-mobile) {
-                font-weight: 500;
-                margin-right: auto;
-                }
-        }
-
-        &-svg {
-            width: 2.4rem;
-            /* 24px */
-            height: 2.4rem;
-            /* 24px */
-            transform: rotate(-90deg);
-        }
-    }
     &__card {
         display: flex;
         flex-direction: column;
@@ -209,22 +185,6 @@
         }
         &-new {
             max-width: 58.7rem;
-            &__title {
-                font-weight: 500;
-                font-size: 2.4rem;
-                line-height: 2.4rem;
-                color: #2E2E2E;
-                margin-top: 6rem;
-                position: relative;
-                svg {
-                    width: 2.4rem;
-                    height: 2.4rem;
-                    position: absolute;
-                    left: -3rem;
-                    top: 50%;
-                    transform: rotate(90deg) translate(-50%, 0);
-                }
-            }
             &-form {
                 &__item {
                         margin-top: 3rem;

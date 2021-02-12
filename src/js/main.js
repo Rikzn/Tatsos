@@ -13,6 +13,9 @@ import sticky from './sticky';
 import checkBox from './checkbox';
 import slider from './slider';
 import { async } from 'regenerator-runtime';
+import select2 from 'select2';
+
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -34,8 +37,6 @@ window.addEventListener('load', function () {
 });
 
 
-
-
 // Параллакс эффект 
 const tl = gsap.timeline({
     scrollTrigger: {
@@ -53,6 +54,13 @@ const tl = gsap.timeline({
   });
 
 
+  // скролл якоря 
+  $(".menu-box").on("click", "a", function(event) {
+    event.preventDefault();
+    var anchorId  = $(this).attr("href");
+    scrollingDistance = $(anchorId).offset().top - $(".menu-box").height();
+    $("html, body").animate({scrollTop: scrollingDistance}, 800);
+});
 // Валидатор
 // let validateForms = function(selector, rules, successModal) {
 //     new window.JustValidate(selector, {

@@ -11,7 +11,6 @@
     <script src="assets/js/svgInject.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="/assets/css/form.css">
-    <link rel="stylesheet" href="/assets/css/choices.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/ >
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
@@ -28,7 +27,7 @@
                     <nav class="menu-nav">
                         <a href="/" class="menu-hover menu-nav__link menu-nav__link--active"><span>Мой банк</span></a>
                         <a href="/payments-and-transfers.html" class="menu-hover menu-nav__link"><span>Платежи и переводы</span></a>
-                        <a href="/visit-history.html" class="menu-hover menu-nav__link"><span>История</span></a>
+                        <a href="/payment-history.html" class="menu-hover menu-nav__link"><span>История</span></a>
                         <div class="menu-nav__more">
                             <div class="menu-nav__more-btn">
                                 Еще
@@ -82,7 +81,7 @@
                                 <div class="menu__authorized-user-more-dropdown">
                                     <div class="menu__authorized-user-more-dropdown-inner">
                                         <a href="/partner.html" class="menu__authorized-user-more-link">Партнеры</a>
-                                        <a href="/specials.html" class="menu__authorized-user-more-link">Спецпредложения</a>
+                                        <a href="/visit-history.html" class="menu__authorized-user-more-link">История платежей</a>
                                         <a href="/settings.html" class="menu__authorized-user-more-link">Настройки</a>
                                     </div>
                                 </div>
@@ -98,205 +97,205 @@
                     <img src="/img/sidebar_bg.jpg" alt="sidebar_bg">
                     <img src="/img/sidebar_bg.jpg" alt="sidebar_bg">
                 </div>
-                    <div class="sidebar__content">
-                        <a href="/" class="sidebar-logo">
-                            <img src="/img/logo.png" alt="Tatsosbank">
-                        </a>
-                        <div class="widget widget-main js-accordion">
+                <div class="sidebar__content">
+                    <a href="/" class="sidebar-logo">
+                        <img src="/img/logo.png" alt="Tatsosbank">
+                    </a>
+                    <div class="widget widget-main js-accordion">
+                        <div class="widget__title widget__title--active">
+                            Всего денег
+                            <svg class="widget-SVG">
+                                <use xlink:href="#chevron-down" />
+                            </svg>
+                        </div>
+                        <div class="widget__body widget__body--active">
+                            <p>390 789<span>,78 ₽</span></p>
+                        </div>
+                    </div>
+                    <div class="sidebar__wrapper">
+                        <div class="widget js-accordion">
                             <div class="widget__title widget__title--active">
-                                Всего денег
+                                Карты и счета
                                 <svg class="widget-SVG">
                                     <use xlink:href="#chevron-down" />
                                 </svg>
                             </div>
                             <div class="widget__body widget__body--active">
-                                <p>390 789<span>,78 ₽</span></p>
-                            </div>
-                        </div>
-                        <div class="sidebar__wrapper">
-                            <div class="widget js-accordion">
-                                <div class="widget__title widget__title--active">
-                                    Карты и счета
-                                    <svg class="widget-SVG">
-                                        <use xlink:href="#chevron-down" />
-                                    </svg>
-                                </div>
-                                <div class="widget__body widget__body--active">
-                                    <div class="card js-filters-dropdown filters__select-group">
-                                        <div class="card-img">
-                                            <img src="/img/dollar.png" alt="Card">
-                                        </div>
-                                        <a href="/banking-product.html" class="card-content">
-                                            <p class="card-content__subtitle">
-                                                Дебетовая карт *1256
-                                            </p>
-                                            <p class="card-content__title">
-                                                91 789<span>,23 ₽</span>
-                                            </p>
-                                        </a>
-                                        <div class="card-more filters__select-group-btn">
-                                            <svg class="widget-SVG">
-                                                <use xlink:href="#more" />
-                                            </svg>
-                                            <div class="card-more-dropdown">
-                                                <div class="card-more__inner">
-                                                    <a href="#">Партнеры</a>
-                                                    <a href="#">Спецпредложения</a>
-                                                    <a href="#">Настройки</a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="/img/dollar.png" alt="Card">
                                     </div>
-                                    <div class="card js-filters-dropdown filters__select-group">
-                                        <div class="card-img">
-                                            <img src="/img/rur-card.png" alt="Card">
-                                        </div>
-                                        <a href="/banking-product-credit.html" class="card-content">
-                                            <p class="card-content__subtitle">
-                                                Кредитная карта *1256
-                                            </p>
-                                            <p class="card-content__title">
-                                                23 415<span>,80 ₽</span>
-                                            </p>
-                                        </a>
-                                        <div class="card-more filters__select-group-btn">
-                                            <svg class="widget-SVG">
-                                                <use xlink:href="#more" />
-                                            </svg>
-                                            <div class="card-more-dropdown">
-                                                <div class="card-more__inner">
-                                                    <a href="#">Партнеры</a>
-                                                    <a href="#">Спецпредложения</a>
-                                                    <a href="#">Настройки</a>
-                                                </div>
+                                    <a href="/banking-product.html" class="card-content">
+                                        <p class="card-content__subtitle">
+                                            Дебетовая карт *1256
+                                        </p>
+                                        <p class="card-content__title">
+                                            91 789<span>,23 ₽</span>
+                                        </p>
+                                    </a>
+                                    <div class="card-more filters__select-group-btn">
+                                        <svg class="widget-SVG">
+                                            <use xlink:href="#more" />
+                                        </svg>
+                                        <div class="card-more-dropdown">
+                                            <div class="card-more__inner">
+                                                <a href="#">Партнеры</a>
+                                                <a href="#">Спецпредложения</a>
+                                                <a href="#">Настройки</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="widget js-accordion">
-                                <div class="widget__title">
-                                    Вклады
-                                    <svg class="widget-SVG">
-                                        <use xlink:href="#chevron-down" />
-                                    </svg>
-                                </div>
-                                <div class="widget__body">
-                                    <div class="card js-filters-dropdown filters__select-group">
-                                        <div class="card-img">
-                                            <img src="/img/dollar.png" alt="Card">
-                                        </div>
-                                        <div class="card-content">
-                                            <p class="card-content__subtitle">
-                                                Дебетовая карт *1256
-                                            </p>
-                                            <p class="card-content__title">
-                                                90 789,<span>23 ₽</span>
-                                            </p>
-                                        </div>
-                                        <div class="card-more filters__select-group-btn">
-                                            <svg class="widget-SVG">
-                                                <use xlink:href="#more" />
-                                            </svg>
-                                            <div class="card-more-dropdown">
-                                                <div class="card-more__inner">
-                                                    <a href="#">Партнеры</a>
-                                                    <a href="#">Спецпредложения</a>
-                                                    <a href="#">Настройки</a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="/img/rur-card.png" alt="Card">
                                     </div>
-                                    <div class="card js-filters-dropdown filters__select-group">
-                                        <div class="card-img">
-                                            <img src="/img/rur-card.png" alt="Card">
-                                        </div>
-                                        <div class="card-content">
-                                            <p class="card-content__subtitle">
-                                                Кредитная карта *1256
-                                            </p>
-                                            <p class="card-content__title">
-                                                23 415<span>,80 ₽</span>
-                                            </p>
-                                        </div>
-                                        <div class="card-more filters__select-group-btn">
-                                            <svg class="widget-SVG">
-                                                <use xlink:href="#more" />
-                                            </svg>
-                                            <div class="card-more-dropdown">
-                                                <div class="card-more__inner">
-                                                    <a href="#">Партнеры</a>
-                                                    <a href="#">Спецпредложения</a>
-                                                    <a href="#">Настройки</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="widget js-accordion">
-                                <div class="widget__title">
-                                    Кредиты
-                                    <svg class="widget-SVG">
-                                        <use xlink:href="#chevron-down" />
-                                    </svg>
-                                </div>
-                                <div class="widget__body">
-                                    <div class="card js-filters-dropdown filters__select-group">
-                                        <div class="card-img">
-                                            <img src="/img/rur-card.png" alt="Card">
-                                        </div>
-                                        <div class="card-content">
-                                            <p class="card-content__subtitle">
-                                                Дебетовая карт *1256
-                                            </p>
-                                            <p class="card-content__title">
-                                                90 789,<span>23 ₽</span>
-                                            </p>
-                                        </div>
-                                        <div class="card-more filters__select-group-btn">
-                                            <svg class="widget-SVG">
-                                                <use xlink:href="#more" />
-                                            </svg>
-                                            <div class="card-more-dropdown">
-                                                <div class="card-more__inner">
-                                                    <a href="#">Партнеры</a>
-                                                    <a href="#">Спецпредложения</a>
-                                                    <a href="#">Настройки</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card js-filters-dropdown filters__select-group">
-                                        <div class="card-img">
-                                            <img src="/img/dollar.png" alt="Card">
-                                        </div>
-                                        <div class="card-content">
-                                            <p class="card-content__subtitle">
-                                                Кредитная карта *1256
-                                            </p>
-                                            <p class="card-content__title">
-                                                23 415<span>,80 ₽</span>
-                                            </p>
-                                        </div>
-                                        <div class="card-more filters__select-group-btn">
-                                            <svg class="widget-SVG">
-                                                <use xlink:href="#more" />
-                                            </svg>
-                                            <div class="card-more-dropdown">
-                                                <div class="card-more__inner">
-                                                    <a href="#">Партнеры</a>
-                                                    <a href="#">Спецпредложения</a>
-                                                    <a href="#">Настройки</a>
-                                                </div>
+                                    <a href="/banking-product-credit.html" class="card-content">
+                                        <p class="card-content__subtitle">
+                                            Кредитная карта *1256
+                                        </p>
+                                        <p class="card-content__title">
+                                            23 415<span>,80 ₽</span>
+                                        </p>
+                                    </a>
+                                    <div class="card-more filters__select-group-btn">
+                                        <svg class="widget-SVG">
+                                            <use xlink:href="#more" />
+                                        </svg>
+                                        <div class="card-more-dropdown">
+                                            <div class="card-more__inner">
+                                                <a href="#">Партнеры</a>
+                                                <a href="#">Спецпредложения</a>
+                                                <a href="#">Настройки</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a href="/open-a-new-product.html" class="sidebar__link"><span>Открыть новый продукт</span></a>
+                        <div class="widget js-accordion">
+                            <div class="widget__title">
+                                Вклады
+                                <svg class="widget-SVG">
+                                    <use xlink:href="#chevron-down" />
+                                </svg>
+                            </div>
+                            <div class="widget__body">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="/img/dollar.png" alt="Card">
+                                    </div>
+                                    <a href="/banking-product.html" class="card-content">
+                                        <p class="card-content__subtitle">
+                                            Дебетовая карт *1256
+                                        </p>
+                                        <p class="card-content__title">
+                                            91 789<span>,23 ₽</span>
+                                        </p>
+                                    </a>
+                                    <div class="card-more filters__select-group-btn">
+                                        <svg class="widget-SVG">
+                                            <use xlink:href="#more" />
+                                        </svg>
+                                        <div class="card-more-dropdown">
+                                            <div class="card-more__inner">
+                                                <a href="#">Партнеры</a>
+                                                <a href="#">Спецпредложения</a>
+                                                <a href="#">Настройки</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="/img/rur-card.png" alt="Card">
+                                    </div>
+                                    <a href="/banking-product-credit.html" class="card-content">
+                                        <p class="card-content__subtitle">
+                                            Кредитная карта *1256
+                                        </p>
+                                        <p class="card-content__title">
+                                            23 415<span>,80 ₽</span>
+                                        </p>
+                                    </a>
+                                    <div class="card-more filters__select-group-btn">
+                                        <svg class="widget-SVG">
+                                            <use xlink:href="#more" />
+                                        </svg>
+                                        <div class="card-more-dropdown">
+                                            <div class="card-more__inner">
+                                                <a href="#">Партнеры</a>
+                                                <a href="#">Спецпредложения</a>
+                                                <a href="#">Настройки</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget js-accordion">
+                            <div class="widget__title">
+                                Кредиты
+                                <svg class="widget-SVG">
+                                    <use xlink:href="#chevron-down" />
+                                </svg>
+                            </div>
+                            <div class="widget__body">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="/img/dollar.png" alt="Card">
+                                    </div>
+                                    <a href="/banking-product.html" class="card-content">
+                                        <p class="card-content__subtitle">
+                                            Дебетовая карт *1256
+                                        </p>
+                                        <p class="card-content__title">
+                                            91 789<span>,23 ₽</span>
+                                        </p>
+                                    </a>
+                                    <div class="card-more filters__select-group-btn">
+                                        <svg class="widget-SVG">
+                                            <use xlink:href="#more" />
+                                        </svg>
+                                        <div class="card-more-dropdown">
+                                            <div class="card-more__inner">
+                                                <a href="#">Партнеры</a>
+                                                <a href="#">Спецпредложения</a>
+                                                <a href="#">Настройки</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="/img/rur-card.png" alt="Card">
+                                    </div>
+                                    <a href="/banking-product-credit.html" class="card-content">
+                                        <p class="card-content__subtitle">
+                                            Кредитная карта *1256
+                                        </p>
+                                        <p class="card-content__title">
+                                            23 415<span>,80 ₽</span>
+                                        </p>
+                                    </a>
+                                    <div class="card-more filters__select-group-btn">
+                                        <svg class="widget-SVG">
+                                            <use xlink:href="#more" />
+                                        </svg>
+                                        <div class="card-more-dropdown">
+                                            <div class="card-more__inner">
+                                                <a href="#">Партнеры</a>
+                                                <a href="#">Спецпредложения</a>
+                                                <a href="#">Настройки</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <a href="/open-a-new-product.html" class="sidebar__link"><span>Открыть новый продукт</span></a>
+                </div>
             </div>        </div>
             <main id="content" class="page-main content">
             <div class="container">
@@ -387,7 +386,6 @@
         <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js" ></script>
         <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js" ></script>
         <script src="/assets/js/clipboard.min.js"></script>
-        <script src="/assets/js/choices.min.js"></script>
         <script src="js/app.js"></script>
     </div>
 </body>

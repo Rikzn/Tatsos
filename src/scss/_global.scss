@@ -19,7 +19,7 @@
         --content-padding: 3rem;
     }
 
-    @include breakpoint(small-mobile) {
+    @include breakpoint(mobile) {
         --content-padding: 2rem;
     }
 }
@@ -49,11 +49,11 @@ html {
     }
 
     @include breakpoint(small-tablet) {
-        font-size: 6px;
+        font-size: 5px;
     }
 
     @include breakpoint(mobile) {
-        font-size: 5px;
+        font-size: 10px;
     }
 
     @include breakpoint(small-mobile) {
@@ -299,7 +299,7 @@ select:-webkit-autofill:focus {
                 left: -6rem;
                 top: 32px;
                 padding-top: 0.5rem;
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     left: -7rem;
                     top: 21px;
                         }
@@ -351,7 +351,7 @@ select:-webkit-autofill:focus {
                 z-index: 99;
                 width: 500px;
 
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     width: 280px;
                     display: block;
                 }
@@ -359,7 +359,7 @@ select:-webkit-autofill:focus {
         }
     }
 
-    @include breakpoint(small-mobile) {
+    @include breakpoint(mobile) {
         .history-form-setting__dropdown {
             position: fixed;
             width: 100%;
@@ -386,4 +386,8 @@ select:-webkit-autofill:focus {
     span {
         color: #FF0000;
     }
+}
+
+.bot {
+    padding-bottom: 6rem;
 }

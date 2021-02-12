@@ -21,4 +21,7 @@
     &--active {
         transform: translateX(-155%);
     }
+    &-item {
+        color: red;
+    }
 }

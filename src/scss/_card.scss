@@ -5,6 +5,7 @@
     cursor: pointer;
     width: 100%;
     transition: 0.4s;
+    margin-top: 1rem;
     &::before {
         content: '';
         position: absolute;
@@ -30,9 +31,6 @@
         }
 
         .card-more {
-            opacity: 1;
-            transition: 0.3s;
-
             @include breakpoint(small-mobile) {
                 opacity: 0;
             }
@@ -44,9 +42,6 @@
         margin-right: 2rem;
         display: flex;
         align-items: center;
-        @include breakpoint(small-mobile) {
-            width: 8.6rem;
-        }
         img {
             border-radius: 5px;
         }
@@ -55,9 +50,7 @@
         &__subtitle {
             font-weight: 400;
             font-size: 1.4rem;
-            /* 14px */
             line-height: 1.7rem;
-            /* 17px */
             color: rgba($color: #fff, $alpha: 0.6);
 
             @include breakpoint(small-mobile) {
@@ -343,6 +336,7 @@
                 line-height: 5.7rem;
                 color: #C1C1C1;
             }
+        
         }
 
         &__descr {
@@ -394,7 +388,13 @@
                 }   
             }
         }
-    
+        svg {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 2.4rem;
+            height: 2.4rem;
+        }
     }
     &-replenishment {
         &-form {

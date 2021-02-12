@@ -22,5 +22,23 @@ export default function maskInput() {
         });
         im.mask(input);
     });
+
+    let sumMask = document.querySelectorAll('.js-sum-mask');
+    sumMask.forEach(input => {
+        var im = new Inputmask("(.999){+|1},00", {
+            positionCaretOnClick: "radixFocus",
+            radixPoint: ",",
+            _radixDance: true,
+            numericInput: true,
+            showMaskOnHover: false,
+            placeholder: "0",
+            definitions: {
+                "0": {
+                    validator: "[0-9\uFF11-\uFF19]"
+                }
+            }
+       })
+        im.mask(input);
+    });
   
 } 

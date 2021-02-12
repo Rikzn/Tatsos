@@ -11,7 +11,7 @@ $widgetTitle: #fff;
     @include breakpoint(mobile) {
         position: relative;
     }
-    @include breakpoint(small-mobile) {
+    @include breakpoint(mobile) {
         padding: 0;
         position: fixed;
         width: 100%;
@@ -35,6 +35,7 @@ $widgetTitle: #fff;
         padding-right: 1.3rem;
         padding-left: 2.2rem;
         margin-left: -1.8rem;
+        overflow-x: auto;
         scrollbar-color: rgba($color: #fff, $alpha: 0.8) rgba($color: #fff, $alpha: 0.1);
         scrollbar-width: thin;
         &::-webkit-scrollbar {
@@ -49,7 +50,7 @@ $widgetTitle: #fff;
             height: 7.5rem;
             box-shadow: inset 0.1rem 0.1rem 1rem #f3faf7;
         }
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             height: auto;
             overflow-x: visible;
         }
@@ -73,7 +74,7 @@ $widgetTitle: #fff;
             background-color: #dd4f0e;
             transition: 0.3s;
         }
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             margin-top: auto;
             margin-bottom: 100px;
         }
@@ -83,7 +84,7 @@ $widgetTitle: #fff;
         max-height: 37px;
         position: relative;
         z-index: 99;
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             display: none;
         }
         img {
@@ -140,7 +141,7 @@ $widgetTitle: #fff;
         height: 100vh;
         display: flex;
         flex-direction: column;
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             padding: 0 20px;
             width: auto;
         }

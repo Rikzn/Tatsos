@@ -1,19 +1,17 @@
-$svg-sitebar: #fff;
-
 .menu {
     &-hover {
         padding: 0.5rem 0.6rem;
         border-radius: 0.7rem;
         transition: 0.3s;
 
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             padding: 0;
         }
 
         &:hover {
             background-color: #F5F5F5;
 
-            @include breakpoint(small-mobile) {
+            @include breakpoint(mobile) {
                 background-color: inherit;
             }
 
@@ -21,7 +19,7 @@ $svg-sitebar: #fff;
                 color: #000000;
                 transition: 0.3s;
 
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     color: rgba($color: #fff, $alpha: 0.4)
                 }
             }
@@ -37,7 +35,7 @@ $svg-sitebar: #fff;
         width: 100%;
         padding-left: 45rem;
 
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             right: 0rem;
             display: flex;
             padding-top: 2.3rem;
@@ -50,7 +48,7 @@ $svg-sitebar: #fff;
     &__logo {
         display: none;
 
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             display: block;
             margin-right: auto;
             width: 14.6rem;
@@ -62,7 +60,7 @@ $svg-sitebar: #fff;
         align-items: center;
         margin-left: -0.8rem;
 
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             overflow-x: scroll;
             width: 100%;
             margin-top: 2rem;
@@ -79,7 +77,7 @@ $svg-sitebar: #fff;
             margin-right: 1.4rem;
             padding: 0.6rem;
 
-            @include breakpoint(small-mobile) {
+            @include breakpoint(mobile) {
                 white-space: pre;
             }
 
@@ -90,7 +88,7 @@ $svg-sitebar: #fff;
                 font-weight: 500;
                 transition: 0.3s;
 
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     color: rgba($color: #fff, $alpha: 0.4)
                 }
             }
@@ -107,7 +105,7 @@ $svg-sitebar: #fff;
                         background-color: #fff;
                     }
 
-                    @include breakpoint(small-mobile) {
+                    @include breakpoint(mobile) {
                         color: rgba($color: #fff, $alpha: 1.0)
                     }
                 }
@@ -123,7 +121,7 @@ $svg-sitebar: #fff;
             overflow: hidden;
             padding: .6rem .1rem .6rem .6rem;
 
-            @include breakpoint(small-mobile) {
+            @include breakpoint(mobile) {
                 pointer-events: none;
                 padding: 0;
                 overflow: visible;
@@ -173,7 +171,7 @@ $svg-sitebar: #fff;
                 transition: 0.3s;
                 font-weight: 500;
 
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     display: none;
                 }
             }
@@ -186,7 +184,7 @@ $svg-sitebar: #fff;
                 opacity: 0;
                 transition: 0.3s;
 
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     position: relative;
                     top: 0;
                     opacity: 1;
@@ -205,7 +203,7 @@ $svg-sitebar: #fff;
                     display: flex;
                     flex-direction: column;
 
-                    @include breakpoint(small-mobile) {
+                    @include breakpoint(mobile) {
                         background-color: transparent;
                         flex-direction: row;
                         color: rgba($color: #fff, $alpha: 0.4);
@@ -219,7 +217,7 @@ $svg-sitebar: #fff;
                         padding: 0.5rem 0.9rem 0.7rem 0.9rem;
                         transition: 0.3s;
 
-                        @include breakpoint(small-mobile) {
+                        @include breakpoint(mobile) {
                             padding: 0;
                             margin-right: 1.4rem;
                         }
@@ -239,7 +237,7 @@ $svg-sitebar: #fff;
         display: flex;
         align-items: center;
 
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             width: 100%;
             align-items: flex-end;
         }
@@ -247,7 +245,7 @@ $svg-sitebar: #fff;
         svg {
             width: 2.4rem;
             height: 2.4rem;
-            @include breakpoint(small-mobile) {
+            @include breakpoint(mobile) {
                 fill: #fff;
                     }
         }
@@ -258,7 +256,7 @@ $svg-sitebar: #fff;
         display: flex;
         position: relative;
 
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             color: #fff;
             margin-right: 1.5rem;
             top: 0.6rem;
@@ -268,8 +266,10 @@ $svg-sitebar: #fff;
 
     &__call {
         margin-right: 0.4rem;
-
-        @include breakpoint(small-mobile) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include breakpoint(mobile) {
             display: none;
         }
     }
@@ -279,7 +279,7 @@ $svg-sitebar: #fff;
         position: relative;
         cursor: pointer;
 
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             display: none;
         }
 
@@ -304,7 +304,7 @@ $svg-sitebar: #fff;
         padding-right: 0.1rem;
         transition: 0.4s;
 
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             color: #fff;
             padding-left: 0;
             margin-bottom: 0;
@@ -344,7 +344,7 @@ $svg-sitebar: #fff;
                 height: 0;
                 overflow: hidden;
 
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     color: #000;
                 }
 
@@ -384,7 +384,7 @@ $svg-sitebar: #fff;
         display: flex;
         justify-content: space-between;
 
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             flex-direction: column-reverse;
         }
     }

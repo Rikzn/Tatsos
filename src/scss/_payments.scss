@@ -88,28 +88,6 @@
             }
     }
 
-    &__title {
-        transition: 0.2s;
-        h2 {
-            font-weight: 600;
-            font-size: 2.4rem;
-            line-height: 2.9rem;
-            margin-right: 1rem;
-            @include breakpoint(small-mobile) {
-                font-weight: 500;
-                margin-right: auto;
-                }
-        }
-
-        &-svg {
-            width: 2.4rem;
-            /* 24px */
-            height: 2.4rem;
-            /* 24px */
-            transform: rotate(-90deg);
-        }
-    }
-
     &-content {
         @include breakpoint(small-mobile) {
             width: 100%;

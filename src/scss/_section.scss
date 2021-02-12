@@ -8,13 +8,13 @@
     &__inner {
         display: flex; 
         padding-bottom: 5.6rem;
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             flex-direction: column-reverse;
         }
     }
     &__left {
         width: 56rem;
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             width: 100%;
         }
         &--wrapper {
@@ -26,7 +26,7 @@
     &__right {
         width: 21rem;
         margin-left: auto;
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             width: 100%;
         }
     }
@@ -39,6 +39,14 @@
             transform: rotate(-90deg);
             position: relative;
             top: 3px;
+        }
+        &:hover {
+            opacity: 0.8;
+            transition: 0.3s;
+            svg {
+                opacity: 0.8;
+                transition: 0.3s;
+            }
         }
     }
 }

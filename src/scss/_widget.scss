@@ -1,6 +1,6 @@
 .widget {
     margin-bottom: 2.2rem;
-    @include breakpoint(small-mobile) {
+    @include breakpoint(mobile) {
         margin-bottom: 2.1rem;
       }
     &__title {
@@ -141,13 +141,13 @@
 
     &__curs {
         margin-top: 2rem;
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             display: none;
           }
     }
     &-main {
         margin-top: 8rem;
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             margin-top: 14rem;
           }
     }
