@@ -5,6 +5,10 @@
         svg {
             width: 75.6rem;
             height: 30.7rem;
+            @include breakpoint(mobile) {
+                width: 32.6rem;
+                height: 15.7rem;
+                    }
         }
     }
     &__subtitle {

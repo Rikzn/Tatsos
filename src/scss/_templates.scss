@@ -2,9 +2,10 @@
     &__inner {
         position: relative;
         margin-left: auto;
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             margin-top: 2.5rem;
             right: 0;
+            margin-left: 0;
             }
     }
     &__wrapper {
@@ -12,9 +13,10 @@
         flex-wrap: wrap;
         max-width: 25rem;
         margin-top: 2.1rem;
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             max-width: none;
             align-items: baseline;
+            margin-top: 0;
             }
     }
     &__card {
@@ -29,13 +31,14 @@
         &:nth-child(3n) {
             margin-right: 0;
         }
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             margin-bottom: 0;
             margin-right: 2rem;
             width: 20%;
             align-items: center;
             height: 9.7rem;
             justify-content: end;
+            margin-top: 2.7rem;
             &:nth-child(3n) {
                 margin-right: 2rem;
             }
@@ -43,7 +46,7 @@
                 margin-right: 0;
             }
         }
-        @include breakpoint(supersmall-mobile) {
+        @include breakpoint(supermobile) {
             margin-right: 1.8rem;
              }
     }
@@ -54,6 +57,13 @@
             font-size: 1.2rem;
             line-height: 1.4rem;
             text-align: center;
+            text-overflow: ellipsis;
+            max-width: 53px;
+            overflow: hidden;
+            max-height: 43px;
+            @include breakpoint(mobile) {
+                max-height: 41px;
+            }
         }
     }
     &-img {
@@ -72,7 +82,7 @@
             width: 2rem;
             height: 2rem;
         }
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             width: 5.8rem;
             height: 5.8rem;
             display: flex;
@@ -83,14 +93,14 @@
         .templates {
             &__wrapper {
                 max-width: none;
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     margin-top: 0;
                         }
             }
             &__inner {
                 right: 0;
                 width: 100%;
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     margin-top: 0;
                         }
             }
@@ -152,7 +162,7 @@
         }
         .sidebar-nav {
             margin-top: 9.8rem;
-            @include breakpoint(small-mobile) {
+            @include breakpoint(mobile) {
                 margin-top: 0;
                     }
                 &__inner {
@@ -232,7 +242,7 @@
     }
     &__box {
         display: flex;
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             flex-direction: column;
                 }
     }

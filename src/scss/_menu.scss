@@ -79,6 +79,10 @@
 
             @include breakpoint(mobile) {
                 white-space: pre;
+                padding: 0;
+                &:first-child {
+                    padding-left: 20px;
+                }
             }
 
             span {
@@ -96,6 +100,9 @@
             &--active {
                 &:hover {
                     background-color: #fff;
+                    @include breakpoint(mobile) {
+                        background-color: transparent;
+                    }
                 }
 
                 span {
@@ -103,6 +110,9 @@
 
                     &:hover {
                         background-color: #fff;
+                        @include breakpoint(mobile) {
+                            background-color: transparent;
+                        }
                     }
 
                     @include breakpoint(mobile) {
@@ -240,6 +250,7 @@
         @include breakpoint(mobile) {
             width: 100%;
             align-items: flex-end;
+            padding: 0 20px;
         }
 
         svg {
@@ -386,6 +397,7 @@
 
         @include breakpoint(mobile) {
             flex-direction: column-reverse;
+            padding: 0;
         }
     }
 

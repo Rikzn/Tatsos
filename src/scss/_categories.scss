@@ -49,6 +49,11 @@
                 opacity: 1;
                 transition: 0.3s;
             }
+            @include breakpoint(mobile) {
+                &::before {
+                    opacity: 0;
+                }
+            }
         }
     }
 

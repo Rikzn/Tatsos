@@ -43,7 +43,7 @@
         border-top-right-radius: 20px;
         background-color: #fff;
         z-index: 3;
-        padding-top: 3.3rem;
+        padding-top: 3rem;
         position: relative;
         margin-top: 65rem;
         &::before {
@@ -56,5 +56,8 @@
             height: 80px;
 
         }
+    }
+    &-404 {
+        margin-top: 0;
     }
 }

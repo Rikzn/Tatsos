@@ -34,7 +34,7 @@
         position: relative;
         z-index: -2;
         display: none;
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             display: none;
           }
         &--active {
@@ -54,5 +54,25 @@
     }
     &-example-basic-single {
         display: none;
+    }
+    &-accordion {
+        &--active {
+            .widget {
+                &__title {
+                    padding-bottom: 5px;
+                    transition: 0.3s;
+                        svg {
+                            transform: rotate(180deg);
+                        }
+                }
+                &__body {
+                    max-height: 20rem;
+                    opacity: 1;
+                    overflow: visible;
+                    transition-property: opacity, max-height;
+                    transition-duration: 1s, 0.3s;
+                }
+            }
+        }
     }
 }

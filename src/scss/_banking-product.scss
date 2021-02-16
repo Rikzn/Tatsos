@@ -6,8 +6,9 @@
         background-color: #F5F5F5;
         padding: 1rem 4rem 4rem 4rem;
         margin-bottom: 6rem;
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             margin-top: 2.3rem;
+            padding: 1rem 2rem 2rem;
            }
         &__descr {
             flex-basis: 45%;
@@ -19,6 +20,9 @@
             line-height: 1.8rem;
             color: #C1C1C1;
             margin-bottom: 1rem;
+            @include breakpoint(mobile) {
+                margin-bottom: 0.5rem;
+                    }
         }
         &__subtitle {
             font-weight: 600;
@@ -29,6 +33,9 @@
             align-items: center;
             transition: 0.3s;
             white-space: nowrap;
+            @include breakpoint(mobile) {
+                white-space: normal;
+                }
             &:hover {
                 svg {
                     opacity: 1;
@@ -72,12 +79,15 @@
                 padding: 1rem 0;
                 font-size: 1.6rem;
                 line-height: 1.9rem;
+                @include breakpoint(mobile) {
+                    font-size: 1.4rem;
+                        }
             }
             &:hover {
                 &::before {
                     opacity: 1;
                     transition: 0.3s;
-                    @include breakpoint(small-mobile) {
+                    @include breakpoint(mobile) {
                         opacity: 0;
                         }
                 }
@@ -114,11 +124,11 @@
                 &:hover {
                     opacity: 0.6;
                     transition: 0.3s;
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     opacity: 1;
                     }
                 }
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     padding: 1.5rem 2.2rem;
                     }
             }

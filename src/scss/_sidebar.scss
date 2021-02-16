@@ -53,6 +53,8 @@ $widgetTitle: #fff;
         @include breakpoint(mobile) {
             height: auto;
             overflow-x: visible;
+            margin-left: 0;
+            padding-left: 0;
         }
     }
     &__link {

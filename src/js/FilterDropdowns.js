@@ -27,49 +27,52 @@ export default function FilterDropdowns() {
         });
     });
 
-    // раскрытия виджета
 
-    let widgets = document.querySelectorAll('.widget');
+     // раскрытия виджета
+    const accordions = document.querySelectorAll('.js-accordion');
+    // Медиа запрос экран меньше 700px скрипт работает
+    if (window.matchMedia("(min-width:700px)").matches) {     
+        for(let item of accordions) {
+        item.addEventListener('click', function() {
+            if(this.classList.contains('js-accordion')) {
+                this.classList.toggle('js-accordion--active');
+            }
+            })
+        }
+    } else {
+       for(let item of accordions) {
+        item.addEventListener('click', function() {
+            if(this.classList.contains('js-accordion--active')) {
+                this.classList.remove('js-accordion--active');
+            } else {
+                for(let el of accordions) {
+                    el.classList.remove('js-accordion--active');
+                }
+                    this.classList.add('js-accordion--active');
+                }
+            })
+        }
+    }
+
+   
+
+
+
+
+
+
+
+
 
     
 
-    // Медиа запрос экран меньше 700px скрипт работает
-    if (window.matchMedia("(min-width:700px)").matches) {     
-        widgets.forEach(function (widget) {
-            widget.addEventListener('click', function(e) {
-                if (e.target.classList.contains('widget__title')) {
-                    e.target.classList.toggle('widget__title--active');
-                    e.target.nextElementSibling.classList.toggle('widget__body--active');
-                }
-            });
-        });
-    } else {
-        widgets.forEach(function (widget) {
-            widget.addEventListener('click', function(e) {
-                if (e.target.classList.contains('widget__title--active')) {
-                    console.log('12')
-                    e.target.classList.remove('widget__title--active');
-                    e.target.nextElementSibling.classList.remove('widget__body--active');
-                }
-                
-            });
-        });   
-    }
+    
 
-    // const accordions = document.querySelectorAll('.js-accordion');
 
-    // for(item of accordions) {
-    //     item.addEventListener('click', function() {
-    //         if(this.classList.contains('active')) {
-    //             this.classList.remove('active');
-    //         } else {
-    //             for(el of accordions) {
-    //                 el.classList.remove('active');
-    //             }
-    //             this.classList.add('active');
-    //         }
-    //     })
-    // }
+  
+
+
+
 
 
     // Клик в блоке Истории операций

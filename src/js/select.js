@@ -1,7 +1,10 @@
   export default function Select() {
       
     $(document).ready(function() {
-        $('.js-example-basic-single').select2();
+        $('.js-example-basic-single').select2({
+            width: 260,
+            theme: "classic"
+        });
     });
 
 

@@ -6,6 +6,10 @@
     white-space: nowrap;
     display: flex;
     align-items: flex-end;
+    @include breakpoint(mobile) {
+        font-size: 2.4rem;
+        line-height: 3rem;
+    }
     svg {
         width: 2.4rem;
         height: 2.4rem;
@@ -19,7 +23,7 @@
         margin-bottom: 5rem;
         display: flex;
         align-items: flex-end;
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             margin-bottom: 1rem;
             font-size: 3rem;
         }

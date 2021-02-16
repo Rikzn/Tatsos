@@ -87,3 +87,4 @@ const tl = gsap.timeline({
 // }
 
 // validateForms('.js-form', { email: {required: true, email: true}, tel: {required: true} }, '.thanks-popup');
+

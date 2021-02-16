@@ -1,6 +1,6 @@
 .operations {
     display: flex;
-    @include breakpoint(small-mobile) {
+    @include breakpoint(mobile) {
         display: flex;
         flex-direction: column;
         }
@@ -18,7 +18,7 @@
         @include breakpointMF(ultra-desktop) {   
             max-width: 66.1rem;
             }
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             flex-wrap: nowrap;
             flex-direction: column;
             margin-top: 0;
@@ -36,14 +36,14 @@
         transition: 0.3s;
         &:hover {
             transition: 0.3s;
-            @include breakpoint(small-mobile) {
+            @include breakpoint(mobile) {
                 transform: translateY(0);
                 }
             &::before {
                 height: 0.3rem;
                 transition: 0.3s;
                 background-color: #2E2E2E;
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     height: 0.1rem;
                     background-color: #C1C1C1;
                     }
@@ -58,14 +58,14 @@
             height: 0.1rem;
             background-color: #C1C1C1;
             transition: 0.3s;
-            @include breakpoint(small-mobile) {
+            @include breakpoint(mobile) {
                 content: none;
                 }
         }
         @include breakpoint(desktop) {
             padding-bottom: 3.1rem;
         }
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             padding-bottom: 1.9rem;
             }
     }
@@ -83,13 +83,13 @@
         @include breakpoint(laptop) {   
             margin-right: 5rem;
             }
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             margin-right: 0;
             }
     }
 
     &-content {
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             width: 100%;
             position: relative;
             &::before {

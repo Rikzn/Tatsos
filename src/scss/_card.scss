@@ -25,13 +25,13 @@
             opacity: 0.6;
             transition: 0.3s;
 
-            @include breakpoint(small-mobile) {
+            @include breakpoint(mobile) {
                 opacity: 0;
             }
         }
 
         .card-more {
-            @include breakpoint(small-mobile) {
+            @include breakpoint(mobile) {
                 opacity: 0;
             }
         }
@@ -53,7 +53,7 @@
             line-height: 1.7rem;
             color: rgba($color: #fff, $alpha: 0.6);
 
-            @include breakpoint(small-mobile) {
+            @include breakpoint(mobile) {
                 font-size: 1.5rem;
             }
         }
@@ -174,9 +174,10 @@
             padding: 7rem 3rem 3.7rem;
         }
 
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             padding: 9.8rem 3rem 6.5rem;
             width: 32rem;
+            height: 21rem;
         }
 
         input {
@@ -445,15 +446,21 @@
         display: flex;
         align-items: center;
         padding-bottom: 5.2rem;
+        @include breakpoint(mobile) {
+            flex-direction: row;
+            align-self: start;
+            padding-bottom: 2rem;
+        }
         &__img {
             width: 8.2rem;
             height: 8.2rem;
             margin-right: 3rem;
             box-shadow: 0px 33px 80px rgba(0, 0, 0, 0.07), 0px 13.7866px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 7.37098px 17.869px rgba(0, 0, 0, 0.0417275), 0px 4.13211px 10.0172px rgba(0, 0, 0, 0.035), 0px 2.19453px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 0.913195px 2.21381px rgba(0, 0, 0, 0.0196802);
             border-radius: 1rem;
-            @include breakpoint(small-mobile) {
-                margin-bottom: 1rem;
-                width: 11.6rem;
+            @include breakpoint(mobile) {
+                width: 5.2rem;
+                height: 5.2rem;
+                margin-right: 1.5rem;
             }
             img {
                 border-radius: 1rem;
@@ -463,9 +470,10 @@
             &__subtitle {
                 margin-bottom: 0.5rem;
                 max-width: 40.3rem;
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     white-space: inherit;
-                    font-size: 3rem;
+                    font-size: 2.4rem;
+                    margin-bottom: 0;
                 }
                 &:hover {
                     opacity: 1;

@@ -11,6 +11,9 @@
                 line-height: 5.7rem;
                 color: #2E2E2E;
                 padding-bottom: 1.1rem;
+                @include breakpoint(mobile) {
+                    font-size: 3.5rem;
+                }
             }
             svg {
                 width: 2.4rem;
@@ -21,10 +24,16 @@
     &-container {
         margin-top: 5rem;
         margin-bottom: 6rem;
+        @include breakpoint(mobile) {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
     }
     &-btn {
         margin-top: 2rem;
-
+        @include breakpoint(mobile) {
+            margin-top: 0;
+        }
         &__link {
             padding: 0.5rem 1rem;
             background-color: #F5F5F5;
@@ -33,6 +42,10 @@
             font-size: 1.2rem;
             line-height: 1.4rem;
             cursor: pointer;
+            @include breakpoint(mobile) {
+                margin-top: 1rem;
+                display: inline-block;
+            }
         }
     }
     &__close {
