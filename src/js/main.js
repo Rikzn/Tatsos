@@ -64,24 +64,6 @@ const tl = gsap.timeline({
 
 
 
-// добавление no-scroll для мобильной версии сайта 
-if (window.matchMedia("(max-width:700px)").matches) {
-  const close = document.querySelector('.history-form-setting__dropdown-svg');
-  const overlay = document.querySelector('.history-form__group-dropdown');
-
-  close.addEventListener('click', CloseWindow);
-  overlay.addEventListener('click', CloseWindow);
-
-  function CloseWindow() {
-      const closeBtn = document.querySelector('.closeBtn');
-      const noScroll = document.querySelector('body');
-      closeBtn.classList.remove('active');
-      noScroll.classList.remove('no-scroll');
-
-    }
-}
-
-
 // Валидатор
 // let validateForms = function(selector, rules, successModal) {
 //     new window.JustValidate(selector, {

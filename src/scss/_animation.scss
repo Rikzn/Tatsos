@@ -5,6 +5,12 @@
             animation: plus 0.9s ease-in-out infinite;
             transition: 0.3s;
         }
+        @include breakpoint(mobile) {
+           &:hover {
+               animation: normal;
+               transform: none;
+           }
+        }
     }
     &__hover {
         &:hover {
@@ -15,6 +21,12 @@
                 transition: 0.3s;
             }
         }
+        @include breakpoint(mobile) {
+            &:hover {
+                animation: normal;
+                transform: none;
+            }
+         }
     }
     &__stroke {
         &:hover {
@@ -22,6 +34,12 @@
             animation-delay: 0;
             // transition: 0.3s;
         }
+        @include breakpoint(mobile) {
+            &:hover {
+                animation: normal;
+                transform: none;
+            }
+         }
     }
 }
 

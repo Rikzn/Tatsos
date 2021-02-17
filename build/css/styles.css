@@ -1255,7 +1255,7 @@ select:-webkit-autofill:focus {
     padding-top: 0; }
     .active .history-form-setting__dropdown-svg {
       position: absolute;
-      right: 7.5%;
+      right: 0.5%;
       top: 25px;
       width: 15px;
       height: 15px;
@@ -1414,6 +1414,8 @@ select:-webkit-autofill:focus {
       border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
       scrollbar-width: none; }
       .menu-nav::-webkit-scrollbar {
+        -webkit-appearance: none;
+        height: 0;
         width: 0; } }
   .menu-nav__link {
     margin-right: 1.4rem;
@@ -1777,13 +1779,11 @@ select:-webkit-autofill:focus {
   will-change: min-height; }
   @media only screen and (max-width: 767px) {
     .sidebar {
-      position: relative; } }
-  @media only screen and (max-width: 767px) {
-    .sidebar {
       padding: 0;
       position: fixed;
       width: 100%;
-      z-index: 0; } }
+      z-index: 0;
+      height: auto; } }
   .sidebar__inner {
     position: relative;
     z-index: 1;
@@ -1845,7 +1845,8 @@ select:-webkit-autofill:focus {
     @media only screen and (max-width: 767px) {
       .sidebar__link {
         margin-top: auto;
-        margin-bottom: 100px; } }
+        margin-bottom: 100px;
+        border-radius: 15px; } }
   .sidebar-logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1900,8 +1901,8 @@ select:-webkit-autofill:focus {
     .sidebar-img--active {
       display: block; }
   .sidebar__content {
-    padding: 2.8rem 5rem 5.7rem 5rem;
     height: 100vh;
+    padding: 2.8rem 5rem 5.7rem 5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1912,7 +1913,8 @@ select:-webkit-autofill:focus {
     @media only screen and (max-width: 767px) {
       .sidebar__content {
         padding: 0 20px;
-        width: auto; } }
+        width: auto;
+        height: 68rem; } }
   .sidebar-item {
     background-color: #F1611F;
     border-radius: 150px;
@@ -2351,7 +2353,13 @@ select:-webkit-autofill:focus {
             -ms-flex-align: center;
                 align-items: center; }
         .history-form::-webkit-scrollbar {
-          display: none; } }
+          -webkit-appearance: none;
+          height: 0;
+          width: 0;
+          display: none; }
+        .history-form::-moz-scrollbar {
+          width: 0px;
+          height: 0px; } }
     .history-form__btn {
       background-color: #F5F5F5;
       border-radius: 1rem;
@@ -2365,6 +2373,9 @@ select:-webkit-autofill:focus {
       transition: 0.3s;
       max-width: 14rem;
       cursor: pointer; }
+      @media only screen and (max-width: 767px) {
+        .history-form__btn {
+          padding: 0.7rem 0.7rem; } }
       .history-form__btn--default {
         background-color: #F5F5F5;
         position: relative;
@@ -2501,6 +2512,8 @@ select:-webkit-autofill:focus {
               fill: #000;
               width: 1.2rem;
               height: 1.2rem; } }
+      .history-form-setting__show {
+        margin-top: auto !important; }
       @media only screen and (max-width: 767px) {
         .history-form-setting .card-item {
           height: 6.2rem; } }
@@ -2637,7 +2650,9 @@ select:-webkit-autofill:focus {
             .history-form__group-dropdown-inner {
               -webkit-box-shadow: none;
                       box-shadow: none;
-              height: 85vh; } }
+              height: 100%;
+              border-bottom-left-radius: 0;
+              border-bottom-right-radius: 0; } }
         .history-form__group-dropdown .card-item {
           width: 32.7rem; }
           @media only screen and (max-width: 767px) {
@@ -2652,6 +2667,9 @@ select:-webkit-autofill:focus {
         .history-form__group-dropdown .card-checkbox {
           margin-left: auto;
           margin-right: 2.6rem; }
+          @media only screen and (max-width: 767px) {
+            .history-form__group-dropdown .card-checkbox {
+              margin-right: 0; } }
           .history-form__group-dropdown .card-checkbox input {
             display: none;
             -webkit-transition: 0.3s;
@@ -2688,7 +2706,7 @@ select:-webkit-autofill:focus {
       text-align: center; }
       @media only screen and (max-width: 767px) {
         .history-form input {
-          width: 140px; } }
+          width: 112px; } }
   .history__add {
     color: #05B135; }
   .history__title {
@@ -2697,9 +2715,9 @@ select:-webkit-autofill:focus {
     font-size: 1.4rem;
     line-height: 1.7rem; }
   .history .card-content__title {
-    font-size: 1.5rem; }
+    font-size: 1.6rem; }
     .history .card-content__title span {
-      font-size: 1rem; }
+      font-size: 1.6rem; }
 
 .widget {
   margin-bottom: 2.2rem; }
@@ -3000,6 +3018,9 @@ select:-webkit-autofill:focus {
     font-weight: 500;
     font-size: 2.4rem;
     line-height: 2.4rem; }
+    @media only screen and (max-width: 767px) {
+      .banking-product-data__title {
+        margin-top: 2rem; } }
   .banking-product-data__inner {
     margin-top: 2rem; }
   .banking-product-data__item {
@@ -3072,6 +3093,9 @@ select:-webkit-autofill:focus {
     font-size: 2.4rem;
     line-height: 2.4rem;
     margin-bottom: 3rem; }
+    @media only screen and (max-width: 767px) {
+      .banking-product-reference__title {
+        margin-top: 2rem; } }
   .banking-product-reference__descr {
     font-weight: 500;
     font-size: 1.6rem;
@@ -3271,7 +3295,7 @@ select:-webkit-autofill:focus {
   margin-left: auto; }
   @media only screen and (max-width: 767px) {
     .templates__inner {
-      margin-top: 2.5rem;
+      margin-top: 3.3rem;
       right: 0;
       margin-left: 0; } }
 
@@ -3952,7 +3976,8 @@ select:-webkit-autofill:focus {
     .btn {
       margin-top: 2rem;
       padding: 1.5rem 0.8rem;
-      min-width: 16rem; } }
+      min-width: 16rem;
+      border-radius: 1.5rem; } }
   .btn:last-child {
     margin-right: 0; }
   .btn a {
@@ -5056,6 +5081,12 @@ select:-webkit-autofill:focus {
             animation: plus 0.9s ease-in-out infinite;
     -webkit-transition: 0.3s;
     transition: 0.3s; }
+  @media only screen and (max-width: 767px) {
+    .animation__plus:hover {
+      -webkit-animation: normal;
+              animation: normal;
+      -webkit-transform: none;
+              transform: none; } }
 
 .animation__hover:hover {
   -webkit-transform: translate3d(0, 0, 0) scale(1.048);
@@ -5067,11 +5098,25 @@ select:-webkit-autofill:focus {
     -webkit-transition: 0.3s;
     transition: 0.3s; }
 
+@media only screen and (max-width: 767px) {
+  .animation__hover:hover {
+    -webkit-animation: normal;
+            animation: normal;
+    -webkit-transform: none;
+            transform: none; } }
+
 .animation__stroke:hover {
   -webkit-animation: stroke 0.4s infinite;
           animation: stroke 0.4s infinite;
   -webkit-animation-delay: 0;
           animation-delay: 0; }
+
+@media only screen and (max-width: 767px) {
+  .animation__stroke:hover {
+    -webkit-animation: normal;
+            animation: normal;
+    -webkit-transform: none;
+            transform: none; } }
 
 @-webkit-keyframes plus {
   100% {
@@ -5284,7 +5329,7 @@ select:-webkit-autofill:focus {
     .title {
       font-size: 2.4rem;
       line-height: 3rem;
-      word-spacing: normal; } }
+      white-space: normal; } }
   .title svg {
     width: 2.4rem;
     height: 2.4rem;

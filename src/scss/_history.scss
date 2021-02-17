@@ -122,7 +122,14 @@
             overflow-x: auto;
             align-items: center;
             &::-webkit-scrollbar {
+                -webkit-appearance: none;
+                height: 0;
+                width: 0;
                 display: none;
+            }
+            &::-moz-scrollbar {
+                width: 0px;
+                height: 0px;
             }
         }
         &__btn {
@@ -137,6 +144,9 @@
             transition: 0.3s;
             max-width: 14rem;
             cursor: pointer;
+            @include breakpoint(mobile) {
+                padding: 0.7rem 0.7rem;
+            }
             &--default {
                 background-color: #F5F5F5;
                 position: relative;
@@ -220,6 +230,7 @@
                     height: 100vh;
                     }
             }
+
             &__item {
                 display: flex;
                 flex-direction: column;
@@ -278,6 +289,10 @@
                 }
 
                 
+            }
+
+            &__show {
+                margin-top: auto !important;
             }
             .card {
                 &-item {
@@ -425,7 +440,9 @@
                     flex-direction: column;
                     @include breakpoint(mobile) {
                         box-shadow:none;
-                        height: 85vh;
+                        height: 100%;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
                         }
                 }
                 .card {
@@ -449,6 +466,9 @@
                     &-checkbox {
                         margin-left: auto;
                         margin-right: 2.6rem;
+                        @include breakpoint(mobile) {
+                            margin-right: 0;
+                            }
                         input {
                             display: none;
                             transition: 0.3s;
@@ -491,7 +511,7 @@
         input {
             text-align: center;
             @include breakpoint(mobile) {
-                width: 140px;
+                width: 112px;
             }
         }
     }
@@ -508,9 +528,9 @@
                 line-height: 1.7rem;
             }
             &__title {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
                 span {
-                    font-size: 1rem;
+                    font-size: 1.6rem;
                 }
             }
         }

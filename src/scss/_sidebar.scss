@@ -7,15 +7,12 @@ $widgetTitle: #fff;
     width: 45rem;
     flex-shrink: 0;
     will-change: min-height;
-
-    @include breakpoint(mobile) {
-        position: relative;
-    }
     @include breakpoint(mobile) {
         padding: 0;
         position: fixed;
         width: 100%;
         z-index: 0;
+        height: auto;
     }
     &__inner {
         position: relative;
@@ -79,6 +76,7 @@ $widgetTitle: #fff;
         @include breakpoint(mobile) {
             margin-top: auto;
             margin-bottom: 100px;
+            border-radius: 15px;
         }
     }
     &-logo {
@@ -139,13 +137,14 @@ $widgetTitle: #fff;
         }
     }
     &__content {
-        padding: 2.8rem 5rem 5.7rem 5rem;
         height: 100vh;
+        padding: 2.8rem 5rem 5.7rem 5rem;
         display: flex;
         flex-direction: column;
         @include breakpoint(mobile) {
             padding: 0 20px;
             width: auto;
+            height: 68rem;
         }
     }
     &-item {
