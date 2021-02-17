@@ -1,34 +1,66 @@
 
 export default function FilterDropdowns() {
-    const elements = Array.from(document.querySelectorAll('.js-filters-dropdown'));
+    // Медиа запрос экран меньше 700px скрипт работает
+    if (window.matchMedia("(max-width:700px)").matches) {
+        const elements = Array.from(document.querySelectorAll('.js-filters-dropdown'));
 
-    elements.forEach(element => {
-        const btn = element.querySelector('.filters__select-group-btn');
-
-        btn.addEventListener('click', event => {
-            event.preventDefault();
-            
-            if (!element.classList.contains('active')) {
-                const close = document.querySelector('.history-form-setting__dropdown-svg');
-                elements.forEach(element => element.classList.remove('active'))
-                element.classList.add('active');
-
-            } else {
-                elements.forEach(element => element.classList.remove('active'))
-                element.classList.remove('active');
-            }
+        elements.forEach(element => {
+            const btn = element.querySelector('.filters__select-group-btn');
+            const noScroll = document.querySelector('body');
+            btn.addEventListener('click', event => {
+                event.preventDefault();
+                
+                if (!element.classList.contains('active')) {
+                    elements.forEach(element => element.classList.remove('active'))
+                    element.classList.add('active');
+                    noScroll.classList.add('no-scroll');
+                    console.log(noScroll);
+                } else {
+                    elements.forEach(element => element.classList.remove('active'))
+                    element.classList.remove('active');
+                }
+            });
+    
+            document.addEventListener('click', event => {
+                const insideGroup = event.target.matches('.filters__select-group') || event.target.closest('.filters__select-group');
+                if (!insideGroup) {
+                    elements.forEach(element => element.classList.remove('active'))
+                } 
+            });
         });
+    } else {
+        const elements = Array.from(document.querySelectorAll('.js-filters-dropdown'));
 
-        document.addEventListener('click', event => {
-            const insideGroup = event.target.matches('.filters__select-group') || event.target.closest('.filters__select-group');
-            if (!insideGroup) {
-                elements.forEach(element => element.classList.remove('active'))
-            } 
+        elements.forEach(element => {
+            const btn = element.querySelector('.filters__select-group-btn');
+    
+            btn.addEventListener('click', event => {
+                event.preventDefault();
+                
+                if (!element.classList.contains('active')) {
+                    elements.forEach(element => element.classList.remove('active'))
+                    element.classList.add('active');
+    
+                } else {
+                    elements.forEach(element => element.classList.remove('active'))
+                    element.classList.remove('active');
+                }
+            });
+    
+            document.addEventListener('click', event => {
+                const insideGroup = event.target.matches('.filters__select-group') || event.target.closest('.filters__select-group');
+                if (!insideGroup) {
+                    elements.forEach(element => element.classList.remove('active'))
+                } 
+            });
         });
-    });
+    }
 
 
-     // раскрытия виджета
+   
+
+
+     // раскрытия аккардиона у сайбара
     const accordions = document.querySelectorAll('.js-accordion');
     // Медиа запрос экран меньше 700px скрипт работает
     if (window.matchMedia("(min-width:700px)").matches) {     

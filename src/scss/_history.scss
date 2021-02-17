@@ -76,7 +76,7 @@
                 font-size: 1.6rem;
                 line-height: 1.9rem;
                 margin-bottom: 0.4rem;
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     font-size: 1.4rem;
                     max-width: 173px;
                     }
@@ -116,7 +116,7 @@
         display: flex;
         align-items: flex-start;
         margin-bottom: 4.4rem;
-        @include breakpoint(small-mobile) {
+        @include breakpoint(mobile) {
             margin-bottom: 3rem;
             overflow-y: hidden;
             overflow-x: auto;
@@ -180,7 +180,7 @@
                 background-color: #F1611F;
                 border-radius: 100%;
             }
-            @include breakpoint(small-mobile) {
+            @include breakpoint(mobile) {
                 margin-right: 0.9rem;
                 padding: .3rem 0.9rem;
             }
@@ -198,7 +198,7 @@
                 height: 0.1rem;
                 overflow: hidden;
                 transition: opacity 0.1s ease-out 0.1s, all 0.3s;
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     top: 450px;
                     display: none;
                 }
@@ -215,7 +215,7 @@
                 background-color: #fff;
                 color: #C1C1C1;
                 padding: 0 1.4rem 3rem 3rem;
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     box-shadow:none;
                     height: 100vh;
                     }
@@ -234,7 +234,7 @@
                     }
                 &--wrapper {
                     display: flex;
-                    @include breakpoint(small-mobile) {
+                    @include breakpoint(mobile) {
                         display: flex;
                         flex-wrap: wrap;
                     }
@@ -259,26 +259,32 @@
                         &:last-child {
                             margin-right: 0;
                         }
-                        @include breakpoint(small-mobile) {
+                        @include breakpoint(mobile) {
                             margin-bottom: 1rem;
                                  }
                     }
                 svg {
-                    position: absolute;
-                    right: 0;
-                    top: 15px;
-                    display: block;
-                    cursor: pointer;
+                    display: none;
+                    @include breakpoint(mobile) {
+                        position: absolute;
+                        right: 0;
+                        top: 15px;
+                        display: block;
+                        cursor: pointer;
+                        fill: #000;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                          }
                 }
 
                 
             }
             .card {
                 &-item {
-                    @include breakpoint(small-mobile) {
+                    @include breakpoint(mobile) {
                         height: 6.2rem;
                           }
-                }    
+                    }    
                 &-content {
                     &__subtitle {
                         color: rgba($color: #2E2E2E, $alpha: 0.6);
@@ -320,6 +326,7 @@
                             height: 100%;
                             opacity: 0;
                         }
+
                    }
                }
             }
@@ -353,7 +360,7 @@
                 line-height: 1.4rem;
                 display: flex;
                 align-items: center;
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     white-space: nowrap;
                  }
                 span {
@@ -396,7 +403,7 @@
                 overflow: hidden;
                 border-radius: 1.5rem;
                 transition: 0.2s;
-                @include breakpoint(small-mobile) {
+                @include breakpoint(mobile) {
                     left: -113%;
                     background-color: rgba($color: #000, $alpha: 0.3);
                     position: fixed;
@@ -406,6 +413,7 @@
                     height: 100vh;
                     border-radius: 0;
                     padding-top: 12.5rem;
+                    display: none;
                 }
                 &-inner {
                     box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem rgba(0, 0, 0, 0.0196802);
@@ -415,7 +423,7 @@
                     padding: 0 1.4rem 3rem 3rem;
                     display: flex;
                     flex-direction: column;
-                    @include breakpoint(small-mobile) {
+                    @include breakpoint(mobile) {
                         box-shadow:none;
                         height: 85vh;
                         }
@@ -423,7 +431,7 @@
                 .card {
                     &-item {
                         width: 32.7rem;
-                        @include breakpoint(small-mobile) {
+                        @include breakpoint(mobile) {
                             width: auto;        
                             }
                     }
@@ -468,6 +476,13 @@
                                  height: 100%;
                                  opacity: 0;
                              }
+                             @include breakpoint(mobile) {
+                                width: 2rem;
+                                height: 2rem;
+                                &::before {
+                                    background-size: 12px;
+                                }
+                            }
                         }
                     }
                  }
@@ -475,7 +490,7 @@
         }
         input {
             text-align: center;
-            @include breakpoint(small-mobile) {
+            @include breakpoint(mobile) {
                 width: 140px;
             }
         }
