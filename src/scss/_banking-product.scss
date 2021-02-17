@@ -35,6 +35,7 @@
             white-space: nowrap;
             @include breakpoint(mobile) {
                 white-space: normal;
+                font-size: 1.5rem;
                 }
             &:hover {
                 svg {

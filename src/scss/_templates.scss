@@ -58,11 +58,12 @@
             line-height: 1.4rem;
             text-align: center;
             text-overflow: ellipsis;
-            max-width: 53px;
+            max-width: 67px;
             overflow: hidden;
             max-height: 43px;
             @include breakpoint(mobile) {
                 max-height: 41px;
+                max-width: 53px;
             }
         }
     }

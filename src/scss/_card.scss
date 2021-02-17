@@ -449,7 +449,7 @@
         @include breakpoint(mobile) {
             flex-direction: row;
             align-self: start;
-            padding-bottom: 2rem;
+            padding-bottom: 3rem;
         }
         &__img {
             width: 8.2rem;
@@ -471,9 +471,10 @@
                 margin-bottom: 0.5rem;
                 max-width: 40.3rem;
                 @include breakpoint(mobile) {
-                    white-space: inherit;
+                    white-space: normal;
                     font-size: 2.4rem;
                     margin-bottom: 0;
+                    max-width: 240px;
                 }
                 &:hover {
                     opacity: 1;
@@ -487,6 +488,12 @@
                 span {
                     font-weight: 300;
                     font-size: 2.4rem;
+                }
+                @include breakpoint(mobile) {
+                    font-size: 1.5rem;
+                    span {
+                        font-size: 1.5rem;
+                    }
                 }
             }
         }

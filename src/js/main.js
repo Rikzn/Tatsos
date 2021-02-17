@@ -75,7 +75,6 @@ if (window.matchMedia("(max-width:700px)").matches) {
   function CloseWindow() {
       const closeBtn = document.querySelector('.closeBtn');
       const noScroll = document.querySelector('body');
-      console.log(noScroll);
       closeBtn.classList.remove('active');
       noScroll.classList.remove('no-scroll');
 

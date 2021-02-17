@@ -9,6 +9,7 @@
     @include breakpoint(mobile) {
         font-size: 2.4rem;
         line-height: 3rem;
+        word-spacing: normal;
     }
     svg {
         width: 2.4rem;
