@@ -1332,8 +1332,7 @@ select:-webkit-autofill:focus {
       background-color: #fff;
       z-index: 3;
       padding-top: 3rem;
-      position: relative;
-      margin-top: 65rem; }
+      position: relative; }
       .page-main::before {
         content: '';
         position: absolute;
@@ -1783,7 +1782,6 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 767px) {
     .sidebar {
       padding: 0;
-      position: fixed;
       width: 100%;
       z-index: 0;
       height: auto; } }
@@ -1799,8 +1797,7 @@ select:-webkit-autofill:focus {
     @media only screen and (max-width: 767px) {
       .sidebar__inner {
         margin-left: unset;
-        width: 100%;
-        position: fixed; } }
+        width: 100%; } }
   .sidebar__wrapper {
     height: 55vh;
     padding-right: 1.3rem;
@@ -5055,7 +5052,7 @@ select:-webkit-autofill:focus {
             transform: rotate(180deg); }
 
 .js-accordion--active .widget__body {
-  max-height: 20rem;
+  max-height: 30rem;
   opacity: 1;
   overflow: visible;
   -webkit-transition-property: opacity, max-height;

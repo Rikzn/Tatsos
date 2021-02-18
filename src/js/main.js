@@ -38,31 +38,49 @@ window.addEventListener('load', function () {
 
 
   //Паралакс эффект для картинки в сайдбаре
-const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#hero",
-      start: "top top",
-      end: "bottom top",
-      scrub: true
-    }
-  });
-  
-  gsap.utils.toArray(".parallax").forEach(layer => {
-    const depth = layer.dataset.depth;
-    const movement = -(layer.offsetHeight * depth)
-    tl.to(layer, {y: movement, top: -30, ease: "none"}, 0)
-  });
+  const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#hero",
+        start: "top top",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+    
+    gsap.utils.toArray(".parallax").forEach(layer => {
+      const depth = layer.dataset.depth;
+      const movement = -(layer.offsetHeight * depth)
+      tl.to(layer, {y: movement, top: -30, ease: "none"}, 0)
+    });
+
 
   //Анимация появления контента в декстопе
   
   
   if (window.matchMedia('(max-width:700px)').matches) {
-    
+    let content = gsap.timeline();
+    gsap.to('.content', {duration: 2, y: -80});
+    content.from('.sidebar', {opacity: 0, duration: 0.5})
+    .from('.content', {opacity: 0, y: 250, duration: 0.5});
+
+    const cn = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#content",
+      start: 0,
+      scrub: true
+      }
+    });
+    gsap.utils.toArray(".content").forEach(layer => {
+      const depth = layer.dataset.depth;
+      const movement = -(layer.offsetHeight * depth)
+      cn.to(layer, {y: 50, top: 300, ease: "none"}, 0)
+    });
+
   } else {
     let content = gsap.timeline();
     content.from('.sidebar', {opacity: 0, duration: 0.5})
     .from('.content', {opacity: 0, x: 250, duration: 0.5})
-    .from('.sidebar__content', {opacity: 0, x: -150, duration: 0.5})
+    .from('.sidebar__content', {opacity: 0, x: -150, duration: 0.5});
   }
 
   // скролл якоря 
