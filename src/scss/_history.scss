@@ -121,6 +121,9 @@
             overflow-y: hidden;
             overflow-x: auto;
             align-items: center;
+            width: 112%;
+            margin-left: -6%;
+            padding-left: 6%;
             &::-webkit-scrollbar {
                 -webkit-appearance: none;
                 height: 0;

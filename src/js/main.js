@@ -37,7 +37,7 @@ window.addEventListener('load', function () {
 });
 
 
-// Параллакс эффект 
+  //Паралакс эффект для картинки в сайдбаре
 const tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#hero",
@@ -53,6 +53,17 @@ const tl = gsap.timeline({
     tl.to(layer, {y: movement, top: -30, ease: "none"}, 0)
   });
 
+  //Анимация появления контента в декстопе
+  
+  
+  if (window.matchMedia('(max-width:700px)').matches) {
+    
+  } else {
+    let content = gsap.timeline();
+    content.from('.sidebar', {opacity: 0, duration: 0.5})
+    .from('.content', {opacity: 0, x: 250, duration: 0.5})
+    .from('.sidebar__content', {opacity: 0, x: -150, duration: 0.5})
+  }
 
   // скролл якоря 
   $(".menu-box").on("click", "a", function(event) {
@@ -61,6 +72,9 @@ const tl = gsap.timeline({
     scrollingDistance = $(anchorId).offset().top - $(".menu-box").height();
     $("html, body").animate({scrollTop: scrollingDistance}, 800);
 });
+
+
+
 
 
 

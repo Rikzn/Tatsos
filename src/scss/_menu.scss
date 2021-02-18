@@ -67,7 +67,7 @@
             margin-left: 0;
             border-bottom: 0.1rem solid rgba($color: #fff, $alpha: 0.2);
             scrollbar-width: none;
-
+            padding-bottom: 19px;
             &::-webkit-scrollbar {
                 -webkit-appearance: none;
                 height: 0;
@@ -356,9 +356,10 @@
                 z-index: -1;
                 height: 0;
                 overflow: hidden;
-
                 @include breakpoint(mobile) {
                     color: #000;
+                    left: -7rem;
+                    top: 21px;
                 }
 
                 &-inner {

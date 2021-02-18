@@ -1412,7 +1412,8 @@ select:-webkit-autofill:focus {
       margin-top: 2rem;
       margin-left: 0;
       border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
-      scrollbar-width: none; }
+      scrollbar-width: none;
+      padding-bottom: 19px; }
       .menu-nav::-webkit-scrollbar {
         -webkit-appearance: none;
         height: 0;
@@ -1676,7 +1677,9 @@ select:-webkit-autofill:focus {
     overflow: hidden; }
     @media only screen and (max-width: 767px) {
       .menu__authorized-user-more-dropdown {
-        color: #000; } }
+        color: #000;
+        left: -7rem;
+        top: 21px; } }
     .menu__authorized-user-more-dropdown-inner {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2351,7 +2354,10 @@ select:-webkit-autofill:focus {
         overflow-x: auto;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-items: center; }
+                align-items: center;
+        width: 112%;
+        margin-left: -6%;
+        padding-left: 6%; }
         .history-form::-webkit-scrollbar {
           -webkit-appearance: none;
           height: 0;
