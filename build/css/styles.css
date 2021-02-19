@@ -1344,6 +1344,65 @@ select:-webkit-autofill:focus {
   .page-main-404 {
     margin-top: 0; }
 
+.btn {
+  cursor: pointer;
+  padding: 2rem 4.8rem;
+  color: #2E2E2E;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  background-color: #F5F5F5;
+  border-radius: 2rem;
+  margin-right: 2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+  min-width: 20rem;
+  text-align: center;
+  margin-top: 5rem; }
+  @media only screen and (max-width: 767px) {
+    .btn {
+      margin-top: 2rem;
+      padding: 1.5rem 0.8rem;
+      min-width: 16rem;
+      border-radius: 1.5rem; } }
+  .btn:last-child {
+    margin-right: 0; }
+  .btn a {
+    color: #2E2E2E; }
+  .btn:hover {
+    background-color: #F1611F;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: #fff; }
+    .btn:hover a {
+      color: #fff; }
+  .btn span {
+    color: #fff; }
+  .btn--off {
+    color: #C1C1C1;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .btn--off:hover {
+      background-color: #F5F5F5;
+      -webkit-transition: 0.3s;
+      transition: 0.3s;
+      color: #C1C1C1; }
+  .btn--active {
+    background-color: #F1611F;
+    color: #fff;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
+    .btn--active:hover {
+      background-color: #DD4F0E;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+    .btn--active a {
+      color: #fff; }
+  @media only screen and (max-width: 767px) {
+    .btn-graph {
+      padding: 1.5rem 1.8rem; } }
+
 .menu-hover {
   padding: 0.5rem 0.6rem;
   border-radius: 0.7rem;
@@ -2516,7 +2575,8 @@ select:-webkit-autofill:focus {
               width: 1.2rem;
               height: 1.2rem; } }
       .history-form-setting__show {
-        margin-top: auto !important; }
+        margin-top: auto !important;
+        display: none; }
       @media only screen and (max-width: 767px) {
         .history-form-setting .card-item {
           height: 6.2rem; } }
@@ -3958,65 +4018,6 @@ select:-webkit-autofill:focus {
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.9rem; }
-
-.btn {
-  cursor: pointer;
-  padding: 2rem 4.8rem;
-  color: #2E2E2E;
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 1.9rem;
-  background-color: #F5F5F5;
-  border-radius: 2rem;
-  margin-right: 2rem;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  display: inline-block;
-  min-width: 20rem;
-  text-align: center;
-  margin-top: 5rem; }
-  @media only screen and (max-width: 767px) {
-    .btn {
-      margin-top: 2rem;
-      padding: 1.5rem 0.8rem;
-      min-width: 16rem;
-      border-radius: 1.5rem; } }
-  .btn:last-child {
-    margin-right: 0; }
-  .btn a {
-    color: #2E2E2E; }
-  .btn:hover {
-    background-color: #F1611F;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    color: #fff; }
-    .btn:hover a {
-      color: #fff; }
-  .btn span {
-    color: #fff; }
-  .btn--off {
-    color: #C1C1C1;
-    -webkit-transition: 0.3s;
-    transition: 0.3s; }
-    .btn--off:hover {
-      background-color: #F5F5F5;
-      -webkit-transition: 0.3s;
-      transition: 0.3s;
-      color: #C1C1C1; }
-  .btn--active {
-    background-color: #F1611F;
-    color: #fff;
-    -webkit-transition: 0.3s;
-    transition: 0.3s; }
-    .btn--active:hover {
-      background-color: #DD4F0E;
-      -webkit-transition: 0.3s;
-      transition: 0.3s; }
-    .btn--active a {
-      color: #fff; }
-  @media only screen and (max-width: 767px) {
-    .btn-graph {
-      padding: 1.5rem 1.8rem; } }
 
 .payment-made-props {
   display: -webkit-box;
