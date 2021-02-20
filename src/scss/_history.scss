@@ -3,6 +3,9 @@
     &__inner {
         display: flex;
         flex-direction: column;
+        @include breakpoint(mobile) {
+            position: relative;
+        }
     }
     &-card {
         padding-bottom: 5rem;
@@ -373,6 +376,9 @@
         }
         &__group {
             position: relative;
+            @include breakpoint(mobile) {
+                position: static;
+            }
             &-cross {
                 font-weight: 500;
                 font-size: 1.2rem;
@@ -427,8 +433,9 @@
                     background-color: rgba($color: #000, $alpha: 0.3);
                     position: fixed;
                     width: 100%;
-                    top: 0;
-                    left: 0;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                     height: 100vh;
                     border-radius: 0;
                     padding-top: 12.5rem;

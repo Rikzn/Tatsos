@@ -1,5 +1,5 @@
 /**
- * Swiper 6.4.12
+ * Swiper 6.4.15
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: February 16, 2021
+ * Released on: February 18, 2021
  */
 @font-face {
   font-family: 'swiper-icons';
@@ -1332,7 +1332,8 @@ select:-webkit-autofill:focus {
       background-color: #fff;
       z-index: 3;
       padding-top: 3rem;
-      position: relative; }
+      position: relative;
+      margin-top: 698px; }
       .page-main::before {
         content: '';
         position: absolute;
@@ -1841,6 +1842,7 @@ select:-webkit-autofill:focus {
   @media only screen and (max-width: 767px) {
     .sidebar {
       padding: 0;
+      position: fixed;
       width: 100%;
       z-index: 0;
       height: auto; } }
@@ -1856,7 +1858,8 @@ select:-webkit-autofill:focus {
     @media only screen and (max-width: 767px) {
       .sidebar__inner {
         margin-left: unset;
-        width: 100%; } }
+        width: 100%;
+        position: fixed; } }
   .sidebar__wrapper {
     height: 55vh;
     padding-right: 1.3rem;
@@ -2298,6 +2301,9 @@ select:-webkit-autofill:focus {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
+    @media only screen and (max-width: 767px) {
+      .history__inner {
+        position: relative; } }
   .history-card {
     padding-bottom: 5rem; }
     .history-card__header {
@@ -2636,6 +2642,9 @@ select:-webkit-autofill:focus {
       transition: 0.2s; }
     .history-form__group {
       position: relative; }
+      @media only screen and (max-width: 767px) {
+        .history-form__group {
+          position: static; } }
       .history-form__group-cross {
         font-weight: 500;
         font-size: 1.2rem;
@@ -2689,8 +2698,10 @@ select:-webkit-autofill:focus {
             background-color: rgba(0, 0, 0, 0.3);
             position: fixed;
             width: 100%;
-            top: 0;
-            left: 0;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
             height: 100vh;
             border-radius: 0;
             padding-top: 12.5rem;

@@ -9,7 +9,7 @@ $widgetTitle: #fff;
     will-change: min-height;
     @include breakpoint(mobile) {
         padding: 0;
-        // position: fixed;
+        position: fixed;
         width: 100%;
         z-index: 0;
         height: auto;
@@ -24,7 +24,7 @@ $widgetTitle: #fff;
         @include breakpoint(mobile) {
             margin-left: unset;
             width: 100%;
-            // position: fixed;
+            position: fixed;
         }
     }
     &__wrapper {
