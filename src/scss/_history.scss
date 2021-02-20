@@ -3,6 +3,9 @@
     &__inner {
         display: flex;
         flex-direction: column;
+        @include breakpoint(mobile) {
+            position: relative;
+        }
     }
     &-card {
         padding-bottom: 5rem;
@@ -373,6 +376,9 @@
         }
         &__group {
             position: relative;
+            @include breakpoint(mobile) {
+                position: static;
+            }
             &-cross {
                 font-weight: 500;
                 font-size: 1.2rem;
@@ -427,12 +433,13 @@
                     background-color: rgba($color: #000, $alpha: 0.3);
                     position: fixed;
                     width: 100%;
-                    top: 0;
-                    left: 0;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                     height: 100vh;
                     border-radius: 0;
-                    padding-top: 12.5rem;
                     display: none;
+                    padding-top: 0;
                 }
                 &-inner {
                     box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem rgba(0, 0, 0, 0.0196802);
@@ -447,6 +454,8 @@
                         height: 100%;
                         border-bottom-left-radius: 0;
                         border-bottom-right-radius: 0;
+                        border-radius: 0;
+                        padding-top: 3.5rem;
                         }
                 }
                 .card {

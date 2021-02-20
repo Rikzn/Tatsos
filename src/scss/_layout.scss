@@ -45,6 +45,7 @@
         z-index: 3;
         padding-top: 3rem;
         position: relative;
+        margin-top: 698px;
         &::before {
             content: '';
             position: absolute;
@@ -53,7 +54,6 @@
             bottom: -80px;
             right: 0;
             height: 80px;
-
         }
     }
     &-404 {

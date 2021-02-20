@@ -58,16 +58,6 @@ window.addEventListener('load', function () {
   
   
   if (window.matchMedia('(max-width:700px)').matches) {
-    gsap.registerPlugin(scrollTrigger);
-
-    gsap.to('.content', {
-      X: 1000,
-      duration: 8,
-      scrollTrigger: {
-        start: "top top"б
-
-      }
-    })
     let content = gsap.timeline();
     gsap.to('.content', {duration: 2, y: -80});
     content.from('.sidebar', {opacity: 0, duration: 0.5})
