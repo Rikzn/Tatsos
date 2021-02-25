@@ -140,6 +140,7 @@
     }
     &-reference {
         color: #2E2E2E;
+        margin-bottom: 6rem;
         &__title {
             font-weight: 500;
             font-size: 2.4rem;
@@ -159,25 +160,26 @@
                 display: block;
             }
         }
-        a {
+        &__link {
             color: #F1611F; 
             display: block;
             margin-bottom: 1rem;
             position: relative;
             padding-bottom: 0.1rem;
-            transition: 0.3s;
+            transition: 0.2s;
             span {
-                transition: 0.3s;
+                transition: 0.2s;
+                color: #F1611F; 
             }
             &:last-child {
                 margin-bottom: 0;
             }
             &:hover {
-                transition: 0.3s;
+                transition: 0.2s;
                 span {
                     color: red;
                     border-bottom: 0.2rem solid #F1611F;
-                    transition: 0.3s;
+                    transition: 0.2s;
                 }
             }
         }

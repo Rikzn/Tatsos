@@ -1,4 +1,4 @@
-// Таб на странице "Открыт новый продукт"
+// Таб на страницах продукции банка
 const tabsBtn = document.querySelectorAll(".js-tabs-link");
 const tabsItems = document.querySelectorAll(".js-tabs-item");
 
@@ -23,6 +23,33 @@ tabsBtn.forEach(function(item) {
         
     });
 });
+
+// Переключение между счетами
+const tabsBtnSection = document.querySelectorAll(".js-tabs-section-link");
+const tabsSection = document.querySelectorAll(".js-tabs-section");
+
+tabsBtnSection.forEach(function(section) {
+    section.addEventListener("click", function() {
+        let currentBtn = section;
+        let tabId = currentBtn.getAttribute("data-tab");
+        let currentTab = document.querySelector(tabId);
+
+        if( ! currentBtn.classList.contains('sidebar-nav__link--active')) {
+            tabsBtnSection.forEach(function(section) {
+                section.classList.remove('sidebar-nav__link--active');
+            });
+            tabsSection.forEach(function(section) {
+                section.classList.remove('js-tabs-section--active');
+            });
+            currentBtn.classList.add('sidebar-nav__link--active');
+            currentTab.classList.add('js-tabs-section--active');
+        }
+
+        
+    });
+});
+
+
 
 // Таб меняют картинку на странице "Настройка"
 const tabsLink = document.querySelectorAll(".sidebar-item");

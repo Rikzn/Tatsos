@@ -115,7 +115,7 @@
                     <div class="sidebar__wrapper">
                         <div class="widget js-accordion">
                             <div class="widget__title">
-                                Карты и счета
+                                Счета
                                 <svg class="widget-SVG">
                                     <use xlink:href="#chevron-down" />
                                 </svg>
@@ -127,7 +127,7 @@
                                     </div>
                                     <a href="/banking-product.html" class="card-content">
                                         <p class="card-content__subtitle">
-                                            Дебетовая карт *1256
+                                            Накопительный счет
                                         </p>
                                         <p class="card-content__title">
                                             91 789<span>,23 ₽</span>
@@ -152,7 +152,7 @@
                                     </div>
                                     <a href="/banking-product-credit.html" class="card-content">
                                         <p class="card-content__subtitle">
-                                            Кредитная карта *1256
+                                            Накопительный счет
                                         </p>
                                         <p class="card-content__title">
                                             23 415<span>,80 ₽</span>
@@ -729,31 +729,38 @@
                     данные можно в профиле.
                     <span>Справку о совершенной операции можно заказать в ленте событий.</span>
                 </p>
-                <a href="#">
+                <a class="banking-product-reference__link" href="#">
                     <span>
                         О доступном остатке (подходит для предоставления в посольство)
                     </span>
                 </a>
-                <a href="#">
+                <a class="banking-product-reference__link" href="#">
                     <span>
                         О доступном остатке на английском языке (подходит для предоставления в посольство)
                     </span>
                 </a>
-                <a href="#">
+                <a class="banking-product-reference__link" href="#">
                     <span>
                         О заключении договора
                     </span>
                 </a>
-                <a href="#">
+                <a class="banking-product-reference__link" href="#">
                     <span>
                         C движением средств (подходит для предоставления в посольство)
                     </span>
                 </a>
-                <a href="#">
+                <a class="banking-product-reference__link" href="#">
                     <span>
                         С реквизитами счета
                     </span>
                 </a>
+            </div>
+            <div class="banking-product-reference">
+                <h3 class="banking-product-reference__title">Выписка за период</h3>
+                <button class="history-form__btn">За месяц</button>
+                <button class="history-form__btn">За полгода</button>
+                <input  readonly class="history-form__btn--default" type="text" name="datefilter" value="Выберите дату" />
+                <span class="btn"><a href="#">Получить выписку</a></span>
             </div>
         </div>
         <div class="section__left js-tabs-item" id="tab_5">
@@ -904,10 +911,16 @@
                     </svg>
                     Изменить пин
                 </div>
-
+                <div class="sidebar-nav__link js-tabs-link">
+                    <svg>
+                        <use xlink:href="#lock" />
+                    </svg>
+                    Заблокировать карту
+                </div>
             </div>
         </div>
     </div>
+    
 </section>
         </div>
         </main>
