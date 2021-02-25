@@ -1,0 +1,17 @@
+.block-card {
+    padding: 37px 51px 40px 40px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    &__title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+        color: #2E2E2E;
+        margin-bottom: 1.7rem;
+    }
+    &__descr {
+        font-size: 16px;
+        line-height: 19px;
+        color: #2E2E2E;
+    }
+}

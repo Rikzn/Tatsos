@@ -32,11 +32,11 @@
   position: absolute;
   left: 0;
   top: 1.5rem;
-  background-color: #fff;
   transition: .3s;
   font-weight: 600;
   font-size: 1.6rem;
   line-height: 1.9rem;
+  background-color: transparent;
 }
 .form__input:focus + .form__label{
   top: -.5rem;

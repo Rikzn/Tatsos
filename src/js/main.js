@@ -61,13 +61,12 @@ window.addEventListener('load', function () {
     let content = gsap.timeline();
     gsap.to('.content', {duration: 2, y: -80});
     content.from('.sidebar', {opacity: 0, duration: 0.5})
-    // .from('.content', {opacity: 0, y: 250, duration: 0.5});
     gsap
   } else {
     let content = gsap.timeline();
     content.from('.sidebar__content', {opacity: 0, x: -950, duration: 1.5})
-    .from('.content', {opacity: 0, x: 250, duration: 0.5})
-    .from('.menu__inner', {opacity: 0, x: 250, duration: 0.5}, "-=0.5");
+    .from('.content', {opacity: 0, x: 250, ease: "expo.out", duration: 1.0})
+    .from('.menu__inner', {opacity: 0, x: 250, ease: "expo.out", duration: 1.0}, "-=1.0");
   }
 
   // скролл якоря 

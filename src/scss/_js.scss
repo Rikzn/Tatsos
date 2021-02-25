@@ -48,6 +48,12 @@
     &-tabs-link {
         white-space: nowrap;
     }
+    &-tabs-section {
+        display: none;
+        &--active {
+            display: flex;
+        }
+    }
     &-validate-error-field {
         border: none;
         border-bottom: 1px solid red !important;
