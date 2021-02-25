@@ -65,8 +65,8 @@ window.addEventListener('load', function () {
   } else {
     let content = gsap.timeline();
     content.from('.sidebar__content', {opacity: 0, x: -950, duration: 1.5})
-    .from('.content', {opacity: 0, x: 250, ease: "expo.out", duration: 1.0})
-    .from('.menu__inner', {opacity: 0, x: 250, ease: "expo.out", duration: 1.0}, "-=1.0");
+    .from('.content', {opacity: 0, x: 250,  ease: "slow(0.7, 0.7, false)",  duration: 1.0})
+    .from('.menu__inner', {opacity: 0, x: 250,  ease: "slow(0.7, 0.7, false)", duration: 1.0}, "-=1.0");
   }
 
   // скролл якоря 
