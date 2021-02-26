@@ -58,10 +58,9 @@ window.addEventListener('load', function () {
   
   
   if (window.matchMedia('(max-width:700px)').matches) {
-    let content = gsap.timeline();
-    gsap.to('.content', {duration: 2, y: -80});
-    content.from('.sidebar', {opacity: 0, duration: 0.5})
-    gsap
+    // let content = gsap.timeline();
+    // gsap.to('.content', {duration: 2, y: -80});
+    // content.from('.sidebar', {opacity: 0, duration: 0.5})
   } else {
     let content = gsap.timeline();
     content.from('.sidebar__content', {opacity: 0, x: -950, duration: 1.5})
@@ -76,37 +75,4 @@ window.addEventListener('load', function () {
     scrollingDistance = $(anchorId).offset().top - $(".menu-box").height();
     $("html, body").animate({scrollTop: scrollingDistance}, 800);
 });
-
-
-
-
-
-
-
-// Валидатор
-// let validateForms = function(selector, rules, successModal) {
-//     new window.JustValidate(selector, {
-//         rules: rules,
-//         submitHandler: function(form) {
-//             let formData = new FormData(form);
-
-//             let xhr = new XMLHttpRequest();
-
-//             xhr.onreadystatechange = function() {
-//                 if (xhr.readyState === 4) {
-//                     if (xhr.status === 200) {
-//                         console.log('Отправлено');
-//                     }
-//                 }
-//             }
-
-//             xhr.open('POST', 'mail.php', true);
-//             xhr.send(formData);
-
-//             form.reset();
-//         }
-//     });
-// }
-
-// validateForms('.js-form', { email: {required: true, email: true}, tel: {required: true} }, '.thanks-popup');
 

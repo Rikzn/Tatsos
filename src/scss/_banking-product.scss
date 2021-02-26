@@ -248,4 +248,9 @@
     &--active {
         display: block;
     }
+    .form__label {
+        @include breakpoint(mobile) {
+            font-size: 1.2rem;
+        } 
+    }
 }

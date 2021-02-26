@@ -30,5 +30,8 @@
     }
     &__nav {
         margin-top: -137px;
+        @include breakpoint(mobile) {
+        margin-top: 0;
+    }
     }
 }
