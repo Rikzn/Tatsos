@@ -5327,7 +5327,7 @@ select:-webkit-autofill:focus {
       display: -ms-flexbox;
       display: flex; }
       .entrance-section .entrance__left {
-        margin-top: 184px;
+        margin-top: 135px;
         width: 100%; }
         .entrance-section .entrance__left .title-main {
           margin-bottom: 4rem;
@@ -5363,14 +5363,20 @@ select:-webkit-autofill:focus {
         .entrance-section .menu-entrance .menu-entrance__item:last-child {
           margin-right: 0;
           margin-top: 2.3rem; } }
-  .entrance-section__inner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+  @media only screen and (max-width: 767px) {
+    .entrance-section__inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  @media only screen and (max-width: 767px) {
+    .entrance-logo {
+      max-width: 13rem;
+      max-height: 3.2rem;
+      margin-top: 1.2rem; } }
 
 .graph__title {
   margin-bottom: 2.5rem; }

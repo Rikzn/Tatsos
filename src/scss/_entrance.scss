@@ -81,7 +81,7 @@
             flex-direction: column-reverse;
             display: flex;
             .entrance__left {
-                margin-top: 184px;
+                margin-top: 135px;
                 width: 100%;
                 .title-main {
                     margin-bottom: 4rem;
@@ -118,9 +118,18 @@
                 }
             }
         }
-        &__inner {
-            flex-direction: column;
-            display: flex;
+        &__inner {    
+            @include breakpoint(mobile){
+                flex-direction: column;
+                display: flex;
+            }
+        }
+    }
+    &-logo {
+        @include breakpoint(mobile) {
+            max-width: 13rem;
+            max-height: 3.2rem;
+            margin-top: 1.2rem;
         }
     }
 }

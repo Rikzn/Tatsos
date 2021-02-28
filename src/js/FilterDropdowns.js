@@ -61,8 +61,12 @@ export default function FilterDropdowns() {
         const close = document.querySelector('.history-form-setting__dropdown-svg');
         const show = document.querySelector('.history-form-setting__show');
         
-        close.addEventListener('click', CloseWindow);
-        show.addEventListener('click', CloseWindow);
+        if (close) {
+            close.addEventListener('click', CloseWindow);
+        };
+        if (show) {
+            show.addEventListener('click', CloseWindow);
+        };
 
         function CloseWindow() {
             const closeBtn = document.querySelector('.closeBtn');
