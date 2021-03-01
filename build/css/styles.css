@@ -5117,8 +5117,8 @@ select:-webkit-autofill:focus {
               transform: none; } }
 
 .animation__hover:hover {
-  -webkit-transform: translate3d(0, 0, 0) scale(1.048);
-          transform: translate3d(0, 0, 0) scale(1.048);
+  -webkit-transform: translate3d(0, 0, 0) scale(1.2);
+          transform: translate3d(0, 0, 0) scale(1.2);
   -webkit-transition: 0.3s;
   transition: 0.3s; }
   .animation__hover:hover svg {
