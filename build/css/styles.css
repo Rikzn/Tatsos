@@ -1,5 +1,5 @@
 /**
- * Swiper 6.4.12
+ * Swiper 6.4.15
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: February 16, 2021
+ * Released on: February 18, 2021
  */
 @font-face {
   font-family: 'swiper-icons';
@@ -1011,7 +1011,7 @@ body {
           flex-direction: column;
   color: black;
   overflow-y: scroll;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
 
 main {
   display: block; }
@@ -1224,7 +1224,8 @@ select:-webkit-autofill:focus {
   overflow: visible;
   opacity: 1;
   z-index: 99;
-  display: block; }
+  display: block;
+  left: 0; }
 
 .active .history-form__group-cross svg {
   -webkit-transform: rotate(180deg);
@@ -1312,6 +1313,11 @@ select:-webkit-autofill:focus {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+  @media only screen and (max-width: 767px) {
+    .page-registration {
+      background-color: #fff;
+      position: relative;
+      padding: 0; } }
 
 .page-main {
   -webkit-box-flex: 1;
@@ -2585,6 +2591,9 @@ select:-webkit-autofill:focus {
       .history-form-setting__show {
         margin-top: auto !important;
         display: none; }
+        @media only screen and (max-width: 767px) {
+          .history-form-setting__show {
+            display: block; } }
       @media only screen and (max-width: 767px) {
         .history-form-setting .card-item {
           height: 6.2rem; } }
@@ -2696,18 +2705,15 @@ select:-webkit-autofill:focus {
         transition: 0.2s; }
         @media only screen and (max-width: 767px) {
           .history-form__group-dropdown {
-            left: -113%;
             background-color: rgba(0, 0, 0, 0.3);
             position: fixed;
             width: 100%;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
             height: 100vh;
             border-radius: 0;
             display: none;
-            padding-top: 0; } }
+            padding-top: 0;
+            top: 0;
+            left: 0; } }
         .history-form__group-dropdown-inner {
           -webkit-box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem rgba(0, 0, 0, 0.0196802);
                   box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem rgba(0, 0, 0, 0.0196802);
@@ -3254,6 +3260,10 @@ select:-webkit-autofill:focus {
 
 .banking-product--active {
   display: block; }
+
+@media only screen and (max-width: 767px) {
+  .banking-product .form__label {
+    font-size: 1.2rem; } }
 
 .sidebar-nav__link {
   position: relative;
@@ -4743,13 +4753,7 @@ select:-webkit-autofill:focus {
     margin-bottom: 2rem; }
     @media only screen and (max-width: 1024px) {
       .card-mask {
-        padding: 9.8rem 3rem 6.5rem; } }
-    @media only screen and (max-width: 1024px) {
-      .card-mask {
         padding: 8.5rem 3rem 5.3rem; } }
-    @media only screen and (max-width: 767px) {
-      .card-mask {
-        padding: 7rem 3rem 3.7rem; } }
     @media only screen and (max-width: 767px) {
       .card-mask {
         padding: 9.8rem 3rem 6.5rem;
@@ -4763,6 +4767,9 @@ select:-webkit-autofill:focus {
       font-size: 2.4rem;
       line-height: 2.9rem;
       color: #2E2E2E; }
+      @media only screen and (max-width: 767px) {
+        .card-mask input {
+          font-size: 2.0rem; } }
     .card-mask--active {
       background-image: url(/img/card-tinkoff.png);
       background-repeat: no-repeat;
@@ -5085,8 +5092,21 @@ select:-webkit-autofill:focus {
   -webkit-transition-duration: 1s, 0.3s;
           transition-duration: 1s, 0.3s; }
 
+@media only screen and (max-width: 767px) {
+  .daterangepicker {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0; } }
+
 .daterangepicker .drp-selected {
   display: none !important; }
+
+@media only screen and (max-width: 767px) {
+  .daterangepicker .drp-calendar {
+    max-width: 319px; } }
 
 .daterangepicker .drp-calendar .start-date {
   background-color: #F1611F; }
@@ -5098,9 +5118,44 @@ select:-webkit-autofill:focus {
   .daterangepicker .drp-calendar .end-date:hover {
     background-color: rgba(241, 97, 31, 0.8); }
 
-.daterangepicker .btn {
-  margin-top: 0;
-  min-width: auto; }
+@media only screen and (max-width: 767px) {
+  .daterangepicker .drp-buttons {
+    border-top: none; }
+    .daterangepicker .drp-buttons .btn {
+      margin-top: 0;
+      min-width: auto; }
+    .daterangepicker .drp-buttons .applyBtn {
+      background-color: #F1611F;
+      color: #fff; } }
+
+@media only screen and (max-width: 767px) {
+  .daterangepicker .show-calendar .ranges {
+    margin-top: 26px; } }
+
+@media only screen and (max-width: 767px) {
+  .daterangepicker .drp-calendar.left {
+    margin: 0 auto; } }
+
+@media only screen and (max-width: 767px) {
+  .daterangepicker .drp-calendar.right {
+    margin: 0 auto; } }
+
+@media only screen and (max-width: 767px) {
+  .daterangepicker .drp-buttons .btn {
+    width: 150px;
+    height: 48px;
+    border-radius: 12px; } }
+
+.daterangepicker.show-calendar .ranges {
+  margin-top: 26px; }
+
+.daterangepicker th.month {
+  font-weight: 600; }
+
+@media only screen and (max-width: 767px) {
+  .daterangepicker.show-calendar .drp-buttons {
+    margin-top: 66px;
+    margin-right: 17px; } }
 
 .animation__plus {
   border-radius: 50px; }
@@ -5251,6 +5306,77 @@ select:-webkit-autofill:focus {
         margin-top: 2.8rem; }
   .entrance-nav {
     margin-top: 11rem; }
+  @media only screen and (max-width: 767px) {
+    .entrance-sidebar {
+      position: relative; }
+      .entrance-sidebar .sidebar__inner {
+        position: relative; } }
+  @media only screen and (max-width: 767px) {
+    .entrance-main {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse; } }
+  @media only screen and (max-width: 767px) {
+    .entrance-section {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .entrance-section .entrance__left {
+        margin-top: 135px;
+        width: 100%; }
+        .entrance-section .entrance__left .title-main {
+          margin-bottom: 4rem;
+          line-height: 2.8rem; }
+        .entrance-section .entrance__left .form__div:first-child {
+          margin-bottom: 4px; }
+        .entrance-section .entrance__left .btn {
+          width: 100%;
+          height: 60px;
+          border-radius: 20px;
+          padding-top: 20px; }
+      .entrance-section .entrance-nav {
+        margin-top: 4rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .entrance-section .entrance-nav .entrance__link {
+          margin-right: 0;
+          margin-bottom: 2.6rem; }
+      .entrance-section .menu-entrance {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+        .entrance-section .menu-entrance .menu-entrance__item:last-child {
+          margin-right: 0;
+          margin-top: 2.3rem; } }
+  @media only screen and (max-width: 767px) {
+    .entrance-section__inner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  @media only screen and (max-width: 767px) {
+    .entrance-logo {
+      max-width: 13rem;
+      max-height: 3.2rem;
+      margin-top: 1.2rem; } }
 
 .graph__title {
   margin-bottom: 2.5rem; }
@@ -5439,18 +5565,30 @@ select:-webkit-autofill:focus {
     line-height: 17px; }
   .bank-card__nav {
     margin-top: -137px; }
+    @media only screen and (max-width: 767px) {
+      .bank-card__nav {
+        margin-top: 0; } }
 
 .block-card {
   padding: 37px 51px 40px 40px;
   background-color: #F5F5F5;
   border-radius: 20px; }
+  @media only screen and (max-width: 767px) {
+    .block-card {
+      padding: 36px 26px 40px 26px; } }
   .block-card__title {
     font-weight: 500;
     font-size: 24px;
     line-height: 24px;
     color: #2E2E2E;
     margin-bottom: 1.7rem; }
+    @media only screen and (max-width: 767px) {
+      .block-card__title {
+        font-size: 16px; } }
   .block-card__descr {
     font-size: 16px;
     line-height: 19px;
     color: #2E2E2E; }
+    @media only screen and (max-width: 767px) {
+      .block-card__descr {
+        font-size: 14px; } }

@@ -302,12 +302,15 @@
             &__show {
                 margin-top: auto !important;
                 display: none;
+                @include breakpoint(mobile) {
+                    display: block;
+                    }
             }
             .card {
                 &-item {
                     @include breakpoint(mobile) {
                         height: 6.2rem;
-                          }
+                        }
                     }    
                 &-content {
                     &__subtitle {
@@ -431,17 +434,15 @@
                 border-radius: 1.5rem;
                 transition: 0.2s;
                 @include breakpoint(mobile) {
-                    left: -113%;
                     background-color: rgba($color: #000, $alpha: 0.3);
                     position: fixed;
                     width: 100%;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
                     height: 100vh;
                     border-radius: 0;
                     display: none;
                     padding-top: 0;
+                    top: 0;
+                    left: 0;
                 }
                 &-inner {
                     box-shadow: 0rem 1.3787rem 3.3422rem rgba(0, 0, 0, 0.0503198), 0rem 0.7371rem 1.7869rem rgba(0, 0, 0, 0.0417275), 0rem 0.4132rem 1.0017rem rgba(0, 0, 0, 0.035), 0rem 0.2195rem 0.532rem rgba(0, 0, 0, 0.0282725), 0rem 0.0913rem 0.2214rem rgba(0, 0, 0, 0.0196802);

@@ -1,8 +1,19 @@
 .daterangepicker {
+    @include breakpoint(mobile) {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100%;
+        height: 100vh;
+        margin-top: 0;
+    }
     .drp-selected {
         display: none !important;
     }
     .drp-calendar {
+        @include breakpoint(mobile) {
+            max-width: 319px;
+        }
         .start-date {
             background-color: #F1611F;
             &:hover {
@@ -16,8 +27,56 @@
             } 
         }
     }
-    .btn {
-        margin-top: 0;
-        min-width: auto;
+    .drp-buttons {
+        @include breakpoint(mobile) {
+            border-top: none;
+        .btn {
+            margin-top: 0;
+            min-width: auto;
+        }
+        .applyBtn {
+            background-color: #F1611F;
+            color: #fff;
+        }
+        }
+        
+    }
+    .show-calendar {
+        .ranges {
+            @include breakpoint(mobile) {
+                margin-top: 26px;
+            }
+        }
+    }
+}
+
+.daterangepicker .drp-calendar.left {
+    @include breakpoint(mobile) {
+        margin: 0 auto;
+    }
+}
+
+.daterangepicker .drp-calendar.right {
+    @include breakpoint(mobile) {
+        margin: 0 auto;
+    }
+}
+.daterangepicker .drp-buttons .btn {
+    @include breakpoint(mobile) {
+        width: 150px;
+        height: 48px;
+        border-radius: 12px;
+    }
+}
+.daterangepicker.show-calendar .ranges {
+    margin-top: 26px;
+}
+.daterangepicker th.month {
+    font-weight: 600;
+}
+.daterangepicker.show-calendar .drp-buttons {
+    @include breakpoint(mobile) {
+        margin-top: 66px;
+        margin-right: 17px;
     }
 }
