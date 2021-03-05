@@ -102,4 +102,24 @@
             }
         }
     }
+    &-sidebar__tabs {
+        &-nav-link {
+            white-space: nowrap;
+            &--active {
+                font-weight: 700;
+                white-space: nowrap;
+            }
+        }
+        &-item {
+            display: none;
+            flex-direction: column;
+            &--active {
+                display: flex;
+            }
+        }
+    }
 }
+
+
+// var links = Array.prototype.slice.call(element.querySelectorAll('.js-sidebar__tabs-nav-link'));
+// var items = Array.prototype.slice.call(element.querySelectorAll('.js-sidebar__tabs-item'));

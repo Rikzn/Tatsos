@@ -1,5 +1,5 @@
 /**
- * Swiper 6.4.15
+ * Swiper 6.4.12
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: February 18, 2021
+ * Released on: February 16, 2021
  */
 @font-face {
   font-family: 'swiper-icons';
@@ -5109,6 +5109,23 @@ select:-webkit-autofill:focus {
     height: auto;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.js-sidebar__tabs-nav-link {
+  white-space: nowrap; }
+  .js-sidebar__tabs-nav-link--active {
+    font-weight: 700;
+    white-space: nowrap; }
+
+.js-sidebar__tabs-item {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .js-sidebar__tabs-item--active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }

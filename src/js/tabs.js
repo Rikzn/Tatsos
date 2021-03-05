@@ -31,6 +31,39 @@ var ratingsTabs = Array.prototype.slice.call(document.querySelectorAll('.js-rati
     setActiveTab(0);
   })
 
+  var ratingsTabsNav = Array.prototype.slice.call(document.querySelectorAll('.js-ratings-tabs-nav'));
+
+  ratingsTabsNav.forEach(function(element) {
+    var links = Array.prototype.slice.call(element.querySelectorAll('.js-sidebar__tabs-nav-link'));
+    var items = Array.prototype.slice.call(element.querySelectorAll('.js-sidebar__tabs-item'));
+
+    if (links.length !== items.length) {
+      console.error('Not equal amount of elements');
+      return;
+    }
+
+    function setActiveTab(index) {
+      links.forEach(function(link) {
+        link.classList.remove('js-sidebar__tabs-nav-link--active');
+      })
+      items.forEach(function(item) {
+        item.classList.remove('js-sidebar__tabs-item--active');
+      })
+
+      links[index].classList.add('js-sidebar__tabs-nav-link--active');
+      items[index].classList.add('js-sidebar__tabs-item--active');
+    }
+
+    links.forEach(function(link, linkIndex) {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        setActiveTab(linkIndex)
+      })
+    })
+
+    setActiveTab(0);
+  })
+
 
 
 
