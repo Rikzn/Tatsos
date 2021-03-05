@@ -81,4 +81,25 @@
             }
         }
     }
+    &-bank-card__tabs{
+        &-nav-link {
+            &--active {
+                font-weight: 700;
+            }
+        }
+        &-item {
+            opacity: 0;
+            visibility: hidden;
+            height: 0;
+            transition: 0.3s;
+            display: none;
+            &--active {
+                opacity: 1;
+                visibility: visible;
+                height: auto;
+                transition: 0.3s;
+                display: flex;
+            }
+        }
+    }
 }

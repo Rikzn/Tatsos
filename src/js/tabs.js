@@ -1,8 +1,8 @@
-var ratingsTabs = Array.prototype.slice.call(document.querySelectorAll('.js-ratings-tabs'));
+var ratingsTabs = Array.prototype.slice.call(document.querySelectorAll('.js-ratings-tabs-card'));
 
   ratingsTabs.forEach(function(element) {
-    var links = Array.prototype.slice.call(element.querySelectorAll('.company-ratings__tabs-nav-link'));
-    var items = Array.prototype.slice.call(element.querySelectorAll('.company-ratings__tabs-item'));
+    var links = Array.prototype.slice.call(element.querySelectorAll('.js-bank-card__tabs-nav-link'));
+    var items = Array.prototype.slice.call(element.querySelectorAll('.js-bank-card__tabs-item'));
 
     if (links.length !== items.length) {
       console.error('Not equal amount of elements');
@@ -11,14 +11,14 @@ var ratingsTabs = Array.prototype.slice.call(document.querySelectorAll('.js-rati
 
     function setActiveTab(index) {
       links.forEach(function(link) {
-        link.classList.remove('active');
+        link.classList.remove('js-bank-card__tabs-nav-link--active');
       })
       items.forEach(function(item) {
-        item.classList.remove('active');
+        item.classList.remove('js-bank-card__tabs-item--active');
       })
 
-      links[index].classList.add('active');
-      items[index].classList.add('active');
+      links[index].classList.add('js-bank-card__tabs-nav-link--active');
+      items[index].classList.add('js-bank-card__tabs-item--active');
     }
 
     links.forEach(function(link, linkIndex) {

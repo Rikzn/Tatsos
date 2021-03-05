@@ -381,6 +381,7 @@
         }
         &__group {
             position: relative;
+            cursor: pointer;
             @include breakpoint(mobile) {
                 position: static;
             }
